@@ -1,1 +1,1 @@
-# ChessPositionRank
+# ChessPositionRanking
