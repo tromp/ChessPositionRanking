@@ -1,0 +1,1603 @@
+100 random diagrams, manually analyzed
+
+wTot = 16, wPawns = 2, wProms = 6
+bTot = 13, bPawns = 3, bProms = 2
+pieceCnts = [1,2,3,6,2,1,1,3,3,2]
+--     corresponding to [K,Q,R,B,N,k,q,r,b,n]
+B r . k . B K .
+N . R B p . b R
+. . . . q . . b
+B . . B P . p .
+. . p r n . . .
+. R b r . N . Q
+. n . . . . P Q
+. . . . . B . .
+wpx = 8-2-6 = 0    maxuwp = 3+3-6 = 0
+bpx = 8-3-2 = 3    maxubp = 0+3-2 = 1
+minopp = max 2-0 3-1 = 2
+White Kg9 in check by qe6
+Black kd8 not in check
+Illegal because wProms=6 requires missing pawn files to come in 3 adjacent pairs
+(e.g. if 2nd oppose were on f instead of g file)
+
+wTot = 13, wPawns = 1, wProms = 4
+bTot = 15, bPawns = 2, bProms = 5
+pieceCnts = [1,2,4,2,3,1,5,2,2,3]
+. . . R q b . .
+q . . r q B Q K
+. . . Q . R k .
+q . p . . n . .
+. . . b R . . .
+N p . . . . N .
+R . r P N B . q
+. n . n . . . .
+White Kh7 in check by kg6
+Black kg6 in check by Kh7
+Illegal due to adjacent kings
+
+wTot = 14, wPawns = 2, wProms = 5
+bTot = 14, bPawns = 3, bProms = 4
+pieceCnts = [1,1,6,1,3,1,3,1,3,3]
+k n . . N R . .
+b . . p R . r .
+. n n P B p . Q
+q N . q . R . .
+R . R . b . b .
+. . . K . . . .
+. . . p . P . .
+. . . R N q . .
+White Kd3 in check by be4 and qd5
+Black ka8 not in check
+Illegal due to impossible double check on king
+
+wTot = 15, wPawns = 3, wProms = 4
+bTot = 13, bPawns = 3, bProms = 3
+pieceCnts = [1,4,2,3,2,1,2,3,1,3]
+n . . N . Q . Q
+. Q r p . . . .
+. . . . q . B q
+. b Q P p r . .
+. . . . . n K .
+P B . . R . k .
+. . p . P . N .
+n B r . . R . .
+White Kg4 in check by kg3
+Black kg3 in check by Kg4
+Illegal due to adjacent kings
+
+wTot = 13, wPawns = 2, wProms = 3
+bTot = 14, bPawns = 3, bProms = 4
+pieceCnts = [1,2,2,3,3,1,3,1,3,3]
+. . . . . . . .
+p B B . . P . .
+q N . . b . Q q
+K . N N . . . P
+. r Q . p n . p
+. . . k n b . .
+q n . . . B b .
+R . . . . . R .
+White Ka5 in check by qa6 and qa2
+Black kd3 in check by Qc4
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 0, wProms = 7
+bTot = 13, bPawns = 3, bProms = 2
+pieceCnts = [1,4,2,2,6,1,1,2,2,4]
+. n K . . . . .
+. p . N . R . N
+q . . k Q . B .
+p Q Q . n r b .
+N . . . . b . p
+. . . . . N . n
+N N . . r . n .
+. . . . R Q B .
+White Kc8 not in check
+Black kd6 in check by Qc5 and Qe6
+Illegal due to impossible double check on king
+
+wTot = 12, wPawns = 1, wProms = 3
+bTot = 16, bPawns = 3, bProms = 5
+pieceCnts = [1,1,5,2,2,1,2,2,2,6]
+n . b b . . . .
+. . . . . . . q
+n p . . . n . r
+. B P . . k q R
+B n R R R . . .
+p N . r . p . n
+. . n Q R . . .
+N . . . . . . K
+wpx = 8-1-3 = 4    maxuwp = 0+4-3 = 1
+bpx = 8-3-5 = 0    maxubp = 4+4-5 = 3
+minopp = 1-1 = 3-3 = 0
+White Kh1 not in check
+Black kf5 not in check
+Illegal due to white bishops of same color and no spare promotions
+
+wTot = 15, wPawns = 2, wProms = 5
+bTot = 13, bPawns = 2, bProms = 3
+pieceCnts = [1,2,2,2,6,1,3,2,2,3]
+. R . . n . N b
+. k . B . . . .
+. q N N . P . q
+. . P p Q . . .
+. n n N . b . N
+. N . . q r K .
+B . . . . p R Q
+. . . r . . . .
+White Kg3 in check by rf3 and bf4
+Black kb7 in check by Rb8 and Nd6
+Illegal due to both kings in check
+
+wTot = 13, wPawns = 1, wProms = 4
+bTot = 15, bPawns = 2, bProms = 5
+pieceCnts = [1,1,4,2,4,1,2,5,2,3]
+. . N . . n r n
+n R . k N . p .
+. . b . B K . .
+r . B R p r N .
+. . . . . . . .
+. P . r . . N .
+. . . Q q q . .
+. . . R b . R r
+White Kf6 in check by rf5 and pg7
+Black kd7 in check by Rb7 and Rd5 and Be6
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 1, wProms = 6
+bTot = 13, bPawns = 2, bProms = 3
+pieceCnts = [1,0,2,4,6,1,1,4,2,3]
+r . . . . . . .
+. . . . R . r .
+. . n . K N N B
+. . b N . p . q
+. B p . . r k .
+. R . . . r . N
+. P b . . . . .
+B n N B . n N .
+wpx = 8-1-6 = 1    maxuwp = 3+5-6 = 2
+bpx = 8-2-3 = 3    maxubp = 1+5-3 = 3
+minopp = 1-2 = 2-3 = -1
+White Ke6 not in check
+Black kg4 in check by Nf6
+Illegal due to Ba1 trapped by Pb2
+
+wTot = 14, wPawns = 1, wProms = 5
+bTot = 14, bPawns = 3, bProms = 3
+pieceCnts = [1,4,4,2,2,1,4,2,2,2]
+. q Q . B . . n
+. q . . P Q . R
+q . . . . p p .
+. n p . . . b .
+. . N r . N R q
+. b K . . R . k
+. Q . . . B . Q
+. . . . . . r R
+White Kc3 in check by nb5
+Black kh3 in check by Qh2 and Rf3 and Nf4
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 2, wProms = 5
+bTot = 13, bPawns = 0, bProms = 5
+pieceCnts = [1,2,5,2,3,1,2,4,4,2]
+. n q . . . r B
+P K . q n . b .
+Q . N . . r N .
+. . R Q . . . N
+. . R b . . . .
+. . R b . . . .
+. . P . b R . R
+B r . . . k r .
+White Kb7 in check by qc8 and qd7 and rb1
+Black kf1 in check by Rf2
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 2, wProms = 5
+bTot = 13, bPawns = 1, bProms = 4
+pieceCnts = [1,1,6,2,3,1,2,2,5,2]
+. . B . R q N b
+P . n B . . . .
+. . b r . . . .
+q . . . . N p b
+k . . . . . . N
+. . . . r b P .
+Q . . K . . . b
+. R R R R . n R
+White Kd2 in check by qa5
+Black ka4 in check by Qa2
+Illegal due to both kings in check
+
+wTot = 16, wPawns = 3, wProms = 5
+bTot = 12, bPawns = 4, bProms = 1
+pieceCnts = [1,2,3,3,4,1,2,1,2,2]
+. . Q . n . B q
+. . q P N . b .
+. . p . N . . p
+p P r B b . . P
+R . . . . . N .
+B . p Q K R . .
+n . . . . R . .
+N . . k . . . .
+wpx = 8-3-5 = 0    maxuwp = 3+4-5 = 2
+bpx = 8-4-1 = 3    maxubp = 0+4-1 = 3
+minopp = 3-2 = 4-3 = 1
+White Ke3 not in check
+Black kd1 in check by Qd3
+Illegal due to no white pieces captured to double black c pawns
+
+wTot = 13, wPawns = 2, wProms = 3
+bTot = 15, bPawns = 2, bProms = 5
+pieceCnts = [1,3,2,2,3,1,3,4,3,2]
+. . r . . . . .
+r . Q . . p . .
+r k . . . N B .
+q . K r B Q R .
+. q b . . b . P
+. q . N . n p R
+P . . . n . N .
+. . b . . . Q .
+White Kc5 in check by kb6 and qa5
+Black kb6 in check by Kc5 and qc7
+Illegal due to both kings in check
+
+wTot = 16, wPawns = 1, wProms = 7
+bTot = 11, bPawns = 3, bProms = 2
+pieceCnts = [1,5,2,4,3,1,2,1,1,3]
+. . . . . . . B
+q . Q . r B . k
+. . . . . n . .
+p N n K Q N . .
+. N b B Q P . R
+p q p . Q n . .
+. . Q . . . . .
+. . B . R . . .
+White Kd5 in check by bc4 and nf6
+Black kh7 in check by Rh4
+Illegal due to both kings in check
+
+wTot = 16, wPawns = 1, wProms = 7
+bTot = 12, bPawns = 3, bProms = 1
+pieceCnts = [1,5,5,2,2,1,2,2,2,2]
+. Q R . . . . B
+. B . n . q r .
+R . . K . Q . .
+. p R N . . . .
+. p Q . . . Q .
+. . . p Q N b R
+. b P R . . . .
+k r . q . . n .
+White Kd6 in check by bg3
+Black ka1 in check by Ra6
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 4, wProms = 3
+bTot = 13, bPawns = 1, bProms = 4
+pieceCnts = [1,3,2,2,3,1,1,2,4,4]
+. n . . . . . r
+n . n . k . . .
+P . . . R . N p
+r Q . . P . n .
+. N P . B K B .
+. b . R . q b Q
+b P . . Q . . .
+. . . . N b . .
+White Kf4 in check by qf3 and bg3
+Black ke7 in check by Re6 and Ng6
+Illegal due to both kings in check
+
+wTot = 16, wPawns = 1, wProms = 7
+bTot = 12, bPawns = 3, bProms = 1
+pieceCnts = [1,5,4,2,3,1,2,2,2,2]
+B . Q N B Q . .
+Q . R . Q n . p
+r . P . . . Q .
+. q . . . . K .
+p k . R . . . q
+. . . N . r . b
+. . . . . p b R
+. n . . R N . .
+White Kg5 in check by qh4 and nf7
+Black kb4 in check by Rd4 and Qe7
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 2, wProms = 5
+bTot = 13, bPawns = 0, bProms = 5
+pieceCnts = [1,1,5,3,3,1,2,3,2,5]
+. R n . R . . Q
+. N . r R P . .
+n N n b . P . .
+. . R . B . . B
+. . b N . . . .
+n R . k . . . n
+. q . . . . . r
+K . q B . . . r
+White Ka1 in check by qb2 and qc1
+Black kd3 in check by Rb3
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 1, wProms = 6
+bTot = 13, bPawns = 2, bProms = 3
+pieceCnts = [1,1,3,4,5,1,2,3,2,3]
+. . . . . . . .
+. . n . . . q .
+. . . B P k b .
+. K . . n N . r
+Q b . . . B p .
+. . . . . r . B
+R R r N . p B .
+. N n N q . R N
+wpx = 8-1-6 = 1    maxuwp = 3+4-6 = 1
+bpx = 8-2-3 = 3    maxubp = 1+4-3 = 2
+minopp = 1-1 = 2-2 = 0
+White Kb5 in check by nc7
+Black kf6 not in check
+Legal with white to move?!
+
+wTot = 12, wPawns = 1, wProms = 3
+bTot = 16, bPawns = 1, bProms = 7
+pieceCnts = [1,1,3,3,3,1,2,4,5,3]
+. k b b . . . r
+. r p P . . . N
+q . n . . . K B
+Q N R . B n . .
+n . b r . . . .
+r . N . . . . .
+B . b . . b . .
+q R . . . R . .
+wpx = 8-1-3 = 4    maxuwp = 0+4-3 = 1
+bpx = 8-1-7 = 0    maxubp = 4+4-7 = 1
+minopp = 1-1 = 1-1 = 0
+White Kg6 not in check
+Black kb8 not in check
+Legal?!
+
+wTot = 16, wPawns = 3, wProms = 5
+bTot = 12, bPawns = 2, bProms = 3
+pieceCnts = [1,2,2,3,5,1,2,1,4,2]
+. . B . . . . .
+. . . b b . p .
+Q p N . P . . r
+Q . P . . . P .
+. b N . B n . q
+. . N b n . N .
+k K . . R q . .
+R N . B . . . .
+White Kb2 in check by ka2
+Black ka2 in check by Kb2 and Ra1 and Qa5 and Nc3
+Illegal due to adjacent kings
+
+wTot = 16, wPawns = 4, wProms = 4
+bTot = 12, bPawns = 1, bProms = 3
+pieceCnts = [1,1,3,3,4,1,4,2,2,2]
+. B R . q . . K
+. . . . N P p .
+b . . N n k . q
+. . r N . . . q
+B q . B . . . b
+. . . . . R P r
+P P N . . . R Q
+. . . . . . . n
+White Kh8 in check by qe8 and qh6
+Black kf6 in check by Nd5 and Bd4 and Rf3
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 5, wProms = 2
+bTot = 14, bPawns = 1, bProms = 5
+pieceCnts = [1,2,1,3,2,1,3,4,2,3]
+r . . b . . . r
+. k . . . Q n .
+. . . n . . . P
+r P . B B . p n
+. r P B . . P .
+b . . . . . P q
+. . R . . N . Q
+q . . K q . N .
+White Kd1 in check by qe1 and qa1
+Black kb7 in check by Bd5 and Qf7
+Illegal due to both kings in check
+
+wTot = 13, wPawns = 1, wProms = 4
+bTot = 15, bPawns = 2, bProms = 5
+pieceCnts = [1,1,4,3,3,1,3,4,3,2]
+b . . R . . . B
+. K . k R p . .
+. n . . p R . R
+. b . b . . . .
+N q r B r . B .
+P . N r . . q q
+. . . . . . . .
+. Q . n N . r .
+White Kb7 in check by ba8 and bd5
+Black kd7 in check by Rd8 and Re7
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 2, wProms = 4
+bTot = 13, bPawns = 2, bProms = 4
+pieceCnts = [1,3,4,2,2,1,2,3,4,1]
+. . . . K . . .
+B . . b R R . .
+p . P n . R Q .
+q Q b P . b . q
+r . . . . Q . .
+. . . . . . B .
+. r R p . . N b
+. . . k N . r .
+White Ke8 in check by bd7 and nd6
+Black kd1 not in check
+Illegal due to impossible double check on king
+
+wTot = 13, wPawns = 3, wProms = 2
+bTot = 15, bPawns = 1, bProms = 6
+pieceCnts = [1,2,2,2,3,1,5,2,3,3]
+. . . B . . . q
+. R P p . . . .
+N R . P . . B .
+N . q . N P n .
+n . Q r . . q .
+. k b . . . . .
+b . . b . . . q
+K q . . r n Q .
+White Ka1 in check by bc3 and qb1
+Black kb3 in check by Na5 and Rb6 and Qc4
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 1, wProms = 6
+bTot = 13, bPawns = 2, bProms = 3
+pieceCnts = [1,4,3,3,3,1,2,3,3,2]
+. . R Q N . . Q
+. p . n b B . n
+. . N r . R . q
+Q B . . . Q . P
+r . . . . . K .
+. B . r . p . b
+. . R . b N . .
+. q . k . . . .
+White Kg4 in check by bh3 and ra3
+Black kd1 in check by Nf2
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 2, wProms = 4
+bTot = 13, bPawns = 2, bProms = 4
+pieceCnts = [1,1,6,2,2,1,0,3,4,3]
+. . . R . b . .
+. . B . . . . .
+. R . n . b . R
+. p N . K k P .
+Q R B . r . N .
+r . r b n R n R
+. . p . . . P .
+. . . . b . . .
+White Ke5 in check by kf5
+Black kf5 in check by Ke5
+Illegal due to adjacent kings
+
+wTot = 12, wPawns = 0, wProms = 4
+bTot = 15, bPawns = 1, bProms = 7
+pieceCnts = [1,2,2,5,2,1,3,3,1,6]
+n . B k n . n .
+Q . . . . p . B
+r n q n N . r .
+. . Q . . . . .
+r . . . . . . .
+N . . . B R n K
+. . . q B . . R
+B . . b . . . q
+wpx = 8-0-4 = 4    maxuwp = 0+5-4 = 1
+bpx = 8-1-7 = 0    maxubp = 4+5-7 = 2
+minopp = 0-1 = 1-2 = -1
+White Kh3 not in check
+Black kd8 in check by Ne6
+Legal with black to move?!
+
+wTot = 14, wPawns = 0, wProms = 6
+bTot = 14, bPawns = 0, bProms = 6
+pieceCnts = [1,1,2,4,6,1,5,3,2,3]
+q B . N . R N .
+. . B r k . . .
+. . . . . q . r
+. . b . . B N .
+. n N N . K . b
+. q . . . R Q q
+n N . . . . B .
+. r . . . . n q
+wpx = 8-0-6 = 2    maxuwp = 2+4-6 = 0
+bpx = 8-0-6 = 2    maxubp = 2+4-6 = 0
+minopp = 0-0 = 0-0 = 0
+White Kf4 not in check
+Black ke7 in check by Ng8
+Legal with black to move?!
+
+wTot = 15, wPawns = 2, wProms = 5
+bTot = 13, bPawns = 0, bProms = 5
+pieceCnts = [1,1,4,3,4,1,2,5,3,2]
+. . . . . N . .
+n . . . . Q r r
+R . b . K . k .
+. r r . b N . .
+. N . q R B P .
+. P . q . B . .
+B . . R R . . .
+. . b r . N n .
+White Ke6 not in check
+Black kg6 in check by Qf7 and Nf8
+Illegal due to impossible double check on king
+
+wTot = 13, wPawns = 1, wProms = 4
+bTot = 14, bPawns = 3, bProms = 3
+pieceCnts = [1,3,4,2,2,1,2,4,2,2]
+. . . Q b . . B
+. . . R p . r .
+P . B N . . . .
+. . . n r . . Q
+. . . k . . N .
+R . r . . . p R
+. p . . . . . r
+q Q q K b R . n
+wpx = 8-1-4 = 3    maxuwp = 2+5-4 = 3
+bpx = 8-3-3 = 2    maxubp = 3+5-3 = 5
+minopp = 1-3 = 3-5 = -2
+White Kd1 in check by qc1 and Nf8
+Black kd4 not in check
+Legal with white to move?!
+
+wTot = 16, wPawns = 1, wProms = 7
+bTot = 12, bPawns = 1, bProms = 3
+pieceCnts = [1,3,4,4,3,1,2,2,2,4]
+. n K . . . . k
+. B . Q . n R .
+. . . . . . . .
+B Q . B N B p .
+. . P r b . . q
+. N N n R . . q
+n b r . . . . .
+. R Q . R . . .
+wpx = 8-1-7 = 0    maxuwp = 4+4-7 = 1
+bpx = 8-1-3 = 4    maxubp = 0+4-3 = 1
+minopp = 1-1 = 1-1 = 0
+White Kc8 not in check
+Black kh8 not in check
+Legal?!
+
+wTot = 16, wPawns = 2, wProms = 6
+bTot = 12, bPawns = 1, bProms = 3
+pieceCnts = [1,2,4,2,5,1,1,5,2,2]
+n N . R r . . B
+. . . r . R . Q
+. . . r . . . .
+N p . K . . . r
+. . b . . Q N P
+q . n r B P . .
+k . . R . . N .
+. N . R b . . .
+White Kd5 in check by rd6 and bc4 and nc3
+Black ka2 in check by Rd2
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 0, wProms = 6
+bTot = 14, bPawns = 2, bProms = 4
+pieceCnts = [1,2,5,2,4,1,1,2,5,3]
+n R . b . . Q R
+B . . N . . . .
+R . r b . N . Q
+n q . K . . . b
+. R B b . . . p
+. . . . . N b .
+n k p . N r . .
+. . . R . . . .
+wpx = 8-0-6 = 2    maxuwp = 2+4-6 = 0
+bpx = 8-2-4 = 2    maxubp = 2+4-4 = 2
+minopp = 0-0 = 2-2 = 0
+White Kd5 in check by qb5
+Black kb2 in check by Rb4
+Illegal due to both kings in check
+
+wTot = 12, wPawns = 3, wProms = 2
+bTot = 16, bPawns = 3, bProms = 5
+pieceCnts = [1,3,1,2,2,1,2,3,4,3]
+r n . q . . n .
+B . . Q . . . p
+. k . . . . . P
+. p b K . R . .
+P . Q . r b . .
+b . . b r P . p
+. . N . . . q .
+wpx = 8-3-2 = 3    maxuwp = 0+4-2 = 2
+bpx = 8-3-5 = 0    maxubp = 3+4-5 = 2
+minopp = 3-2 = 2-2 = 1
+White Kd4 not in check
+Black kb5 in check by Ba6
+Illegal due to doubled h pawn requiring extra capture
+
+wTot = 15, wPawns = 2, wProms = 5
+bTot = 14, bPawns = 3, bProms = 3
+pieceCnts = [1,2,3,4,3,1,1,3,3,3]
+. . . B . . . .
+r . . N p Q . R
+r K . p n R . .
+. . p n . r k .
+Q B . . P . q .
+. . P . R . b .
+. b . . B b N .
+N . B . . . . n
+White Kb6 in check by ra6 and nd5
+Black kg5 not in check
+Illegal due to impossible double check on king
+
+wTot = 13, wPawns = 1, wProms = 4
+bTot = 15, bPawns = 1, bProms = 6
+pieceCnts = [1,1,4,4,2,1,2,6,3,2]
+. R N B . q r .
+. . . . . . . .
+q . . r . R r .
+R n K B . n . .
+. r . . . B P .
+b Q k . b N . p
+. . r . B . r .
+. . . . b . R .
+White Kc5 in check by be3
+Black kc3 in check by Qb3
+Illegal due to both kings in check
+
+wTot = 16, wPawns = 1, wProms = 7
+bTot = 12, bPawns = 2, bProms = 2
+pieceCnts = [1,5,2,4,3,1,2,2,3,2]
+. . . b Q r k .
+. . Q B B R . .
+. b p . . . . .
+q . K . B . N .
+. p B . n . . .
+. r . R N Q Q .
+. N q . n . . P
+. Q b . . . . .
+White Kc5 in check by bb6 and qa6 and ne4
+Black kg8 not in check
+Illegal due to impossible double check on king
+
+wTot = 13, wPawns = 1, wProms = 5
+bTot = 14, bPawns = 1, bProms = 6
+pieceCnts = [1,2,5,3,1,1,2,6,1,3]
+. . r . . R . q
+r . . R . . n r
+. . . . P . r .
+r R . q p . . .
+. . . . B . n b
+. . K n . R Q B
+Q . . . B . r .
+N . R . k . . .
+White Kc3 in check by rc8
+Black ke1 in check by rc1 and Qg3
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 0, wProms = 7
+bTot = 13, bPawns = 2, bProms = 3
+pieceCnts = [1,3,3,2,6,1,2,2,3,3]
+N . B N R r N .
+r R . . K . . .
+N . . . . . k .
+. p Q p b . . n
+. . . . b q Q .
+Q . N . . R . n
+. B . . N . . .
+n . q . . . . b
+wpx = 8-0-7 = 1    maxuwp = 3+4-7 = 0
+bpx = 8-2-3 = 3    maxubp = 1+4-3 = 2
+minopp = 0-0 = 2-2 = 0
+White Ke7 not in check
+Black kg6 in check by Qg4
+Legal with black to move?!
+
+wTot = 13, wPawns = 1, wProms = 4
+bTot = 15, bPawns = 0, bProms = 7
+pieceCnts = [1,1,4,3,3,1,3,3,5,3]
+. . . . . B . N
+. . . q . b b q
+. . . K k . n .
+b . . . B P N .
+. . b R . . . n
+r . R R . . . r
+. . n Q . R b .
+r q . B . . N .
+White Kd6 in check by ke6
+Black ke6 in check by Kd6
+Illegal due to adjacent kings
+
+wTot = 12, wPawns = 0, wProms = 4
+bTot = 16, bPawns = 3, bProms = 5
+pieceCnts = [1,3,3,2,3,1,3,3,4,2]
+. q . . Q . N b
+b r . . . q . p
+Q . q n . . . .
+R . . . b . p .
+. K . N B . b .
+B . r N R . . .
+. . p . . n . .
+R . . Q . r . k
+White Kb4 in check by rb7
+Black kh1 in check by Be4
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 3, wProms = 3
+bTot = 13, bPawns = 2, bProms = 4
+pieceCnts = [1,2,3,3,2,1,4,2,1,3]
+. B n . B q . R
+n R . . Q k . .
+P p . R r . q .
+. . . . . q . .
+. . n q . B . .
+. . . P . r . P
+N . . N b . p K
+. . . . Q . . .
+White Kh2 not in check
+Black kf7 in check by Be8 and Qe7
+Illegal due to impossible double check on king
+
+wTot = 13, wPawns = 2, wProms = 3
+bTot = 15, bPawns = 1, bProms = 7
+pieceCnts = [1,3,2,2,3,1,4,6,1,2]
+. . . K . . . .
+. R . . . . r .
+. r R . q . . B
+. p P Q r . r .
+q q . Q . n . B
+N P . N . . . k
+. r . . N b . q
+. . . . . n r Q
+wpx = 8-2-3 = 3    maxuwp = 0+4-3 = 1
+bpx = 8-1-7 = 0    maxubp = 3+4-7 = 0
+minopp = 2-1 = 1-0 = 1
+White Kd8 not in check
+Black kh3 not in check
+Illegal due to white same colored bishops requiring extra promotion
+
+wTot = 14, wPawns = 4, wProms = 3
+bTot = 14, bPawns = 2, bProms = 4
+pieceCnts = [1,2,1,2,4,1,2,4,2,3]
+. . q . . . . N
+K b P n . . Q N
+. k p . Q . . B
+. . r n p R . P
+q . B . . . N b
+n P P . . . . .
+. . r . r . . .
+. . . r . N . .
+White Ka7 in check by kb6
+Black kb6 in check by Ka7
+Illegal due to adjacent kings
+
+wTot = 14, wPawns = 0, wProms = 6
+bTot = 13, bPawns = 0, bProms = 6
+pieceCnts = [1,6,3,2,2,1,3,2,6,1]
+b . . . . K . Q
+. R . . . b Q Q
+q Q . b . . q .
+Q R Q . b . r .
+. . b . B . . .
+. . . . N . . .
+. . N r B . k .
+. . b n . R q .
+White Kf8 in check by bd6
+Black kg2 in check by Ne3 and Be4
+Illegal due to both kings in check
+
+wTot = 13, wPawns = 0, wProms = 5
+bTot = 15, bPawns = 3, bProms = 4
+pieceCnts = [1,1,5,4,2,1,1,2,6,2]
+. . r . . . . .
+p . . . R . . q
+. . Q B . . K B
+. b b . . B k b
+. . p . n N R .
+. r B . . . b n
+N . . b . . p R
+. b . . R . . R
+White Kg6 in check by kg5
+Black kg5 in check by Kg6
+Illegal due to adjacent kings
+
+wTot = 12, wPawns = 2, wProms = 2
+bTot = 16, bPawns = 1, bProms = 7
+pieceCnts = [1,1,3,3,2,1,3,3,3,5]
+. . . . q r . r
+B . n . . b k q
+. . . . p . R .
+. b . . . Q . .
+. B b n B R n .
+P . . n r K . n
+. . . . P . . .
+. N . N . q . R
+White Kf3 in check by re3 and qf1 and nd4
+Black kg7 in check by Rg6
+Illegal due to both kings in check
+
+wTot = 16, wPawns = 2, wProms = 6
+bTot = 12, bPawns = 1, bProms = 3
+pieceCnts = [1,2,2,6,3,1,1,3,4,2]
+. . Q . n . . .
+k . . . . P B p
+. . B b . . . B
+N n . . q Q . .
+B b b B . P r .
+. . . . . . R b
+. K . N R N . .
+r B r . . . . .
+wpx = 8-2-6 = 0    maxuwp = 4+4-6 = 2
+bpx = 8-1-3 = 4    maxubp = 0+4-3 = 1
+minopp = 2-2 = 1-1 = 0
+White Kb2 not in check
+Black ka7 in check by Bd4
+Legal with black to move?!
+
+wTot = 14, wPawns = 3, wProms = 4
+bTot = 13, bPawns = 2, bProms = 4
+pieceCnts = [1,4,2,1,3,1,3,3,1,3]
+N . . . . . . .
+Q p . N n . P n
+q . . . . . Q .
+r . k P r q . B
+. P R p n . . .
+. . N . . Q . .
+. . . Q . . . R
+K b q . r . . .
+White Ka1 in check by ra5
+Black kc5 in check by Qa7 and Nd7 and Pb4 and Rc4
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 3, wProms = 4
+bTot = 13, bPawns = 3, bProms = 2
+pieceCnts = [1,2,3,2,4,1,1,2,2,4]
+n . . n Q N . .
+p K B . . . P N
+. . p . p . . .
+. B r P q b k r
+. . Q N . . . .
+. n . R . P . .
+N . . . . . b .
+. . . . . n R R
+White Kb7 in check by nd8
+Black kg5 in check by Nh7
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 0, wProms = 7
+bTot = 13, bPawns = 4, bProms = 2
+pieceCnts = [1,4,1,6,2,1,0,3,2,3]
+n B K . b . B .
+N p Q . B . B .
+. b . . p . . p
+. . . . . r . .
+. Q . Q r . . .
+n B n . . . R .
+. Q . . k . p .
+r . N . . . B .
+wpx = 8-0-7 = 1    maxuwp = 2+5-7 = 0
+bpx = 8-4-2 = 2    maxubp = 1+5-2 = 4
+minopp = 0-0 = 4-4 = 0
+White Kc8 not in check
+Black ke2 in check by Nc1 and Qb2
+Illegal due to impossible double check on king
+
+wTot = 14, wPawns = 2, wProms = 5
+bTot = 13, bPawns = 0, bProms = 5
+pieceCnts = [1,2,4,1,4,1,2,2,6,2]
+. n . b . B . q
+. k . . R b b b
+n . . . . . P .
+. b . . . Q N .
+. . . . N . . b
+. R . . R . r .
+Q . . . . . r P
+q N . K R . . N
+wpx = 8-2-5 = 1    maxuwp = 3+5-5 = 3
+bpx = 8-0-5 = 3    maxubp = 1+5-5 = 1
+minopp = 2-3 = 0-1 = -1
+White Kd1 not in check
+Black kb7 in check by Re7
+Legal with black to move?!
+
+wTot = 14, wPawns = 5, wProms = 2
+bTot = 14, bPawns = 3, bProms = 3
+pieceCnts = [1,0,2,2,4,1,3,2,3,2]
+. N . . . N . k
+. . P q . b p R
+p . N . . . p .
+. . b q . . . .
+. r n . . P P .
+. . . R N B r P
+. P B . . . q .
+n . . . . b . K
+White Kh1 in check by qg2
+Black kh8 in check by Rh7
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 2, wProms = 6
+bTot = 12, bPawns = 2, bProms = 3
+pieceCnts = [1,4,1,3,4,1,0,4,2,3]
+Q B r . . . n .
+r . . b . N . n
+. k . Q . N . r
+. P . Q P p Q .
+K . N . . . B .
+. . n R . . . .
+. N . r b . p .
+. B . . . . . .
+White Ka4 in check by nc3 and ra7
+Black kb6 in check by Qd6 and Nc4
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 4, wProms = 3
+bTot = 13, bPawns = 2, bProms = 3
+pieceCnts = [1,1,3,4,2,1,2,3,3,2]
+. . b . . . r .
+. N . . r . . .
+b . . . B . P B
+p K N . . . . n
+R p P . P . . R
+. B . q . k . .
+R . n r . q Q P
+B . . . . b . .
+White Kb5 in check by ba6
+Black kf3 in check by Qg2
+Illegal due to both kings in check
+
+wTot = 13, wPawns = 0, wProms = 5
+bTot = 15, bPawns = 2, bProms = 5
+pieceCnts = [1,4,3,2,3,1,3,4,3,2]
+r R . Q b . . .
+. q . K . q . b
+. . . n . r . p
+B R . . n . Q .
+Q . Q . b . . .
+. . . r p . B .
+. r . k . . N .
+. . N R N . . q
+White Kd7 in check by qb7 and be8 and ne5 and qf7
+Black kd2 in check by Rd1 and Ba5
+Illegal due to both kings in check
+
+wTot = 16, wPawns = 2, wProms = 6
+bTot = 12, bPawns = 1, bProms = 3
+pieceCnts = [1,4,2,3,4,1,3,2,2,3]
+n . . B B . . Q
+Q . . N R . . n
+q . . . . Q . q
+. R r . b . . k
+. . . . B P . N
+q N . b N . n .
+. . P . . . . p
+Q K . r . . . .
+White Kb1 in check by rd1
+Black kh5 in check by Be8
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 5, wProms = 2
+bTot = 13, bPawns = 2, bProms = 4
+pieceCnts = [1,1,3,3,1,1,3,2,4,1]
+b . . . r q . .
+b . . . . P r .
+B . p . B R . .
+b . . R . b q .
+. . . . P P . P
+. . . B N K . .
+R . . . p P n Q
+. . k . q . . .
+wpx = 8-5-2 = 1    maxuwp = 2+5-2 = 5
+bpx = 8-2-4 = 2    maxubp = 1+5-4 = 2
+minopp = 5-5 = 2-2 = 0
+White Kf3 not in check
+Black kc1 not in check
+Illegal due to white same colored bishops requiring extra promotion
+
+wTot = 11, wPawns = 1, wProms = 4
+bTot = 16, bPawns = 4, bProms = 4
+pieceCnts = [1,4,0,2,3,1,3,3,2,3]
+. b . B . r . N
+. . r . Q . p .
+. p . Q . K q .
+. N . p . . . n
+q k . . n Q . .
+. q N . Q . r P
+b . . . p . . n
+. . . . . . . B
+White Kf6 in check by pg7 and rf8 and nh5 and ne4
+Black kb4 in check by Qd6
+Illegal due to both kings in check
+
+wTot = 13, wPawns = 0, wProms = 6
+bTot = 14, bPawns = 3, bProms = 4
+pieceCnts = [1,0,4,5,3,1,4,1,2,3]
+. . N k n . q .
+N . . . . B q .
+. . . . . . n .
+B . R . . . R .
+. p . r . R . .
+. p . . . b R .
+p B B b N . . B
+q q . . n . K .
+wpx = 8-0-6 = 2    maxuwp = 1+5-6 = 0
+bpx = 8-3-4 = 1    maxubp = 2+5-4 = 3
+minopp = 0-0 = 3-3 = 0
+White Kg1 not in check
+Black kd8 in check by Ba5
+Illegal due to 3 black pawns on and b files?!
+
+wTot = 14, wPawns = 1, wProms = 5
+bTot = 14, bPawns = 0, bProms = 6
+pieceCnts = [1,3,3,4,2,1,1,6,4,2]
+Q . B b . . n .
+b r . n Q . . .
+R . N . r . . r
+. N . B . b . R
+. k K R B . . .
+. . r . . . . .
+B . . . q P r Q
+. b . . . . r .
+White Kc4 in check by kb4
+Black kb4 in check by Kc4
+Illegal due to adjacent kings
+
+wTot = 13, wPawns = 2, wProms = 3
+bTot = 15, bPawns = 3, bProms = 4
+pieceCnts = [1,3,2,3,2,1,2,2,4,3]
+Q . q B R . . n
+n b R . . . q .
+b . . . . P P .
+p . . . . k b Q
+. . . . . . . p
+. K . p . . . .
+. b . . n N . Q
+r . N B B r . .
+wpx = 8-2-3 = 3    maxuwp = 1+4-3 = 2
+bpx = 8-3-4 = 1    maxubp = 3+4-4 = 3
+minopp = 2-2 = 3-3 = 0
+White Kb3 not in check
+Black kf5 not in check
+Legal?!
+
+wTot = 13, wPawns = 1, wProms = 4
+bTot = 15, bPawns = 0, bProms = 7
+pieceCnts = [1,5,2,2,2,1,2,5,2,5]
+n . . . . . . .
+K . . . . . Q .
+r . R R B . n b
+r n . r . . P k
+q . n . N . . .
+. r Q . . Q . r
+. B . . n . Q .
+b Q . . N . . q
+White Ka7 in check by ra6 and nb5
+Black kh5 in check by Qf3
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 3, wProms = 4
+bTot = 13, bPawns = 0, bProms = 5
+pieceCnts = [1,3,2,2,4,1,3,3,2,4]
+Q . r . . N K .
+. . . q n . b .
+N . . P n . b .
+P r . . P R N q
+Q . . q . . R .
+. . . . . N . .
+. B . . n k B Q
+. . . n r . . .
+wpx = 8-3-4 = 1    maxuwp = 3+4-4 = 3
+bpx = 8-0-5 = 3    maxubp = 1+4-5 = 0
+minopp = 3-3 = 0-0 = 0
+White Kg8 in check by ne7
+Black kf2 not in check
+Legal with white to move?!
+
+wTot = 13, wPawns = 3, wProms = 2
+bTot = 15, bPawns = 3, bProms = 5
+pieceCnts = [1,2,3,2,2,1,3,1,3,4]
+. q r q n R . .
+b P p . . . n b
+n . R B . q N .
+. . P Q k P . .
+. . . N . p . .
+. . . K B . . n
+p . . . . b . R
+. . . . . . Q .
+White Kd3 not in check
+Black ke5 in check by Qd5 and Bd6 and Ng6
+Illegal due to impossible double check on king
+
+wTot = 12, wPawns = 3, wProms = 1
+bTot = 16, bPawns = 3, bProms = 5
+pieceCnts = [1,1,2,3,2,1,2,4,4,2]
+N . . . q r . .
+. . . N . . . .
+. . B . K P p P
+R k . P . . . q
+b r Q . . . r b
+p B . n r . . .
+b . . . . n B p
+. . . . . b R .
+White Ke6 in check by qe8 and re3
+Black kb5 in check by Ra5 and Qc4 and Bc6
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 2, wProms = 5
+bTot = 13, bPawns = 1, bProms = 4
+pieceCnts = [1,1,2,2,7,1,2,2,5,2]
+R . . N . b . .
+b . . N b . q .
+. . B q . . . .
+. . N p k Q b .
+R . r N N N . .
+r b . . P . n .
+K P . . . . . N
+. n B . . . . .
+White Ka2 in check by ra3 and bb3
+Black ke5 in check by Qe5 and Nd7
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 3, wProms = 3
+bTot = 15, bPawns = 4, bProms = 3
+pieceCnts = [1,3,2,2,3,1,2,2,4,2]
+. r . . . n . b
+. . p b . r . p
+. . k R q b p .
+N . . . . Q K P
+. . P . b . P .
+. . N . B . . .
+n . . . . R q p
+. Q N Q . . B .
+White Kg5 in check by bf6
+Black kc6 in check by Rd6 and Na5
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 2, wProms = 4
+bTot = 14, bPawns = 2, bProms = 4
+pieceCnts = [1,1,3,4,3,1,1,2,3,5]
+R k B . . . . .
+. K q . P N . p
+. n . Q . n . .
+. . r . . n . .
+. . b N b . p .
+. n . . . . . P
+b B . . n B . .
+N r . R . B . R
+White Kb7 in check by kb8
+Black kb8 in check by Kb7
+Illegal due to adjacent kings
+
+wTot = 14, wPawns = 3, wProms = 3
+bTot = 15, bPawns = 3, bProms = 4
+pieceCnts = [1,2,3,3,2,1,3,3,2,3]
+q . . b q . N Q
+p . . B . . . B
+. . . . p . n .
+. P n R P q . Q
+. p K N . . k n
+. . . . . . . .
+r P r . b R . B
+. . . R . r . .
+White Kc4 in check by be2
+Black kg4 in check by Qh5
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 1, wProms = 6
+bTot = 13, bPawns = 0, bProms = 5
+pieceCnts = [1,5,3,3,2,1,1,4,3,4]
+. . . Q . . . .
+. Q . . Q . . R
+. . . . r . . .
+. . B k b n K .
+r . . . n . N .
+B . . . b n b R
+. r P B q . . R
+r Q n N . Q . .
+White Kg5 in check by ne4 and nf3
+Black kd5 in check by Qb7 and Qd8
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 1, wProms = 5
+bTot = 14, bPawns = 1, bProms = 5
+pieceCnts = [1,3,2,4,3,1,1,5,3,3]
+. Q . . B . Q B
+K r b b . . R B
+. . . . . . b .
+P n . . . N . n
+r . . . . . . N
+. r r N . r k .
+. . p B R . . .
+. . Q . q . . n
+White Ka7 in check by rb7 and nb5
+Black kg3 in check by Nf5
+Illegal due to both kings in check
+
+wTot = 11, wPawns = 3, wProms = 2
+bTot = 16, bPawns = 1, bProms = 7
+pieceCnts = [1,3,1,1,2,1,3,4,3,4]
+Q . Q q . . K .
+q . n . P . . .
+. P b . n . . .
+. . . . . N . .
+P . b B r . . .
+. . Q . q . . N
+k r n . p . R .
+. . . r b n . r
+wpx = 8-3-2 = 3    maxuwp = 0+5-2 = 3
+bpx = 8-1-7 = 0    maxubp = 3+5-7 = 1
+minopp = 3-3 = 1-1 = 0
+White Kg8 in check by qd8
+Black ka2 not in check
+Illegal due to w made no captures while black needs 3 piece captures to get her pawns around white original a,b,e pawns
+
+wTot = 13, wPawns = 2, wProms = 3
+bTot = 15, bPawns = 3, bProms = 5
+pieceCnts = [1,1,3,4,2,1,3,5,2,1]
+. r . n . . N .
+. k . . K B q .
+. . . r b q p N
+. R . . p B b .
+. r . q R . . .
+P . B Q r . R .
+. p . . . B P r
+. . . . . . . .
+White Ke7 in check by qf6
+Black kb7 in check by Rb5
+Illegal due to both kings in check
+
+wTot = 13, wPawns = 1, wProms = 4
+bTot = 15, bPawns = 3, bProms = 4
+pieceCnts = [1,2,4,3,2,1,2,4,3,2]
+r . b b . r . .
+p . N . . b R .
+. p . R . R . .
+. . . . K n n .
+Q q . . . q . .
+B . . B p . r .
+. R . N . . Q P
+. . r B . . k .
+White Ke5 in check by qf4
+Black kg1 in check by Qg2
+Illegal due to both kings in check
+
+wTot = 16, wPawns = 3, wProms = 5
+bTot = 12, bPawns = 1, bProms = 3
+pieceCnts = [1,2,3,5,2,1,2,2,2,4]
+R N . Q N . . .
+P B . R . . P .
+. . P b . B . B
+. B n . . . . R
+. k r . Q . q p
+. . . . b . . n
+. . . q . B n .
+. . n . r K . .
+wpx = 8-3-5 = 0    maxuwp = 4+4-5 = 3
+bpx = 8-1-3 = 4    maxubp = 0+4-3 = 1
+minopp = 3-3 = 1-1 = 0
+White Kf1 in check by re1
+Black kb4 not in check
+Illegal due to black's same colored bishops requiring extra promotion
+
+wTot = 13, wPawns = 0, wProms = 5
+bTot = 15, bPawns = 3, bProms = 4
+pieceCnts = [1,3,4,3,2,1,3,4,2,2]
+. K r B b . R .
+N . B n . R . .
+q . . p . r . .
+B Q . N p . . Q
+. p . . . . . .
+. Q . r k . . q
+. . . . r . . .
+. . . q n R R b
+White Kb8 in check by rc8 and nd7
+Black ke3 in check by Nd5
+Illegal due to both kings in check
+
+wTot = 13, wPawns = 1, wProms = 4
+bTot = 15, bPawns = 2, bProms = 5
+pieceCnts = [1,3,3,3,2,1,3,2,3,4]
+. . . Q q . r B
+. . . . . N . .
+R b N . R . . .
+B . p n . b Q .
+. b . . Q R . K
+. q r p . . P .
+. B . . k . . .
+. n . n n q . .
+wpx = 8-1-4 = 3    maxuwp = 1+4-4 = 1
+bpx = 8-2-5 = 1    maxubp = 3+4-5 = 2
+minopp = 1-1 = 2-2 = 0
+White Kh4 not in check
+Black ke2 in check by Qe5
+Illegal due to white's same colored bishops requiring extra promotion
+
+wTot = 14, wPawns = 2, wProms = 4
+bTot = 13, bPawns = 2, bProms = 4
+pieceCnts = [1,3,2,4,2,1,2,3,1,4]
+. Q . R K . . .
+. P n . r . . .
+B r . . p . . k
+. . n . . . . p
+. . B r P . . N
+. B N n b . B .
+R Q . . . q Q .
+. . . . q . . n
+White Ke8 in check by nc7 and re7
+Black kh6 not in check
+Illegal due to impossible double check on king
+
+wTot = 16, wPawns = 2, wProms = 6
+bTot = 12, bPawns = 0, bProms = 4
+pieceCnts = [1,2,2,6,3,1,1,3,2,5]
+. r Q . . . . .
+. P . . B . N .
+n b . n . . r .
+k R n r . . . .
+. B . q . P . .
+b . . . . . . R
+. n Q B . N B .
+n . . B . N K B
+White Kg1 not in check
+Black ka5 in check by Rb5 and Bb4
+Illegal due to impossible double check on king
+
+wTot = 14, wPawns = 0, wProms = 6
+bTot = 14, bPawns = 1, bProms = 5
+pieceCnts = [1,3,2,4,4,1,3,3,4,2]
+N . . b . N . K
+. . . . R b r .
+R . . . . . Q B
+. . . . . B . n
+q p b . Q q . .
+B B N . . . . .
+Q N . k b . n .
+. . r r . q . .
+wpx = 8-0-6 = 2    maxuwp = 2+4-6 = 0
+bpx = 8-1-5 = 2    maxubp = 2+4-5 = 1
+minopp = 0-0 = 1-1 = 0
+White Kh8 not in check
+Black kd2 not in check
+Legal?!
+
+wTot = 11, wPawns = 0, wProms = 4
+bTot = 15, bPawns = 1, bProms = 6
+pieceCnts = [1,2,4,1,3,1,3,2,4,4]
+B . . k R . . Q
+n . N . . . . .
+. r r . R . . Q
+p . . . n N . R
+n N . . . . . .
+. b q K b . b .
+. q . . q . . .
+. n R . . . . b
+White Kd3 in check by qc3 and qe2 and ne5
+Black kd8 in check by Re8
+Illegal due to both kings in check
+
+wTot = 13, wPawns = 1, wProms = 4
+bTot = 15, bPawns = 4, bProms = 3
+pieceCnts = [1,3,2,3,3,1,2,3,2,3]
+. R . B . B . n
+. k . . . . P .
+. . Q p . . n .
+. . q . . N p .
+. . . b n r Q B
+K r b R N p r .
+. p N . . . . .
+. . . . q Q . .
+White Ka3 in check by rb3 and qc5
+Black kb7 in check by Rb8 and Qc6
+Illegal due to both kings in check
+
+wTot = 12, wPawns = 1, wProms = 3
+bTot = 16, bPawns = 3, bProms = 5
+pieceCnts = [1,2,3,2,3,1,3,2,4,3]
+R . b . . . . Q
+. . . b . K . k
+n . . . N Q . .
+. q N r . b . .
+. P . . . p p .
+. . p N n . B b
+q . . . B . R R
+n q . r . . . .
+wpx = 8-1-3 = 4    maxuwp = 0+4-3 = 1
+bpx = 8-3-5 = 0    maxubp = 4+4-5 = 3
+minopp = 1-1 = 3-3 = 0
+White Kf7 not in check
+Black kh7 in check by Qh8
+Illegal due to black's same colored bishops requiring extra promotion
+
+wTot = 15, wPawns = 1, wProms = 7
+bTot = 12, bPawns = 1, bProms = 3
+pieceCnts = [1,4,2,6,1,1,1,2,4,3]
+. . Q B n r . .
+. b Q . b . b .
+B . . . p . . B
+. . . . . Q . R
+. . r . . . K B
+b P R . Q . B .
+. . . . . N . .
+. k q B n n . .
+White Kg4 in check by rc4
+Black kb1 in check by Qf5
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 2, wProms = 5
+bTot = 13, bPawns = 3, bProms = 2
+pieceCnts = [1,2,3,2,5,1,1,3,2,3]
+. . . . N . . .
+. n . Q . . p r
+. . . . P R . .
+. r k n b N p .
+. N R q . . N .
+n P K . . . . .
+b . p . . Q . B
+B N r . . . R .
+White Kc3 in check by qd4 and nd5
+Black kc5 in check by Rc4
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 0, wProms = 6
+bTot = 14, bPawns = 2, bProms = 4
+pieceCnts = [1,3,4,2,4,1,1,2,3,5]
+b b r . . Q N .
+R . . . B . q .
+. R K N . . r p
+. . . n . . n n
+b R Q Q . . . n
+. R . . . n . .
+. p . . k B . .
+N N . . . . . .
+White Kc6 in check by ba8 and rc8 and ba4
+Black ke2 in check by Qc4
+Illegal due to both kings in check
+
+wTot = 13, wPawns = 1, wProms = 5
+bTot = 14, bPawns = 2, bProms = 5
+pieceCnts = [1,4,1,2,4,1,6,2,2,1]
+. . . N . q Q .
+. . . p . N n q
+. . b N . q p q
+r . . B r Q . .
+. . q q P Q . b
+. . N . . . . k
+. R . K . B Q .
+. . . . . . . .
+White Kd1 in check by qd4
+Black kh2 in check by Qg1 and Qf4
+Illegal due to both kings in check
+
+wTot = 16, wPawns = 2, wProms = 6
+bTot = 12, bPawns = 1, bProms = 3
+pieceCnts = [1,5,4,2,2,1,2,2,3,3]
+q . Q . . . Q .
+. . . R r N . .
+. R . b Q N . Q
+. n . . . Q k R
+r . . P . b . .
+. B P . . . . .
+K . p . R B . n
+n . . . . b q .
+White Ka2 in check by ra4
+Black kg5 in check by Qf5 and Qh6 and Rh5 and Nf7 and Qg8
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 1, wProms = 6
+bTot = 13, bPawns = 0, bProms = 5
+pieceCnts = [1,4,4,3,2,1,1,5,4,2]
+. B r . . n b .
+. . . . r Q b r
+. b . q Q R . .
+. . . . N . . .
+. N r n . b B .
+. . R . . R . Q
+P . B . . R . k
+. . . r . K . Q
+White Kf1 in check by rd1
+Black kh2 in check by Qh1 and Qh3 and Rf2
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 2, wProms = 4
+bTot = 14, bPawns = 1, bProms = 5
+pieceCnts = [1,1,3,2,5,1,2,2,3,5]
+. K . . . . . .
+b . k . N . . r
+p n q n Q . . .
+. N . . . P . .
+B . . . . . . r
+R R . . P B . n
+. N . . . n . N
+R N . b . q b n
+White Kb8 in check by kc7
+Black kc7 in check by Kb8
+Illegal due to adjacent kings
+
+wTot = 14, wPawns = 2, wProms = 4
+bTot = 14, bPawns = 1, bProms = 5
+pieceCnts = [1,1,3,4,3,1,5,2,3,2]
+. . . . . b . .
+. Q . . . . . b
+. k q . . . n .
+. N . . B P . n
+R . B . r r . .
+q p P . N q q q
+. . N B . . . R
+. B R . . . K b
+White Kg1 in check by qg3
+Black kb6 in check by Qb7
+Illegal due to both kings in check
+
+wTot = 15, wPawns = 0, wProms = 8
+bTot = 12, bPawns = 0, bProms = 4
+pieceCnts = [1,1,7,1,5,1,3,2,4,2]
+. R R N . . . .
+R R b . R k . N
+. n . . . q . .
+. . N R . B n .
+R . . . . . . b
+. r . b q . . Q
+. . . . N b . K
+N . r . . q . .
+White Kh2 in check by bc7
+Black kf7 in check by Re7 and Nd8
+Illegal due to both kings in check
+
+wTot = 14, wPawns = 0, wProms = 6
+bTot = 14, bPawns = 4, bProms = 2
+pieceCnts = [1,1,3,3,6,1,1,2,3,3]
+. b N . . . . .
+N B . . . . . .
+q . . . . . . p
+. N n . k . p r
+. r b R . . . R
+Q p N b . p B n
+. . . . N . n K
+B . . N . R . .
+wpx = 8-0-6 = 2    maxuwp = 2+4-6 = 0
+bpx = 8-4-2 = 2    maxubp = 2+4-2 = 4
+minopp = 0-0 = 4-4 = 0
+White Kh2 not in check
+Black ke5 in check by Bg3
+Illegal due to black pawns on f,g,h files not supporting promotions by captures of pawns only
+
+wTot = 13, wPawns = 3, wProms = 2
+bTot = 15, bPawns = 1, bProms = 6
+pieceCnts = [1,1,3,3,2,1,3,2,3,5]
+. . Q r k . . .
+. n n . . b . .
+. N . . r . R P
+. . . . B n n .
+q q . . n p b .
+R . B . . . . .
+. . R . . P P b
+q . K . B . . N
+wpx = 8-3-2 = 3    maxuwp = 1+4-2 = 3
+bpx = 8-1-6 = 1    maxubp = 3+4-6 = 1
+minopp = 3-3 = 1-1 = 0
+White Kc1 in check by qa1
+Black kd8 not in check
+Illegal due to white's same colored bishops requiring extra promotion
+
+wTot = 13, wPawns = 2, wProms = 3
+bTot = 15, bPawns = 0, bProms = 7
+pieceCnts = [1,1,4,3,2,1,5,2,5,2]
+. q Q . R . . .
+R . . . . b . B
+b . k q P . . q
+. . . B r r q .
+B . . . . b . .
+n K . b R q n .
+b . . . . P . .
+. N N . . . . R
+White Kb3 in check by ba2 and qb8
+Black kc6 in check by Qc8 and Ba4 and Bd5
+Illegal due to both kings in check
+
+In total 4 legal with either side to move and 8 legal with one side to move,
+for 8% sample position legality and estimated number of positions ~7E44.
+
+Top reasons for illegality (later ones conditional on absence of earlier ones):
+53x Illegal due to both kings in check
+11x Illegal due to impossible double check on king
+10x Illegal due to adjacent kings
+ 7x Illegal due to same colored bishops requiring extra promotion
+(the above ~80% of illegalities should be automatically recognized, leaving roughly half of remaining positions (half)legal)
+ 1x Illegal because wProms=6 requires missing pawn files to come in 3 adjacent pairs
+ 1x Illegal due to Ba1 trapped by Pb2
+ 1x Illegal due to no white pieces captured to double black c pawns
+ 1x Illegal due to doubled h pawn requiring extra capture
+ 1x Illegal due to 3 black pawns on and b files?!
+ 1x Illegal due to w made no captures while black needs 3 piece captures to get her pawns around white original a,b,e pawns
+ 1x Illegal due to black pawns on f,g,h files not supporting promotions by captures of pawns only

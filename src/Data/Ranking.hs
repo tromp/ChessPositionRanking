@@ -1,6 +1,8 @@
-module Data.Ranking (Ranking(..), multinomialRanking, finiteRanking, sizeRanking, bindR, bindUR, bindRI, bindURI, composeRI, composeURI) where
+module Data.Ranking (Ranking(..), multinomialRanking, finiteRanking, listRanking, sizeRanking, bindR, bindUR, bindRI, bindURI, composeRI, composeURI) where
 
 import Data.Array
+import Data.Maybe
+import Data.List
  
 -- rank and unrank size items to/from 0..size-1
 data Ranking a = Ranking {
@@ -37,6 +39,15 @@ multinomialRanking itemCounts = Ranking size unrank rank where
 -- rank Integers from 0..size-1
 finiteRanking :: Integer -> Ranking Integer
 finiteRanking size = Ranking size id id
+
+-- rank itens from list
+listRanking :: (Eq a, Show a) => [a] -> Ranking a
+listRanking l = Ranking size unrank rank where
+  size = fromIntegral $ length l
+  unrank i = l !! fromIntegral i
+  rank x = case elemIndex x l of
+    Nothing -> error $ show x ++ " not in " ++ show l
+    Just i -> fromIntegral i
 
 -- rank pairs (0,0)..(0,size0-1), (1,0)..(1,size1-1), ... ,(k,0)..(k,sizek-1)
 sizeRanking :: Eq a => [(a, Integer)] -> Ranking (a, Integer)
