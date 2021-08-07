@@ -1,5 +1,5 @@
 {-# LANGUAGE TupleSections #-}
-module CountChess where
+module Main where
 
 import Control.Monad
 import Data.Array

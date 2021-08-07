@@ -1,4 +1,4 @@
-module Chess.Position (Coord, boardCoords, pawnCoords, CastleMap, filterMap, Square, emptySquare, Diagram, emptyDiagram, showDiagram, Position(..), emptyPosition, readFEN, writeFEN, printDiagram) where
+module Chess.Position (Square, boardSquares, pawnSquares, CastleMap, filterMap, Symbol, emptySymbol, Diagram, emptyDiagram, showDiagram, Position(..), emptyPosition, readFEN, writeFEN, printDiagram, Opposing, mkOpps) where
 
 import Data.Maybe
 import Data.Char
@@ -10,14 +10,15 @@ import Data.Bits
  
 -- ccordinate
 -- integer in 0..63 corresponding to a8,b8,...,h8,a7,...,h7,...,a1,...,h1
-type Coord = Int
+type Square = Int
 
 -- common coordinate lists
-boardCoords :: [Coord]
-boardCoords = [0..63]
+boardSquares :: [Square]
+boardSquares = [0..63]
 
-pawnCoords :: [Coord]
-pawnCoords = [8..55]
+-- pawns can only appear on the central 8x6 squares
+pawnSquares :: [Square]
+pawnSquares = [8..55]
 
 -- filter list by bitmap, assuming 64 bit Ints
 filterMap :: Int -> [a] -> [a]
@@ -25,21 +26,21 @@ filterMap 0 _ = []
 filterMap i (x:xs) = let fm = filterMap (i `shiftR` 1) xs in if odd i then x:fm else fm
 
 -- convert bitmap into list of set bit indices
-bitmapCoords :: Int -> [Coord]
-bitmapCoords bm = filterMap bm boardCoords
+bitmapSquares :: Int -> [Square]
+bitmapSquares bm = filterMap bm boardSquares
 
 -- contents of a chess board square
-type Square = Char
+type Symbol = Char
 
 -- display a king queen rook bishop knight as character
-emptySquare = '.'
+emptySymbol = '.'
 
 -- a diagram is just an array of (64) squares
-type Diagram = Array Coord Square
+type Diagram = Array Square Symbol
 
 -- empty diagram
 emptyDiagram :: Diagram
-emptyDiagram = listArray (0, 63) (repeat emptySquare)
+emptyDiagram = listArray (0, 63) (repeat emptySymbol)
 
 -- bitmap with bit 0 black queen(side), 1 black king, 2 white queen, 3 white king
 type CastleMap = Int
@@ -49,7 +50,7 @@ data Position = Position {
   diagram     :: Diagram,
   sideToMove  :: Char,
   castlings   :: CastleMap,
-  enPassant   :: Coord,
+  enPassant   :: Square,
   num0        :: Int,
   num1        :: Int
 } deriving (Eq, Ord, Show)
@@ -57,7 +58,7 @@ data Position = Position {
 -- empty position
 emptyPosition :: Position
 emptyPosition = Position {
-  diagram     = listArray (0, 63) (repeat emptySquare),
+  diagram     = listArray (0, 63) (repeat emptySymbol),
   sideToMove  = 'w',
   castlings   = 0,
   enPassant   = 0,
@@ -72,8 +73,8 @@ showDiagram = concat . map ((++ ['\n']) . intersperse ' ') . chunksOf 8 . elems
 -- run length encode pawns in FEN
 compact :: String -> String
 compact "" = ""
-compact (c:s) = if c==emptySquare then show (1 + length empties) ++ compact rest else c: compact s where
-  (empties, rest) = span (== emptySquare) s
+compact (c:s) = if c==emptySymbol then show (1 + length empties) ++ compact rest else c: compact s where
+  (empties, rest) = span (== emptySymbol) s
 
 -- convert a position to FEN
 writeFEN :: Position -> String
@@ -89,7 +90,7 @@ writeFEN pos = intercalate " " [board, [stm], castles, enpassants, show n0, show
 uncompact :: String -> String
 uncompact "" = ""
 uncompact (c:s) = uc ++ uncompact s where
-  uc = if c=='/' then "" else if isDigit c then replicate (digitToInt c) emptySquare else [c]
+  uc = if c=='/' then "" else if isDigit c then replicate (digitToInt c) emptySymbol else [c]
 
 -- read a FEN
 readFEN :: String -> Position
@@ -109,18 +110,11 @@ readFEN fen = case words fen of
 printDiagram :: Position -> IO ()
 printDiagram = putStrLn . showDiagram . diagram
 
--- research legality
-research :: Position -> String
-research (Position { diagram = diag, sideToMove = stm, castlings = c, enPassant = ep }) = let
-  wtm = stm == 'w'
-  nkSquares = "PQRBNpqrbn"
-  zerocnts = zip nkSquares (repeat 0)
-  cnts = M.fromListWith (+) $ zerocnts ++ zip (elems diag) (repeat 1)
-  nkcnts = map (cnts M.!) nkSquares
-  [wp,wq,wr,wb,wn,bp,bq,br,bb,bn] = nkcnts
-  wproms = sum . map (max 0) $ [wq-1,wr-2,wb-2,wn-2]
-  bproms = sum . map (max 0) $ [bq-1,br-2,bb-2,bn-2]
-  tot = 2 + sum cnts
-  maxuwp = let caps = 32-tot in 8-bp - bproms + caps - wproms
-  minopp = wp - maxuwp
- in "Illegal"
+-- file that contains opposing black and white pawns on given coordinates
+type Opposing = (Square, Square)
+
+-- make list of possible opposings on each file
+mkOpps :: Diagram -> [[Opposing]]
+mkOpps diag = map mkFileOpp [0..7] where
+  mkFileOpp f = [(bp,wp) | (('p',bp):('P',wp):_) <- tails filePawns] where
+    filePawns = [(sq,co) | co <- [8+f,16+f..48+f], let sq = diag!co, toLower sq=='p']
