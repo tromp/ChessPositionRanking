@@ -98,12 +98,21 @@ leaving 53063 + 35584 + 5839 = 94486 positions for manual analysis.
 # References
 
 [1] https://vision.unipv.it/IA1/ProgrammingaComputerforPlayingChess.pdf
-[2] https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards\_Notation
+
+[2] https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation
+
 [3] https://tromp.github.io/go/legal.html
-[4] https://en.wikipedia.org/wiki/Retrograde\_analysis
+
+[4] https://en.wikipedia.org/wiki/Retrograde_analysis
+
 [5] https://www.janko.at/Retros/Masterworks/Part1.htm
+
 [6] https://arxiv.org/abs/2010.09271
+
 [7] http://fragrieu.free.fr/SearchingForSolutions.pdf
-[8] https://www.chessprogramming.org/ICGA\_Journal#19\_3
+
+[8] https://www.chessprogramming.org/ICGA_Journal#19_3
+
 [9] https://github.com/fulldecent/chess-upper-bound-armies
-[10] https://en.wikipedia.org/wiki/Binomial\_proportion\_confidence\_interval#Normal\_approximation\_interval
+
+[10] https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval
