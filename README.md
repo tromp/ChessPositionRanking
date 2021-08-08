@@ -20,7 +20,7 @@ moved being in check, or due to the position being unreachable through a
 series of legal moves. Therefore, we assume the true state-space complexity
 to be close to 1E50''
 
-While these numbers turn out to be many orders of magnitude too large (perhaps due to a programming bug), we will see the reasoning mirrored in our methods of estimating the fraction of legal positions within a larger set that does admit counting.
+While these numbers turn out to be many orders of magnitude too large (perhaps due to a programming bug), we will likewise be estimating the fraction of legal positions within a larger set that does admit counting.
 
 In 1996, Shirish Chinchalkar obtained an upper bound of 1.77894E46 [8].
 A copy of the program that Shirish Chinchalkar developed to compute his upperbound may be found
@@ -41,20 +41,57 @@ The file sortedRnd1kResearchManual contains all 1000 positions together with the
 
 With a 95% confidence level [10], this yields an estimated number of legal positions of
 (5.2% +- 1.96 sqrt(5.2% * 94.8% / 1000)) * N / 1.077, or 4.2e44 +- 1.1e44.
+Note that this is still less than one digit of accuracy.
 
 # Future Work
 
 More accuracy can be obtained by analysing the larger samples testRnd10kResearch, testRnd100kResearch, or testRnd1mResearch, with the last one giving a full 2 digits of accuracy at the 95% confidence level.
 While manual analysis of the 921 potentially legal positions in the 10k sample (which includes the 1k sample) is quite doable, the even larger samples will probably require additional software to aid and/or distribute the analysis effort.
 
-# Bug Bounty
+# Bug Bounties
 
-Since validity of these results hinges on the crucial property that the ranking includes all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable FEN.
+Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a $64 bonus is available for demonstrating that sortedRnd10kResearchManual contains a classification error.
 
 # Interesting observations
 
-The original ranking implementation based on src/Data/Ranking.hs
+The original ranking implementation based on src/Data/Ranking.hs took on the order of 10s per position on top of the startup time of around 30 mins.
+Adding the batched rankings of src/Data/Ranking/Batched.hs resulted in huge speedups where many millions of positions could be generated within an hour.
 
+The entire urposition ranking is composed out of 14 separate ranking functions called
+    sideToMoveRanking
+    caseRanking
+    wArmyStatRanking bArmyStatRanking
+    guardRanking
+    enPassantRanking epOppRanking sandwichRanking
+    opposeRanking pawnRanking castleRanking wArmyRanking bArmyRanking pieceRanking
+where functions on the same row compose like a cartesian product, i.e. independent of each other (but dependent on the choices made in rankings above). The efficiency of the entire ranking is mostly attributable to the large final row.
+
+Treating placement of kings just like that of other pieces hugely simplifies the ranking,
+but allows positions with adjacent kings. Avoiding adjacent kings only improves the upper bound by 10%, which is not worth the complications and resulting slowdowns,
+
+The maximum multiplicity of 2 * 70 = 140 is achieved on positions where 4 pieces but no pawns were captured, and with an en-passant pawn landing between two opponent pawns. For example, unranking 4363356584943110212154534698526026458664867108 yields "r3kb1r/ppp1pp1p/3p4/5PpP/8/8/PPPPP1P1/RNBQKBNR w KQkq g6 99 140".
+
+Most urpositions (72.5%) have 4 captures, which supports up to 12 promotions.
+The next most common capture counts are 5 (20%), 3 (5.7%), 6 (1.9%) and 7 (0.1%).
+
+The number of promotions is much more evenly distributed, with 4 through 12 promotions accounting for
+0.3%, 1.1%, 3.4%, 8.3%, 15.2%, 21.5%, 22.7%, 17.1%, 8.3%, and 2% of random urpositions.
+
+The 1 million sample classifies as
+    $ src/legal < sortedRnd1mFENs | grep "^ " | sort | uniq -c | sort -rn
+    492045  Illegal Both Kings in Check
+    173401  Illegal Side not to move in Check
+    102541  Illegal Adjacent Kings
+    79019  Illegal Bishops Too Monochromatic
+    53063  Single Check
+    35584  No Checks
+    29962  Illegal Triple Check
+    27832  Illegal Double Check
+    5839  Discovered Double Check
+     714  Illegal Double Knight Check
+leaving 53063 + 35584 + 5839 = 94486 positions for manual analysis.
+
+# References
 
 [1] https://vision.unipv.it/IA1/ProgrammingaComputerforPlayingChess.pdf
 [2] https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards\_Notation
@@ -65,4 +102,4 @@ The original ranking implementation based on src/Data/Ranking.hs
 [7] http://fragrieu.free.fr/SearchingForSolutions.pdf
 [8] https://www.chessprogramming.org/ICGA\_Journal#19\_3
 [9] https://github.com/fulldecent/chess-upper-bound-armies
-[10] https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval
+[10] https://en.wikipedia.org/wiki/Binomial\_proportion\_confidence\_interval#Normal\_approximation\_interval
