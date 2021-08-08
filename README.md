@@ -58,12 +58,14 @@ The original ranking implementation based on src/Data/Ranking.hs took on the ord
 Adding the batched rankings of src/Data/Ranking/Batched.hs resulted in huge speedups where many millions of positions could be generated within an hour.
 
 The entire urposition ranking is composed out of 14 separate ranking functions called
+
     sideToMoveRanking
     caseRanking
     wArmyStatRanking bArmyStatRanking
     guardRanking
     enPassantRanking epOppRanking sandwichRanking
     opposeRanking pawnRanking castleRanking wArmyRanking bArmyRanking pieceRanking
+
 where functions on the same row compose like a cartesian product, i.e. independent of each other (but dependent on the choices made in rankings above). The efficiency of the entire ranking is mostly attributable to the large final row.
 
 Treating placement of kings just like that of other pieces hugely simplifies the ranking,
@@ -78,6 +80,7 @@ The number of promotions is much more evenly distributed, with 4 through 12 prom
 0.3%, 1.1%, 3.4%, 8.3%, 15.2%, 21.5%, 22.7%, 17.1%, 8.3%, and 2% of random urpositions.
 
 The 1 million sample classifies as
+
     $ src/legal < sortedRnd1mFENs | grep "^ " | sort | uniq -c | sort -rn
     492045  Illegal Both Kings in Check
     173401  Illegal Side not to move in Check
@@ -89,6 +92,7 @@ The 1 million sample classifies as
     27832  Illegal Double Check
     5839  Discovered Double Check
      714  Illegal Double Knight Check
+
 leaving 53063 + 35584 + 5839 = 94486 positions for manual analysis.
 
 # References
