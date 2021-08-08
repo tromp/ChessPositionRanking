@@ -45,8 +45,7 @@ We then unranked these to obtain 1000 random urpositions (Makefile target testRn
 Manual analysis of the remaining 93 positions found 52 (5.2% of the sample) to be legal.
 The file sortedRnd1kResearchManual contains all 1000 positions together with their legality determination. The 52 legal positions have an average multiplicity of 56/52~1.077, slightly higher than the 1.052 average of all 1000.
 
-With a 95% confidence level [10], this yields an estimated number of legal positions of
-(5.2% +- 1.96 sqrt(5.2% * 94.8% / 1000)) * N / 1.077, or 4.2e44 +- 1.1e44.
+With a 95% confidence level [10], this yields an **estimated number of legal positions of** (5.2% +- 1.96 sqrt(5.2% * 94.8% / 1000)) * N / 1.077, or **4.2e44 +- 1.1e44**.
 Note that this is still less than one digit of accuracy.
 
 # Future Work
