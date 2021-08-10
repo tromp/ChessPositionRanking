@@ -1,9 +1,8 @@
 # Chess Position Ranking
 
 
-![pos1](test1.png) ![pos2](test1.png)
-
-![pos3](test1.png) ![pos2](test1.png)
+| ![pos1](test1.png) | ![pos2](test1.png) |
+| ![pos3](test1.png) | ![pos2](test1.png) |
 
 This Haskell based software suite was written to accurately estimate the number of legal chess positions, already pondered by Claude Shannon in 1950 [1]. A position is legal iff it's reachable from the starting position in a valid game of chess.
 
