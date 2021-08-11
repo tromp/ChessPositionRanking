@@ -1,5 +1,6 @@
 # Chess Position Ranking
 
+| a                  | b                  |
 | ------------------ | ------------------ |
 | ![pos1](test1.png) | ![pos2](test1.png) |
 | ![pos3](test1.png) | ![pos2](test1.png) |
