@@ -1,9 +1,16 @@
 # Chess Position Ranking
 
-| a                  | b                  |
+| This is what | random legal | chess positions | look like |
 | ------------------ | ------------------ |
-| ![pos1](test1.png) | ![pos2](test1.png) |
-| ![pos3](test1.png) | ![pos2](test1.png) |
+| ![pos1](img/legal1.png) | ![pos2](img/legal2.png) | ![pos1](img/legal3.png) | ![pos2](img/legal4.png) |
+| ![pos1](img/legal5.png) | ![pos2](img/legal6.png) | ![pos1](img/legal7.png) | ![pos2](img/legal8.png) |
+| ![pos1](img/legal9.png) | ![pos2](img/legal10.png) | ![pos1](img/legal11.png) | ![pos2](img/legal12.png) |
+| ![pos1](img/legal13.png) | ![pos2](img/legal14.png) | ![pos1](img/legal15.png) | ![pos2](img/legal16.png) |
+| ![pos1](img/legal17.png) | ![pos2](img/legal18.png) | ![pos1](img/legal19.png) | ![pos2](img/legal20.png) |
+| ![pos1](img/legal21.png) | ![pos2](img/legal22.png) | ![pos1](img/legal23.png) | ![pos2](img/legal24.png) |
+| ![pos1](img/legal25.png) | ![pos2](img/legal26.png) | ![pos1](img/legal27.png) | ![pos2](img/legal28.png) |
+| ![pos1](img/legal29.png) | ![pos2](img/legal30.png) | ![pos1](img/legal31.png) | ![pos2](img/legal32.png) |
+| ![pos1](img/legal33.png) | ![pos2](img/legal34.png) | ![pos1](img/legal35.png) | ![pos2](img/legal36.png) |
 
 This Haskell based software suite was written to accurately estimate the number of legal chess positions, already pondered by Claude Shannon in 1950 [1]. A position is legal iff it's reachable from the starting position in a valid game of chess.
 
