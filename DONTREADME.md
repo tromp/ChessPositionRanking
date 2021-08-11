@@ -1,7 +1,7 @@
 # Chess Position Ranking
 
-| This is what | random legal | chess positions | look like |
-| ------------------ | ------------------ |
+| This is what       | random legal       | chess positions    | look like          |
+| ------------------ | ------------------ | ------------------ | ------------------ |
 | ![pos1](img/legal1.png) | ![pos2](img/legal2.png) | ![pos1](img/legal3.png) | ![pos2](img/legal4.png) |
 | ![pos1](img/legal5.png) | ![pos2](img/legal6.png) | ![pos1](img/legal7.png) | ![pos2](img/legal8.png) |
 | ![pos1](img/legal9.png) | ![pos2](img/legal10.png) | ![pos1](img/legal11.png) | ![pos2](img/legal12.png) |
