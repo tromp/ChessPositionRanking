@@ -11,6 +11,10 @@
 | ![pos1](img/legal25.png) | ![pos2](img/legal26.png) | ![pos1](img/legal27.png) | ![pos2](img/legal28.png) |
 | ![pos1](img/legal29.png) | ![pos2](img/legal30.png) | ![pos1](img/legal31.png) | ![pos2](img/legal32.png) |
 | ![pos1](img/legal33.png) | ![pos2](img/legal34.png) | ![pos1](img/legal35.png) | ![pos2](img/legal36.png) |
+| ![pos1](img/legal37.png) | ![pos2](img/legal38.png) | ![pos1](img/legal39.png) | ![pos2](img/legal40.png) |
+| ![pos1](img/legal41.png) | ![pos2](img/legal42.png) | ![pos1](img/legal43.png) | ![pos2](img/legal44.png) |
+| ![pos1](img/legal45.png) | ![pos2](img/legal46.png) | ![pos1](img/legal47.png) | ![pos2](img/legal48.png) |
+| ![pos1](img/legal49.png) | ![pos2](img/legal50.png) | ![pos1](img/legal51.png) | ![pos2](img/legal52.png) |
 
 This Haskell based software suite was written to accurately estimate the number of legal chess positions, already pondered by Claude Shannon in 1950 [1]. A position is legal iff it's reachable from the starting position in a valid game of chess.
 
