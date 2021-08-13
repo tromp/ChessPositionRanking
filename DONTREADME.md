@@ -49,7 +49,7 @@ With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_
 positions of** (5.2% +- 1.96 sqrt(5.2% * 94.8% / 1000)) * N / 1.077, or
 **4.2e44 +- 1.1e44**.
 
-# Improving accuracy of the estimate
+# Improving accuracy
 
 The estimate above has less than one digit of accuracy.
 More accuracy can be obtained by analysing the larger samples
@@ -102,10 +102,12 @@ In his 1994 [PhD thesis](http://fragrieu.free.fr/SearchingForSolutions.pdf), Vic
 We suspect a programming bug led to these numbers being many orders of magnitude
 too large.
 
-In 1996, Shirish Chinchalkar obtained an upper bound of [1.77894E46](https://www.chessprogramming.org/ICGA_Journal#19_3).  A copy
-of the program that Shirish Chinchalkar developed to compute his upperbound may
-be found in [Will Entriken github's repo](https://github.com/fulldecent/chess-upper-bound-armies), which also contains his software
-for ranking chess diagrams.
+In 1996, Shirish Chinchalkar obtained an upper bound of
+[1.77894E46](https://www.chessprogramming.org/ICGA_Journal#19_3).  A copy of
+the program that Shirish Chinchalkar developed to compute his upperbound may be
+found in Will Entriken's [github
+repo](https://github.com/fulldecent/chess-upper-bound-armies), which also
+contains his software for ranking chess diagrams.
 
 # Bug Bounties
 
@@ -114,10 +116,10 @@ Since validity of these results hinges on the ranking including all legal positi
 # Interesting observations
 
 The upper bound of N = 8726713169886222032347729969256422370854716254
-is computed in under 10s by src/CountChess.hs (Makefile target count).
+is computed in under 10s by [CountChess.hs](src/CountChess.hs) (Makefile target count).
 
-The original ranking implementation based on src/Data/Ranking.hs took on the order of 10s per position on top of the startup time of around 30 mins.
-Adding the batched rankings of src/Data/Ranking/Batched.hs resulted in huge speedups where many millions of positions could be generated within an hour.
+The original ranking implementation based on [Data/Ranking.hs](src/Data/Ranking.hs) took on the order of 10s per position on top of the startup time of around 30 mins.
+Adding the batched rankings of [Data/Ranking/Batched.hs](src/Data/Ranking/Batched.hs) resulted in huge speedups where many millions of positions could be generated within an hour.
 
 The entire urposition ranking is composed out of 14 separate ranking functions called
 
