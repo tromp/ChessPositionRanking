@@ -45,7 +45,7 @@ It uses [Forsyth–Edwards Notation](https://en.wikipedia.org/wiki/Forsyth%E2%80
 # Estimating the number of legal positions
 
 The 52 legal positions have an average multiplicity of 56/52~1.077, slightly higher than the 1.052 average of all 1000.
-With a 95% confidence level [1], this yields an **estimated number of legal
+With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an **estimated number of legal
 positions of** (5.2% +- 1.96 sqrt(5.2% * 94.8% / 1000)) * N / 1.077, or
 **4.2e44 +- 1.1e44**.
 
@@ -80,31 +80,31 @@ The file sortedRnd1kResearchManual extends sortedRnd1kResearch with a manual det
 
 # Related Work
 
-Estimates of the number of legal chess positions date back to Claude Shannon's seminal 1950 paper [2].
+Estimates of the number of legal chess positions date back to Claude Shannon's [seminal 1950 paper](https://vision.unipv.it/IA1/ProgrammingaComputerforPlayingChess.pdf).
 
 The reason for satisfying ourselves with a mere estimate is that we have no
-hope of ever determining the number exactly, like we did in the game of Go [3].
+hope of ever determining the number exactly, like we did in the [game of Go](https://tromp.github.io/go/legal.html).
 Whereas in Go, deciding whether a given position is legal is quite simple,
 determining the legality of a given chess position is exceedingly hard. It is
-the essence of so-called retrograde analysis problems [4] that concern the
+the essence of so-called [retrograde analysis problems](https://en.wikipedia.org/wiki/Retrograde_analysis) that concern the
 possible past moves rather than the possible future moves that normal chess
 problems concern themselves with.
 
 The reader is invited to study some of the best retrograde problems ever
-composed, together with their intricate solution, at this ``Masterworks''
-collection [5]. Evidence of the algorithmic hardness of retrograde problems may
-be found in this recent computational complexity paper [6] that proves
+composed, together with their intricate solution, at this [``Masterworks''
+collection](https://www.janko.at/Retros/Masterworks/Part1.htm). Evidence of the algorithmic hardness of retrograde problems may
+be found in this recent [computational complexity paper](https://arxiv.org/abs/2010.09271) that proves
 retrograde decision problems on arbitrarily large chess boards to be
 PSPACE-hard.
 
-In his 1994 PhD thesis [7], Victor Allis claims a calculated upper bound of
-5E52 and assumed ``the true state-space complexity to be close to 1E50''. We
-suspect a programming bug led to these numbers being many orders of magnitude
+In his 1994 [PhD thesis](http://fragrieu.free.fr/SearchingForSolutions.pdf), Victor Allis claims a calculated upper bound of
+5E52 and assumed "the true state-space complexity to be close to 1E50".
+We suspect a programming bug led to these numbers being many orders of magnitude
 too large.
 
-In 1996, Shirish Chinchalkar obtained an upper bound of 1.77894E46 [8].  A copy
+In 1996, Shirish Chinchalkar obtained an upper bound of [1.77894E46](https://www.chessprogramming.org/ICGA_Journal#19_3).  A copy
 of the program that Shirish Chinchalkar developed to compute his upperbound may
-be found in Will Entriken github's repo [9], which also contains his software
+be found in [Will Entriken github's repo](https://github.com/fulldecent/chess-upper-bound-armies), which also contains his software
 for ranking chess diagrams.
 
 # Bug Bounties
