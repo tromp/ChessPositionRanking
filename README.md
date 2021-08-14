@@ -56,7 +56,8 @@ More accuracy can be obtained by analysing the larger samples
 testRnd10kResearch, testRnd100kResearch, or testRnd1mResearch, with the last
 one giving a full 2 digits of accuracy at the 95% confidence level.
 
-I plan to file a separate issue for each of the 919 potentially legal positions in the 10k sample (which includes the 1k sample), so that anyone can contribute by picking a random issue and manually analyzing the position to come up with either a proof of legality or proof of illegality. Resolving all issues will give at least one digit of accuracy.
+Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample (which extends the 1k sample with 9k new positions).
+Everyone is invited to contribute by picking a random issue and manually analyzing the position to come up with either a proof of legality or proof of illegality. Completion of this milestone will give at least one digit of accuracy.
 
 Analyzing the even larger 100k and 1m samples will probably require
 additional software to aid and/or distribute the analysis effort.
