@@ -57,7 +57,9 @@ testRnd10kResearch, testRnd100kResearch, or testRnd1mResearch, with the last
 one giving a full 2 digits of accuracy at the 95% confidence level.
 
 Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample (which extends the 1k sample with 9k new positions).
-Everyone is invited to contribute by picking a random issue and manually analyzing the position to come up with either a proof of legality or proof of illegality. Completion of this milestone will give at least one digit of accuracy.
+Everyone is invited to contribute by picking a random issue and manually analyzing the position to come up with either a proof of legality or proof of illegality.
+To aid analysis, a line of statistics is shown for both white and black, listing number of men captured (x), number of pawns (p), minimum number of promotions required (pr), number of pawns captured (px), maximum number of unopposed pawns (maxup), and minimum number of opposing pawn files (minopp).
+Completion of this milestone will give at least one digit of accuracy.
 
 Analyzing the even larger 100k and 1m samples will probably require
 additional software to aid and/or distribute the analysis effort.
