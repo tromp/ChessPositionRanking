@@ -14,8 +14,8 @@ darkSquares = filter isDark boardSquares where
   isDark c = let (y,x) = c `divMod` 8 in odd x /= odd y
 
 -- spare room for promotions
-spareProms :: Diagram -> (Int, String)
-spareProms diag = let
+spareProms :: Char -> Diagram -> (Int, String)
+spareProms sep diag = let
   nkSymbols = "PQRBNpqrbn" -- non king squares
   zerocnts = zip nkSymbols (repeat 0)
   cnts = M.fromListWith (+) $ zerocnts ++ zip (elems diag) (repeat 1)
@@ -37,8 +37,8 @@ spareProms diag = let
   minopp = wp - maxuwp
   nOppFiles = length . filter (not . null) . mkOpps $ diag
   spare = if wpx >= 0 && bpx >= 0 then nOppFiles - minopp else -1
-  stats = "\n wx " ++ show wx ++ " wp " ++ show wp ++ " wpr " ++ show wproms ++ " wpx " ++ show wpx ++ " maxuwp " ++ show maxuwp ++ " minopp " ++ show minopp ++
-          "\n bx " ++ show bx ++ " bp " ++ show bp ++ " bpr " ++ show bproms ++ " bpx " ++ show bpx ++ " maxubp " ++ show maxubp ++ " minopp " ++ show minopp
+  stats = (sep:" wx ") ++ show wx ++ " wp " ++ show wp ++ " wpr " ++ show wproms ++ " wpx " ++ show wpx ++ " maxuwp " ++ show maxuwp ++ " minopp " ++ show minopp ++
+          (sep:" bx ") ++ show bx ++ " bp " ++ show bp ++ " bpr " ++ show bproms ++ " bpx " ++ show bpx ++ " maxubp " ++ show maxubp ++ " minopp " ++ show minopp
  in (spare, stats)
 
 -- list opponent pieces checking target coord
@@ -62,8 +62,8 @@ checks diag king = let
     [ x | (x@(sq,_):_) <- map neray dRQ, sq == toOpp 'r' || sq == toOpp 'q']
 
 -- research legality
-research :: Bool -> Position -> String
-research verbose (Position { diagram = diag, sideToMove = stm, castlings = c, enPassant = ep }) = let
+research :: Char -> Bool -> Position -> String
+research sep verbose (Position { diagram = diag, sideToMove = stm, castlings = c, enPassant = ep }) = let
   [wk, bk] = map (\sq -> fst . fromJust . find (\(i,x)-> x==sq) . assocs $ diag) "Kk"
   wtm = stm == 'w'
   (ktm,kntm) = if wtm then (wk,bk) else (bk,wk) -- to move or not to move
@@ -78,9 +78,9 @@ research verbose (Position { diagram = diag, sideToMove = stm, castlings = c, en
   minDist = M.fromList [("bb",99),("bn",7),("bp",99),("bq",5),("br",5),("nn",99),("np",99),
                 ("nq",6),("nr",6),("pp",99),("pq",5),("pr",5),("qq",99),("qr",5),("rr",99)]
   discoverable = taxiCab >= minDist M.! checkingpcs
-  promRowCheckers = [sq | (sq,(_,y)) <- checksOnTM, if wtm then y==0 else y==7]
+  promRowCheckers = [sq | (sq,(_,y)) <- checksOnTM, if wtm then y==7 else y==0]
   kDistToPromRow = if wtm then 7-yktm else yktm
-  (slack, stats) = spareProms diag
+  (slack, stats) = spareProms sep diag
   vstats = if verbose then stats else ""
   promRowLegal = case length promRowCheckers of
     0 ->  sharpAngle && discoverable 
@@ -100,6 +100,8 @@ research verbose (Position { diagram = diag, sideToMove = stm, castlings = c, en
 
 main = do
   args <- getArgs
-  let verbose = "-v" `elem` args 
-      legality = map (\fen -> fen ++ "\n " ++ research verbose (readFEN fen))
+  let
+    sep = if "-t" `elem` args then '\t' else '\n'
+    verbose = "-v" `elem` args 
+    legality = map (\fen -> fen ++ (sep:" ") ++ research sep verbose (readFEN fen))
   getContents >>= mapM_ putStrLn . legality . filter (not . null) . lines

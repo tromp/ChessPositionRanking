@@ -56,7 +56,7 @@ More accuracy can be obtained by analysing the larger samples
 testRnd10kResearch, testRnd100kResearch, or testRnd1mResearch, with the last
 one giving a full 2 digits of accuracy at the 95% confidence level.
 
-I plan to file a separate issue for each of the 921 potentially legal positions in the 10k sample (which includes the 1k sample), so that anyone can contribute by picking a random issue and manually analyzing the position to come up with either a proof of legality or proof of illegality. Resolving all issues will give at least one digit of accuracy.
+I plan to file a separate issue for each of the 919 potentially legal positions in the 10k sample (which includes the 1k sample), so that anyone can contribute by picking a random issue and manually analyzing the position to come up with either a proof of legality or proof of illegality. Resolving all issues will give at least one digit of accuracy.
 
 Analyzing the even larger 100k and 1m samples will probably require
 additional software to aid and/or distribute the analysis effort.
@@ -68,7 +68,7 @@ generator with a seed of 0, and sorted the result for use in batched ranking
 (Makefile targets testRnd1kRanks, testRnd10kRanks, and testRnd100kRank).
 
 We unranked these to obtain random urpositions (Makefile targets testRnd1kFENs,
-testRnd10kFENs, and testRnd100kFENs).
+testRnd10kFENs, and testRnd100kFENs). NOTE that these can take over half an hour to complete.
 
 We checked invertibility by ranking the results (Makefile targets testRnd1kRanking, testRnd10kRanking, and testRnd100kRanking), and comparing with the original integers used for unranking.
 
@@ -160,8 +160,8 @@ The 1 million sample classifies as
     53063  Single Check
     35584  No Checks
     29962  Illegal Triple Check
-    27832  Illegal Double Check
-    5839  Discovered Double Check
+    27541  Illegal Double Check
+    6130  Discovered Double Check
      714  Illegal Double Knight Check
 
 leaving 53063 + 35584 + 5839 = 94486 positions for manual analysis.
