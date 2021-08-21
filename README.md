@@ -57,8 +57,10 @@ testRnd10kResearch, testRnd100kResearch, or testRnd1mResearch, with the last
 one giving a full 2 digits of accuracy at the 95% confidence level.
 
 Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample (which extends the 1k sample with 9k new positions).
-Everyone is invited to contribute by picking a random issue and manually analyzing the position to come up with either a [Proof Game](https://github.com/tromp/ChessPositionRanking/issues/464) or [proof of illegality](https://github.com/tromp/ChessPositionRanking/issues/914).
-To aid analysis, a line of statistics is shown for both white and black, listing number of men captured (x), number of pawns (p), minimum number of promotions required (pr), number of pawns captured (px), maximum number of unopposed pawns (maxup), and minimum number of opposing pawn files (minopp).
+Everyone is invited to contribute by joining [github](https://github.com/), picking a random [issue](https://github.com/tromp/ChessPositionRanking/issues) labelled "proof game wanted" and using [lichess](https://lichess.org/analysis) to construct a
+[Proof Game](https://github.com/tromp/ChessPositionRanking/issues/464) leading to the position in question.
+Alternatively, one could pick an unlabeled issue and try recognize the position as being illegal, in which case one can comment a [proof of illegality](https://github.com/tromp/ChessPositionRanking/issues/914).
+To aid such a proof, a line of statistics is shown for both white and black, listing number of men captured (x), number of pawns (p), minimum number of promotions required (pr), number of pawns captured (px), maximum number of unopposed pawns (maxup), and minimum number of opposing pawn files (minopp).
 Completion of this milestone will give at least one digit of accuracy.
 
 Analyzing the even larger 100k and 1m samples will probably require
