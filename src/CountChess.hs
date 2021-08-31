@@ -1,4 +1,3 @@
-{-# LANGUAGE TupleSections #-}
 module Main where
 
 import Control.Monad
@@ -30,7 +29,7 @@ _armies fixr fixp = do
  
 -- pair unique elements in a list with their multiplicity
 count_unique :: Ord a => [a] -> [(a ,Integer)]
-count_unique = M.toList . M.fromListWith (+) . map (,1)
+count_unique = M.toList . M.fromListWith (+) . map (\x -> (x,1))
 
 -- precompute unique armies with multiplicity into array
 -- indexd by 3x2 parameter combinations for efficiency
