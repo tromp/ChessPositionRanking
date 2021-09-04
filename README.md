@@ -53,18 +53,27 @@ positions of** (5.2% +- 1.96 sqrt(5.2% * 94.8% / 1000)) * N / 1.077, or
 
 The estimate above has less than one digit of accuracy.
 More accuracy can be obtained by analysing the larger samples
-testRnd10kResearch, testRnd100kResearch, or testRnd1mResearch, with the last
-one giving a full 2 digits of accuracy at the 95% confidence level.
+testRnd10kResearch, testRnd100kResearch, or testRnd1mResearch, with the first
+giving 1 digit of accuracy and the last
+one giving 2 digits of accuracy at the 95% confidence level.
+Analyzing the larger 100k and 1m samples will probably require
+additional software to aid and/or distribute the analysis effort.
+
+# Preliminary 10k results
 
 Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample (which extends the 1k sample with 9k new positions).
-Everyone is invited to contribute by joining [github](https://github.com/), picking a random [issue](https://github.com/tromp/ChessPositionRanking/issues) labelled "proof game wanted" and using [lichess](https://lichess.org/analysis) to construct a
-[Proof Game](https://github.com/tromp/ChessPositionRanking/issues/464) leading to the position in question.
-Alternatively, one could pick an unlabeled issue and try recognize the position as being illegal, in which case one can comment a [proof of illegality](https://github.com/tromp/ChessPositionRanking/issues/914).
-To aid such a proof, a line of statistics is shown for both white and black, listing number of men captured (x), number of pawns (p), minimum number of promotions required (pr), number of pawns captured (px), maximum number of unopposed pawns (maxup), and minimum number of opposing pawn files (minopp).
-Completion of this milestone will give at least one digit of accuracy.
 
-Analyzing the even larger 100k and 1m samples will probably require
-additional software to aid and/or distribute the analysis effort.
+Mario Richter kindly contributed the output of his legality checking program "rawbats", which found 130 of the 919 positions to be illegal. Of the remainder, I manually judged 538 to be legal and 381 to be illegal. Only 24 of the 538 have proof games constructed for them so far, while the other 514 are open issues labeled "proof game wanted". If my judgement is correct (a big if) this yields an **estimated number of legal positions of** (5.38% +- 1.96 sqrt(5.38% * 94.62% / 10000)) * N / 1.04275, or **4.5e44 +- 0.37e44**.
+
+# Chess players wanted to construct proof games
+
+Chess players are invited to contribute to this project by joining [github](https://github.com/), picking an open [issue](https://github.com/tromp/ChessPositionRanking/issues) and using [lichess](https://lichess.org/analysis) to construct a [Proof Game](https://github.com/tromp/ChessPositionRanking/issues/464) leading to the position in question. This will establish with absolute certainty that the position is legal. I will be happy to list contributors of at least 10 proof games in an eventual publication.
+
+Unfortunately, judgements of illegality cannot be established with absolute certainty, but chess players familiar with retrograde analysis are invited to randomly check purported proofs of illegality.
+They range in complexity from the [very simple](https://github.com/tromp/ChessPositionRanking/issues/98)
+to the [quite complex](https://github.com/tromp/ChessPositionRanking/issues/136),
+and often rely on so-called statistics of white and black armies. These stats include men captured (x), number of pawns (p), minimum number of promotions required (pr), number of pawns captured (px), maximum number of unopposed pawns (maxup), and minimum number of opposing pawn files (minopp).
+The key inequality is that the number of white (resp. black) promotions is limited by the number of black (resp. white) pawns captured plus the total number of captures. A pair of adjacent files each with a white pawn opposing a black pawn support 3 promotions by having one pawn capture the opponent in the other file. A captured piece supports 2 promotions on a single file with a white pawn opposing a black pawn by letting either pawn capture the piece to an adjacent file where it is no longer opposed.
 
 # Reproducibility
 
@@ -116,7 +125,7 @@ contains his software for ranking chess diagrams.
 
 # Bug Bounties
 
-Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a $64 bonus is available for demonstrating that sortedRnd10kResearchManual contains a classification error.
+Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity.
 
 # Interesting observations
 
