@@ -45,9 +45,7 @@ The main executable, cpr, uses [Forsyth–Edwards Notation](https://en.wikipedia
 # Estimating the number of legal positions
 
 The 52 legal positions have an average multiplicity of 56/52~1.077, slightly higher than the 1.052 average of all 1000.
-With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an **estimated number of legal
-positions of** (5.2% +- 1.96 sqrt(5.2% * 94.8% / 1000)) * N / 1.077, or
-**4.2e44 +- 1.1e44**.
+With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (5.2% +- 1.96 sqrt(5.2% * 94.8% / 1000)) * N / 1.077, or 4.2e44 +- 1.1e44.
 
 # Improving accuracy
 
