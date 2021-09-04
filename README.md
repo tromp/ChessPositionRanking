@@ -61,15 +61,15 @@ additional software to aid and/or distribute the analysis effort.
 
 Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample (which extends the 1k sample with 9k new positions).
 
-Mario Richter kindly contributed the output of his legality checking program "rawbats", which found 130 of the 919 positions to be illegal. Of the remainder, I manually judged 538 to be legal and 381 to be illegal. Only 24 of the 538 have proof games constructed for them so far, while the other 514 are open issues labeled "proof game wanted". If my judgement is correct (a big if) this yields an **estimated number of legal positions of** (5.38% +- 1.96 sqrt(5.38% * 94.62% / 10000)) * N / 1.04275, or **4.5e44 +- 0.37e44**.
+Mario Richter kindly contributed the output of his legality checking program "rawbats", which found 130 of the 919 positions to be illegal. Of the remainder, I manually judged 538 to be legal and 381 to be illegal. These 538 positions have an average multiplicity of 561/538~1.04275, slightly larger than the 1.0355 average of all 1000.
+If my judgement is correct (a big if) this yields an **estimated number of legal positions of** (5.38% +- 1.96 sqrt(5.38% * 94.62% / 10000)) * N / 1.04275, or **4.5e44 +- 0.37e44**.
 
-# Chess players wanted to construct proof games
+# Chess players wanted
 
-Chess players are invited to contribute to this project by joining [github](https://github.com/), picking an open [issue](https://github.com/tromp/ChessPositionRanking/issues) and using [lichess](https://lichess.org/analysis) to construct a [Proof Game](https://github.com/tromp/ChessPositionRanking/issues/464) leading to the position in question. This will establish with absolute certainty that the position is legal. I will be happy to list contributors of at least 10 proof games in an eventual publication.
+Chess players are invited to contribute to this project by joining [github](https://github.com/), picking an open [issue](https://github.com/tromp/ChessPositionRanking/issues) and using [lichess](https://lichess.org/analysis) to construct a [Proof Game](https://github.com/tromp/ChessPositionRanking/issues/464) leading to the position in question. This will establish with absolute certainty that the position is legal. Only 24 of the 538 have proof games constructed for them so far. Contributors of at least 10 proof games will receive acknowledgement in an eventual publication, as will anyone finding an misclassified position.
 
-Unfortunately, judgements of illegality cannot be established with absolute certainty, but chess players familiar with retrograde analysis are invited to randomly check purported proofs of illegality.
-They range in complexity from the [very simple](https://github.com/tromp/ChessPositionRanking/issues/98)
-to the [quite complex](https://github.com/tromp/ChessPositionRanking/issues/136),
+Unfortunately, judgements of illegality cannot be established with absolute certainty. Chess players familiar with retrograde analysis are invited to randomly check purported proofs of illegality.
+They range in complexity from the [very simple](https://github.com/tromp/ChessPositionRanking/issues/98) through the [medium complex](https://github.com/tromp/ChessPositionRanking/issues/22) to the [quite complex](https://github.com/tromp/ChessPositionRanking/issues/136),
 and often rely on so-called statistics of white and black armies. These stats include men captured (x), number of pawns (p), minimum number of promotions required (pr), number of pawns captured (px), maximum number of unopposed pawns (maxup), and minimum number of opposing pawn files (minopp).
 The key inequality is that the number of white (resp. black) promotions is limited by the number of black (resp. white) pawns captured plus the total number of captures. A pair of adjacent files each with a white pawn opposing a black pawn support 3 promotions by having one pawn capture the opponent in the other file. A captured piece supports 2 promotions on a single file with a white pawn opposing a black pawn by letting either pawn capture the piece to an adjacent file where it is no longer opposed.
 
