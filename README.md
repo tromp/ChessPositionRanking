@@ -61,7 +61,7 @@ additional software to aid and/or distribute the analysis effort.
 
 Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample (which extends the 1k sample with 9k new positions).
 
-Mario Richter kindly contributed the output of his legality checking program "rawbats", which found 130 of the 919 positions to be illegal. Of the remainder, I manually judged 538 to be legal and 381 to be illegal. These 538 positions have an average multiplicity of 561/538~1.04275, slightly larger than the 1.0355 average of all 1000.
+Mario Richter kindly contributed the output of his legality checking program "rawbats", which found 130 of the 919 positions to be illegal. Of the remainder, I manually judged 538 to be legal and 381 to be illegal. These 538 positions have an average multiplicity of 561/538~1.04275, slightly larger than the 1.0355 average of all 10000.
 If my judgement is correct (a big if) this yields an **estimated number of legal positions of** (5.38% +- 1.96 sqrt(5.38% * 94.62% / 10000)) * N / 1.04275, or **4.5e44 +- 0.37e44**.
 
 # Chess players wanted
