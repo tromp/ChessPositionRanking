@@ -60,16 +60,16 @@ Under milestone "10k", I have filed a separate issue for each of the 919 potenti
 
 Mario Richter kindly contributed the output of his legality checking program
 "rawbats", which found 130 of the 919 positions to be illegal. Of the
-remainder, 534 appear to be legal and 385 appear to be illegal. These 534
-positions have an average multiplicity of 560/534~1.0487, slightly larger than
+remainder, 533 appear to be legal and 386 appear to be illegal. These 533
+positions have an average multiplicity of 559/533~1.049, slightly larger than
 the 1.0355 average of all 10000. If these judgements are correct, this
 yields an **estimated number of legal positions of**
-(5.34% +- 1.96 sqrt(5.34% * 94.66% / 10000)) * N / 1.0487,
+(5.33% +- 1.96 sqrt(5.33% * 94.67% / 10000)) * N / 1.049,
 or **(4.4 +- 0.37) x 10^44**.
 
 # Chess players wanted
 
-Chess players are invited to contribute to this project by joining [github](https://github.com/), picking an open [issue](https://github.com/tromp/ChessPositionRanking/issues) and using [lichess](https://lichess.org/analysis) to construct a [Proof Game](https://github.com/tromp/ChessPositionRanking/issues/464) leading to the position in question. This will establish with absolute certainty that the position is legal. Some 470 of the 534 have proof games constructed for them so far. Contributors of at least 10 proof games will receive acknowledgement in an eventual publication, as will anyone finding an misclassified position.
+Chess players are invited to contribute to this project by joining [github](https://github.com/), picking an open [issue](https://github.com/tromp/ChessPositionRanking/issues) and using [lichess](https://lichess.org/analysis) to construct a [Proof Game](https://github.com/tromp/ChessPositionRanking/issues/464) leading to the position in question. This will establish with absolute certainty that the position is legal. Some 480 of the 533 have proof games constructed for them so far. Contributors of at least 10 proof games will receive acknowledgement in an eventual publication, as will anyone finding an misclassified position.
 
 Unfortunately, judgements of illegality cannot be established with absolute certainty. Chess players familiar with retrograde analysis are invited to randomly check purported proofs of illegality.
 They range in complexity from the [very simple](https://github.com/tromp/ChessPositionRanking/issues/98) through the [medium complex](https://github.com/tromp/ChessPositionRanking/issues/22) to the [quite complex](https://github.com/tromp/ChessPositionRanking/issues/136),
