@@ -42,39 +42,18 @@ The main executable, cpr, uses [Forsyth–Edwards Notation](https://en.wikipedia
 # Estimating the number of legal positions
 
 The 50 legal positions have an average multiplicity of 54/50~1.08, slightly higher than the 1.052 average of all 1000.
-With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (5% +- 1.96 sqrt(5% * 95% / 1000)) * N / 1.08, or (4+-1.1)x10^44.
-
-# Improving accuracy
-
-The estimate above has less than one digit of accuracy.
-More accuracy can be obtained by analysing the larger samples
-testRnd10kResearch, testRnd100kResearch, or testRnd1mResearch, with the first
-giving 1 digit of accuracy and the last
-one giving 2 digits of accuracy at the 95% confidence level.
-Analyzing the larger 100k and 1m samples will probably require
-additional software to aid and/or distribute the analysis effort.
-
-# Preliminary 10k results
-
-Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample (which extends the 1k sample with 9k new positions).
-
+With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (5% +- 1.96 sqrt(5% * 95% / 1000)) * N / 1.08, or (4+-1.1)x10^44,
+which is less than one digit of accuracy.
+To obtain a full digit of accuracy we analyzed the 10,000 random positions in testRnd10kResearch.
+Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample.
 Mario Richter kindly contributed the output of his legality checking program
 "rawbats", which found 130 of the 919 positions to be illegal. Of the
-remainder, 533 appear to be legal and 386 appear to be illegal. These 533
-positions have an average multiplicity of 559/533~1.049, slightly larger than
+remainder, 535 are proven legal with a proof game constructed for each, and 384 determined to be illegal with an illegality proof sketch. The 535 legal
+positions have an average multiplicity of 561/535~1.0486, slightly larger than
 the 1.0355 average of all 10000. If these judgements are correct, this
 yields an **estimated number of legal positions of**
-(5.33% +- 1.96 sqrt(5.33% * 94.67% / 10000)) * N / 1.049,
-or **(4.4 +- 0.37) x 10^44**.
-
-# Chess players wanted
-
-Chess players are invited to contribute to this project by joining [github](https://github.com/), picking an open [issue](https://github.com/tromp/ChessPositionRanking/issues) and using [lichess](https://lichess.org/analysis) to construct a [Proof Game](https://github.com/tromp/ChessPositionRanking/issues/464) leading to the position in question. This will establish with absolute certainty that the position is legal. Some 480 of the 533 have proof games constructed for them so far. Contributors of at least 10 proof games will receive acknowledgement in an eventual publication, as will anyone finding an misclassified position.
-
-Unfortunately, judgements of illegality cannot be established with absolute certainty. Chess players familiar with retrograde analysis are invited to randomly check purported proofs of illegality.
-They range in complexity from the [very simple](https://github.com/tromp/ChessPositionRanking/issues/98) through the [medium complex](https://github.com/tromp/ChessPositionRanking/issues/22) to the [quite complex](https://github.com/tromp/ChessPositionRanking/issues/136),
-and often rely on so-called statistics of white and black armies. These stats include men captured (x), number of pawns (p), minimum number of promotions required (pr), number of pawns captured (px), maximum number of unopposed pawns (maxup), and minimum number of opposing pawn files (minopp).
-The key inequality is that the number of white (resp. black) promotions is limited by the number of black (resp. white) pawns captured plus the total number of captures. A pair of adjacent files each with a white pawn opposing a black pawn support 3 promotions by having one pawn capture the opponent in the other file. A captured piece supports 2 promotions on a single file with a white pawn opposing a black pawn by letting either pawn capture the piece to an adjacent file where it is no longer opposed.
+(5.35% +- 1.96 sqrt(5.35% * 94.65% / 10000)) * N / 1.0486,
+or **(4.45 +- 0.37) x 10^44**, again with 95% confidence level.
 
 # Reproducibility
 
@@ -126,7 +105,7 @@ contains his software for ranking chess diagrams.
 
 # Bug Bounties
 
-Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity.
+Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $32 is offered for a proof game for one of the 384 positions claimed to be illegal.
 
 # Interesting observations
 
@@ -182,6 +161,15 @@ The 1 million sample classifies as
 leaving 53063 + 35584 + 5839 = 94486 positions for manual analysis.
 
 Some people might enjoy minimizing the number of moves in a Proof Game, in what could be a friendly "Chess golf" competition, similar to [Code golf](https://en.wikipedia.org/wiki/Code_golf).
+
+# Future work
+
+More accuracy can be obtained by analysing the 100x larger sample
+testRnd1mResearch, giving 2 digits of accuracy at the 95% confidence level.
+Analyzing such a large sample will require
+additional software to aid both in proof game construction and in much
+more comprehensive detection of illegality, in order to keep the necessary
+manual analysis within manageable limits.
 
 # References
 
