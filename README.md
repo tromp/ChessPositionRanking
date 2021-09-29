@@ -41,7 +41,7 @@ The main executable, cpr, uses [Forsyth–Edwards Notation](https://en.wikipedia
 
 # Estimating the number of legal positions
 
-The 50 legal positions have an average multiplicity of 54/50~1.08, slightly higher than the 1.052 average of all 1000.
+The 50 legal positions have an average multiplicity of 54/50 ~1.08, slightly higher than the 1.052 average of all 1000.
 With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (5% +- 1.96 sqrt(5% * 95% / 1000)) * N / 1.08, or (4+-1.1)x10^44,
 which is less than one digit of accuracy.
 To obtain a full digit of accuracy we analyzed the 10,000 random positions in testRnd10kResearch.
@@ -49,7 +49,7 @@ Under milestone "10k", I have filed a separate issue for each of the 919 potenti
 Mario Richter kindly contributed the output of his legality checking program
 "rawbats", which found 130 of the 919 positions to be illegal. Of the
 remainder, 535 are proven legal with a proof game constructed for each, and 384 determined to be illegal with an illegality proof sketch. The 535 legal
-positions have an average multiplicity of 561/535~1.0486, slightly larger than
+positions have an average multiplicity of 561/535 ~1.0486, slightly larger than
 the 1.0355 average of all 10000. If these judgements are correct, this
 yields an **estimated number of legal positions of**
 (5.35% +- 1.96 sqrt(5.35% * 94.65% / 10000)) * N / 1.0486,
