@@ -48,12 +48,12 @@ To obtain a full digit of accuracy we analyzed the 10,000 random positions in te
 Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample.
 Mario Richter kindly contributed the output of his legality checking program
 "rawbats", which found 130 of the 919 positions to be illegal. Of the
-remainder, 535 are proven legal with a proof game constructed for each, and 384 determined to be illegal with an illegality proof sketch. The 535 legal
-positions have an average multiplicity of 561/535 ~1.0486, slightly larger than
+remainder, 536 are proven legal with a proof game constructed for each, and 384 determined to be illegal with an illegality proof sketch. The 536 legal
+positions have an average multiplicity of 562/536 ~1.0485, slightly larger than
 the 1.0355 average of all 10000. If these judgements are correct, this
 yields an **estimated number of legal positions of**
-(5.35% +- 1.96 sqrt(5.35% * 94.65% / 10000)) * N / 1.0486,
-or **(4.45 +- 0.37) x 10^44**, again with 95% confidence level.
+(5.36% +- 1.96 sqrt(5.36% * 94.64% / 10000)) * N / 1.0485,
+or **(4.46 +- 0.37) x 10^44**, again with 95% confidence level.
 
 # Reproducibility
 
@@ -105,7 +105,7 @@ contains his software for ranking chess diagrams.
 
 # Bug Bounties
 
-Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $32 is offered for a proof game for one of the 384 positions claimed to be illegal.
+Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $32 is offered for a proof game for one of the 383 positions claimed to be illegal.
 
 # Interesting observations
 
