@@ -4,6 +4,30 @@ count:	Makefile
 	$(MAKE) -C src/ CountChess
 	time src/CountChess
 	
+test100:	Makefile testRnd1kResearch
+	diff testRnd100Research sortedRnd100Research
+
+testRnd100Ranks:	Makefile
+	$(MAKE) -C src/ randomRs
+	src/randomRs 8726713169886222032347729969256422370854716254 100 | sort -n > testRnd100Ranks
+	diff testRnd100Ranks sortedRnd100Ranks
+
+testRnd100FENs:	Makefile testRnd100Ranks
+	$(MAKE) -C src/ cpr
+	time src/cpr unrank < testRnd100Ranks > testRnd100FENs
+	diff testRnd100FENs sortedRnd100FENs
+
+testRnd100Research:	Makefile testRnd100FENs
+	$(MAKE) -C src/ legal
+	src/legal < testRnd100FENs > testRnd100Research
+	diff testRnd100Research sortedRnd100Research
+	
+testRnd100Ranking:	Makefile testRnd100FENs
+	$(MAKE) -C src/ cpr
+	time src/cpr rank < testRnd100FENs > testRnd100FENsRanked
+	diff testRnd100FENs testRnd100FENsRanked
+
+	
 test1k:	Makefile testRnd1kResearch
 	diff testRnd1kResearch sortedRnd1kResearch
 
