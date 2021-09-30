@@ -35,14 +35,17 @@ The main executable, cpr, uses [Forsyth–Edwards Notation](https://en.wikipedia
 The 3 legal positions all have a multiplicity of 1, while the average multiplicity of all 100 positions is 1.04.
 With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (3% +- 1.96 sqrt(3% * 97% / 100)) * N / 1, or (2.6+-2.9)x10^44,
 which is far less than one digit of accuracy, and barely gives us the order of magnitude.
+
 To obtain a full digit of accuracy, we need to reduce the error by about a factor of 10, which requires a 100x bigger sample. File "testRnd10kResearch" contains a sample of 10,000 random positions subjected to a relatively simple legality check, that finds all but 919 positions to be illegal for trivial reasons.
 Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample.
+
 Mario Richter kindly contributed the output of his legality checking program
 "rawbats", which found 130 of the 919 positions to be illegal. Of the
 remainder, 537 are proven legal with a proof game constructed for each, and 382 determined to be illegal with an illegality proof sketch. The 537 legal
 positions have an average multiplicity of 562/537 ~1.0484, slightly larger than
-the 1.0355 average of all 10000. If these judgements are correct, this
-yields an **estimated number of legal positions of**
+the 1.0355 average of all 10000.
+
+This yields an **estimated number of legal positions of**
 (5.37% +- 1.96 sqrt(5.37% * 94.63% / 10000)) * N / 1.0484,
 or **(4.47 +- 0.37) x 10^44**, again with 95% confidence level.
 
