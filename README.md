@@ -1,12 +1,10 @@
 # Chess Position Ranking
 
-| What do these | chess positions | have in common ? |
-|---------------|-----------------|------------------|
+The following 3 positions have two things in common.
+
+| white to move | black to move | black to move | 
+|---------------|---------------|---------------|
 | ![png](img/2389704906374985477664262349386869232706664089.png) | ![png](img/8407831187507152187492557297490243416405059949.png) | ![png](img/8545434809537180765086507091416427802529352632.png) |
-
-The first has White to move, while the other 2 have Black to move.
-
-# These 3 positions have two things in common
 
 1. They're all legal. That is, reachable from the starting position in a valid game of chess.
 
