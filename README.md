@@ -39,13 +39,13 @@ Under milestone "10k", I have filed a separate issue for each of the 919 potenti
 
 Mario Richter kindly contributed the output of his legality checking program
 "rawbats", which found 130 of the 919 positions to be illegal. Of the
-remainder, 537 are proven legal with a proof game constructed for each, and 382 determined to be illegal with an illegality proof sketch. The 537 legal
-positions have an average multiplicity of 562/537 ~1.0484, slightly larger than
+remainder, 538 are proven legal with a proof game constructed for each, and 381 determined to be illegal with an illegality proof sketch. The 538 legal
+positions have an average multiplicity of 564/538 ~1.0483, slightly larger than
 the 1.0355 average of all 10000.
 
 This yields an **estimated number of legal positions of**
-(5.37% +- 1.96 sqrt(5.37% * 94.63% / 10000)) * N / 1.0484,
-or **(4.47 +- 0.37) x 10^44**, again with 95% confidence level.
+(5.38% +- 1.96 sqrt(5.38% * 94.62% / 10000)) * N / 1.0483,
+or **(4.48 +- 0.37) x 10^44**, again with 95% confidence level.
 
 # Reproducibility
 
