@@ -38,8 +38,8 @@ To obtain a full digit of accuracy, we need to reduce the error by about a facto
 Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample.
 
 Mario Richter kindly contributed the output of his legality checking program
-"rawbats", which found 130 of the 919 positions to be illegal. Of the
-remainder, 538 are proven legal with a proof game constructed for each, and 381 determined to be illegal with an illegality proof sketch. The 538 legal
+"rawbats", which found 130 of the 919 positions to be illegal. Altogether,
+538 are proven legal with a proof game constructed for each, and 381 determined to be illegal with an illegality proof sketch. The 538 legal
 positions have an average multiplicity of 564/538 ~1.0483, slightly larger than
 the 1.0355 average of all 10000.
 
@@ -96,7 +96,7 @@ contains his software for ranking chess diagrams.
 
 # Bug Bounties
 
-Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $32 is offered for a proof game for one of the 382 positions claimed to be illegal.
+Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $64 is offered for a proof game for one of the 381 positions claimed to be illegal.
 
 # Interesting observations
 
