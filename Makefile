@@ -25,7 +25,7 @@ testRnd100Research:	Makefile testRnd100FENs
 testRnd100Ranking:	Makefile testRnd100FENs
 	$(MAKE) -C src/ cpr
 	time src/cpr rank < testRnd100FENs > testRnd100FENsRanked
-	diff testRnd100FENs testRnd100FENsRanked
+	diff testRnd100Ranks testRnd100FENsRanked
 
 	
 test1k:	Makefile testRnd1kResearch
@@ -49,7 +49,7 @@ testRnd1kResearch:	Makefile testRnd1kFENs
 testRnd1kRanking:	Makefile testRnd1kFENs
 	$(MAKE) -C src/ cpr
 	time src/cpr rank < testRnd1kFENs > testRnd1kFENsRanked
-	diff testRnd1kFENs testRnd1kFENsRanked
+	diff testRnd1kRanks testRnd1kFENsRanked
 	
 
 testRnd10kRanks:	Makefile
@@ -76,7 +76,7 @@ testRnd100kRanks:	Makefile
 testRnd10kRanking:	Makefile testRnd10kFENs
 	$(MAKE) -C src/ cpr
 	time src/cpr rank < testRnd10kFENs > testRnd10kFENsRanked
-	diff testRnd10kFENs testRnd10kFENsRanked
+	diff testRnd10kRanks testRnd10kFENsRanked
 	
 
 testRnd100kFENs:	Makefile testRnd100kRanks
@@ -92,4 +92,4 @@ testRnd100kResearch:	Makefile testRnd100kFENs
 testRnd100kRanking:	Makefile testRnd100kFENs
 	$(MAKE) -C src/ cpr
 	time src/cpr rank < testRnd100kFENs > testRnd100kFENsRanked
-	diff testRnd100kFENs testRnd100kFENsRanked
+	diff testRnd100kRanks testRnd100kFENsRanked
