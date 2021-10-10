@@ -64,9 +64,11 @@ count fixwr fixbr fixp = sum $ do
   let np = 8 - fixp                 -- number of unfixed pawns
   let fixwk = if fixwr /= 0 then 1 else 0
   (Army wpcs wp wproms wprod, wmul) <- armies fixwr fixp
+  guard $ wproms == 0
   let wpx = np-wp-wproms            -- white pawns captured
   let fixbk = if fixbr /= 0 then 1 else 0
   (Army bpcs bp bproms bprod, bmul) <- armies fixbr fixp
+  guard $ bproms == 0
   let bpx = np-bp-bproms            -- black pawns captured
   -- number of captures
   let caps = 32-2*fixp-fixwk-fixbk-fixwr-fixbr-wp-bp-wpcs-bpcs

@@ -1,5 +1,6 @@
 module Chess.Position.Ranking (URPosition, fromPosition, toPosition, sideToMoveRanking, caseRanking, wArmyStatRanking, bArmyStatRanking, guardRanking, enPassantRanking, epOppRanking, sandwichRanking, opposeRanking, pawnRanking, castleRanking, wArmyRanking, bArmyRanking, pieceRanking, emptyURPosition) where
 
+import Control.Monad
 import Data.Maybe
 import Data.Char
 import Data.List
@@ -205,6 +206,7 @@ armies fixr fixp = do
   let np4 = np3 - max (n-2) 0   -- adjust for knight promotions
   let proms = np0 - np4         -- number of promotions
   p <- [0..np4]                 -- number of pawns
+  guard $ proms == 0
   return $ Army p proms [k,q,r,b,n]
 
 -- precompute unique armyStats with multiplicity into array
