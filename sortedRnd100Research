@@ -1,100 +1,100 @@
-4R3/BQN1p3/nB1Qq1q1/3prb1n/5K2/1qq1Bk2/2N1RR1p/2Q1q1qr w - - 0 1	 Illegal Adjacent Kings
-2N1qnq1/b5NR/2nB1n2/NB1q1R1b/n1K2rQQ/n2Q1N2/b4k1q/3r1q2 w - - 0 1	 Illegal Both Kings in Check
-5k1Q/1n1r2R1/qB2Q1q1/3n2pn/3r2Kq/Rq1QbR2/2qPB1pN/b4rN1 w - - 0 1	 Illegal Both Kings in Check
-qn1qB3/1Pp2R2/3qN2N/2n1Nr2/2Qr2b1/bN1K1rpp/2qR1R2/Bn4k1 w - - 0 1	 Illegal Triple Check
-2R2BN1/n2n1b2/1P6/QrrQNBR1/q2nrpqb/1B3bbr/k2B4/4bK2 w - - 0 1	 Illegal Side not to move in Check
-6Kq/bp1r4/3n2qr/rbB1RPB1/2Q3R1/2PP1q1r/3n1N1N/n2kb1Rq w - - 0 1	 Illegal Both Kings in Check
-b5n1/1P4q1/pRrn4/pBB1Qq1p/R1Q2P2/2N1r1pb/K4n1P/qn4kR w - - 0 1	 Illegal Both Kings in Check
-1q3nQq/K1r1k1p1/Br2N2b/1nrB1n1b/1p2N1QN/2R1p3/Rr1NQ3/3N4 w - - 0 1	 Illegal Triple Check
-1n1KbBr1/2nN2N1/2NRpN1Q/2q1b3/2nr3R/npQQ2k1/2b5/1rbB3B w - - 0 1	 Illegal Side not to move in Check
-3B3N/1Q1q4/2qn1BbR/7R/2RNkrBb/r1R1bB2/bK6/n1nbn1Qn w - - 0 1	 Illegal Side not to move in Check
-NQ6/3k1N1n/1b2R1R1/p1n3R1/3nbrKn/qNrBBBqp/1P1Qq3/1r6 w - - 0 1	 Illegal Double Check
-r4K2/1B1N1P1q/1p2N1Qq/1b2Rrbk/npp4B/B1pnb3/4B3/2nRB2R w - - 0 1	 Illegal Both Kings in Check
-1N1r4/1b2K1P1/2Bkb1r1/Nn1p1q1R/pQb5/2RN2RB/pb1q4/r1n1R2B w - - 0 1	 Illegal Adjacent Kings
-1R4Rr/2Pn1r2/1B2kR1n/b1qnK2B/rQ5B/bp2B1Qq/1N4N1/4qbq1 w - - 0 1	 Illegal Adjacent Kings
-N1B1B3/q2rNRp1/p1Kk4/2B1Pb2/3qrN2/Rn1bbP2/6pQ/q2r2R1 w - - 0 1	 Illegal Adjacent Kings
-B4b2/qN1N3b/Q1Pnn3/R2Rq3/3k1rRn/q1N4P/nbr2q1K/1rB4B w - - 0 1	 Illegal Both Kings in Check
-BB1q1rR1/2p3Rk/N2bq1p1/5nbN/1rp4p/p2QQ1Pr/7P/K2Nnb1B w - - 0 1	 Illegal Side not to move in Check
-5k2/q4r2/q3K1bN/1r1qPbnQ/N2Qb1nR/nR3B1R/1qP4B/2Rnn3 w - - 0 1	 Illegal Triple Check
-1B2n3/1kN1rq1P/q1P1b3/2B1Rn2/1B2Q1bB/Rpn3Kr/3bq2Q/1N1nn3 w - - 0 1	 Illegal Both Kings in Check
-2nr1n2/Q1NPb1rn/qBn1q3/1PrN2P1/5N2/2k2p2/2Rq2b1/q1BR1BK1 w - - 0 1	 Illegal Side not to move in Check
-K1B1q3/N2B2n1/1Q1qrnkn/3b4/1r2b3/qnBN2QR/3b1BR1/1QNQ2n1 w - - 0 1	 Illegal Both Kings in Check
-2r1NbqR/1Rk1n1B1/N6n/2br2R1/nK1rrr2/PQ2R1b1/Q2rN3/4R1B1 w - - 0 1	 Illegal Both Kings in Check
-4KQ2/BR4bn/Npn5/1NpN2n1/r1P2Q2/Qk4BR/1nqr3q/2rB1B1q w - - 0 1	 Illegal Side not to move in Check
-nr1N2n1/2NNB1R1/1Q4kp/4Rp1b/b1BNqQ1b/N1q3N1/1p2rKP1/4q3 w - - 0 1	 Illegal Both Kings in Check
-3NRnkK/1N5b/QPP1nR1n/2bQ4/2r1r1n1/3nq1NB/1BBNrn2/7r w - - 0 1	 Illegal Adjacent Kings
-1r6/1qrRPk2/1rn1Rn1n/1RQRR2R/3P4/3b2BN/1Knn1b1b/1BR5 w - - 0 1	 No Checks	 wx 2 wp 2 wpr 5 wpx 1 maxuwp 3 minopp -1	 bx 3 bp 0 bpr 5 bpx 3 maxubp 1 minopp -1
-2nR2N1/1nKQRNpb/Q2p4/1q3B2/1r3nP1/B1P4r/1p2NBPb/n1kq4 w - - 0 1	 Illegal Side not to move in Check
-B5KQ/1bRpQq2/1P4N1/p1P1N3/Nrn1Pk1n/n3B1rb/5p1q/1R1R1n2 w - - 0 1	 Illegal Both Kings in Check
-Nq1q1K2/1Qb1B2P/2Rp2pn/3rRQPr/1q3b2/6qR/NrkP2n1/B3N2r w - - 0 1	 Illegal Both Kings in Check
-rNb1Qn2/1kpnn1q1/2R2P2/1P3K2/b1qP1N2/pN3BN1/1B3R1N/1rr4q w - - 0 1	 Illegal Bishops Too Monochromatic	 wx 2 wp 3 wpr 3 wpx 2 maxuwp 2 minopp 1	 bx 2 bp 2 bpr 5 bpx 1 maxubp 1 minopp 1
-NR3Rb1/3bb1K1/1bNPnrqr/1P6/3kbN1P/N1B4p/5B1r/1Q1R1r2 w - - 0 1	 Illegal Both Kings in Check
-N5Qr/N2N1q2/QK3P2/b1R1Nq2/2q1r2B/1Qp2q2/1B1kRN2/b2b1Rnn w - - 0 1	 Illegal Both Kings in Check
-QQN4r/2bb1B2/Q6R/qr2p2p/2r1NnkR/1Q1KQP2/2b4Q/2bn1NB1 w - - 0 1	 Illegal Both Kings in Check
-5N1q/1b4n1/5QQq/RQ2r1bB/N2p2P1/1K1R4/1Rbb1QBk/r1R1n1qR w - - 0 1	 Illegal Both Kings in Check
-b7/prkqP1K1/1BpNNQQB/B1N1q2q/3rn1QR/2n5/2P3n1/2R1Nb2 w - - 0 1	 Illegal Side not to move in Check
-N1Q3N1/qN3kRP/q2q1nRR/2q1p3/3bBb1n/2PB2r1/1qn1P1K1/2Q1B3 w - - 0 1	 Illegal Both Kings in Check
-rB3k2/1K2b2Q/P3N1p1/4n2b/PR2Q3/Q1N2p2/rbpNqPP1/n2B3N w - - 0 1	 Illegal Side not to move in Check
-B1Kb3N/n1bp4/R1rR1N2/1bB5/RQQb1q2/B1rQ1Rk1/Q2np3/2R1R3 w - - 0 1	 Illegal Both Kings in Check
-1R1R3b/1QN1n3/5b2/2r1Qq1r/PRBKBrQk/2bN1N2/1nb4n/NB1Q4 w - - 0 1	 Illegal Both Kings in Check
-1rQn1QR1/P5N1/1Q2RkB1/1R2pnp1/1K2B1rR/4n2p/2b1Q3/NN1Nq3 w - - 0 1	 Illegal Both Kings in Check
-1N2K1k1/1qb3qB/n3Bb2/Bp1Qn3/3RPb2/BPr2B2/1N2R1n1/NRr3R1 w - - 0 1	 Illegal Side not to move in Check
-1N2q1N1/2pk2p1/B1N1b2b/N1b1P1bN/R1r1P2Q/N2rnR2/QR2n3/1BK5 w - - 0 1	 Illegal Both Kings in Check
-1qQ1N1n1/3qR1PN/RK6/P3bP1B/1rq1k1b1/1Rn2R2/1rB3Bb/Q1R5 w - - 0 1	 Illegal Both Kings in Check
-1r1B4/bR2B2b/1rP1kb1B/B5PQ/B1P3qN/2nnq2q/1BN2KqR/3N4 w - - 0 1	 Illegal Triple Check
-1bN2Nk1/pnb4B/Q3B3/rBRq3r/RQp1q1B1/P1P2K2/P2B2p1/6Bn w - - 0 1	 Illegal Both Kings in Check
-n3bK2/P1B3pp/Rbr5/3p2P1/2kPRBB1/3NQr1q/rp1BB1nN/1N4N1 w - - 0 1	 No Checks	 wx 0 wp 3 wpr 5 wpx 0 maxuwp 1 minopp 2	 bx 3 bp 4 bpr 1 bpx 3 maxubp 2 minopp 2
-1K2R3/rQrN4/1qQ1k1P1/3N2P1/1Q2Q2n/BQBp1rP1/1P1bb1q1/2r4R w - - 0 1	 Illegal Side not to move in Check
-3K4/pP1b3B/N1R1p1Q1/r1pnQ3/Pq1PB2p/2n1PR2/r2NR2P/rk1b3R w - - 1 3	 Illegal Side not to move in Check
-2bq1Q2/NP6/p2Q1rr1/kRBn1N2/1Q2q2n/BbRr3q/rp1qr3/4K3 b - - 0 1	 Illegal Both Kings in Check
-R2rn1B1/R2n1n1B/bpk2P2/1K2PQ2/nn4p1/rq1qp2Q/6N1/2Q3nb b - - 0 1	 Illegal Adjacent Kings
-3B1Q2/nq1K2p1/4Q2N/R1Np1RRr/1nb1Q1n1/qq1B2b1/5nb1/k1Q1b1r1 b - - 0 1	 Illegal Both Kings in Check
-BRr1Q1r1/1B2p1n1/1q1K1Nn1/1q6/1pR3r1/2b2Q1R/1pb1b2R/rQk2N1r b - - 0 1	 Illegal Both Kings in Check
-bQ2rBN1/p2N2R1/Q1r4p/K4kR1/p2q2bp/4n3/r1BN1rnQ/1q2q2N b - - 0 1	 Illegal Bishops Too Monochromatic	 wx 4 wp 0 wpr 4 wpx 4 maxuwp -1 minopp 1	 bx 0 bp 4 bpr 5 bpx -1 maxubp 3 minopp 1
-4n1q1/3Q1qK1/3b2nR/2qk2Nb/P2q2Qb/3rp3/N4pBR/1Nn1R1Bn b - - 0 1	 Illegal Both Kings in Check
-1N3qb1/R2n3Q/bR1BpB2/3kb1NP/1n3b2/r2Kb3/1rNBN1p1/1n4bq b - - 0 1	 Illegal Side not to move in Check
-4q1NQ/3BK1rq/R1B1N1B1/PQ2n1r1/3nr2q/RBb2b2/b1b5/kr4bq b - - 0 1	 Illegal Side not to move in Check
-2B1b3/pB1N3B/r1b4n/qbkRnQ1b/2bKP1N1/P3R2r/4q3/1N1n1qn1 b - - 0 1	 Illegal Adjacent Kings
-1B1bb1r1/RN3nnr/1r2P1NB/3b1n1q/1QR2KNP/1q1kn2n/8/2rn3Q b - - 0 1	 Illegal Side not to move in Check
-n1b4n/1Q1kn1n1/3bB1Pr/nP1N2b1/1b4qp/4K1Q1/RBN2rn1/4n1BR b - - 0 1	 Illegal Both Kings in Check
-N1rRR3/7p/1b2B1Rn/P1Pp2Bn/q2r3n/K3Nnr1/2QQb1r1/1n2k1n1 b - - 0 1	 Illegal Both Kings in Check
-4r1N1/qr1Np1R1/2RK1p1p/r1b1R2k/2nR1b2/1B1P4/1Q1P4/R5r1 b - - 0 1	 Illegal Both Kings in Check
-K1q1R3/pp1nn1R1/b6b/1NR1R1n1/3qb1k1/1PQr1p1P/1n3B2/Rq1rN3 b - - 0 1	 Illegal Both Kings in Check
-1q2K2B/rNk5/2Q2PPr/3RR1P1/qB3N1n/2Rqbn2/3q1p1p/rq1r2b1 b - - 0 1	 Illegal Both Kings in Check
-3Q4/1rr1kPbn/2N1nBr1/3PBr2/1pn2N2/2R1rNK1/1rb2P2/r3Q2r b - - 0 1	 Illegal Both Kings in Check
-4bq1K/1n2k3/Bpq2Q1q/R2R1PB1/2Pb2rQ/Pb3pn1/N1q3b1/q2B4 b - - 0 1	 Illegal Both Kings in Check
-q1q4N/5B1n/nB2rNn1/1n1NRbp1/3K3Q/Qb1krNB1/1rQr4/r3R3 b - - 0 1	 Illegal Adjacent Kings
-1n1q1RQ1/1rR5/Nr2qRnq/1n2k1KB/2bRnB2/1qB2B2/5bN1/q3n1Q1 b - - 0 1	 Illegal Both Kings in Check
-3N3n/qr2n1Rp/QN2qB1k/7q/1rb2Bp1/1b1p1QqR/1bN3P1/K2Q2R1 b - - 0 1	 Illegal Both Kings in Check
-k3qBB1/P4n1R/r2pKQ1N/b3b3/1N6/1Rq2rRQ/nr1b4/n2B1qBb b - - 0 1	 Illegal Side not to move in Check
-7N/2p2rn1/pp2K2N/Q4r1R/NPN1r1Qn/bn3krq/B1b5/1N1qNB2 b - - 0 1	 Illegal Both Kings in Check
-N3B2n/b2b3p/4qQQ1/P1R1K2k/RB4q1/4rP1b/rbRnq1Nb/4Bb2 b - - 0 1	 Illegal Both Kings in Check
-QR3n2/2K3Nr/2Bq2pk/B2b2q1/6q1/pr1N2qn/Pqb1P1P1/1RrB1n1R b - - 0 1	 Illegal Side not to move in Check
-1NqnR1Br/r2Q4/n2Q3q/1b1P4/1p5q/1k1B2NP/qrq3KP/3Qn1N1 b - - 0 1	 Illegal Side not to move in Check
-8/1bB1r1N1/rQ1qR2p/RQn2nq1/PQqK1p2/2Nk4/3rBRB1/1b1Q3q b - - 0 1	 Illegal Adjacent Kings
-qQN4K/1RN2n2/1rR1Nr2/1qn2q1B/2b3pp/BR1Q4/3p1k1P/Br2Nq2 b - - 0 1	 Illegal Side not to move in Check
-3R2R1/K3bn1q/1rNp1q2/Q2b2bP/1QN2r2/3q2B1/pNrPk3/n1BQ1R2 b - - 0 1	 Single Check	 wx 2 wp 2 wpr 5 wpx 1 maxuwp 1 minopp 1	 bx 2 bp 2 bpr 4 bpx 2 maxubp 1 minopp 1
-2RR3N/2qPr2R/4R2b/Q4n1b/Nk1p3q/bBPp1b1N/1n3Rn1/3r2BK b - - 0 1	 Illegal Double Check
-1B1r4/1QRB2p1/Bq1rp1b1/3Nn3/2b4p/3N3R/1BKkPrP1/B1r1Nb1r b - - 1 2	 Illegal Adjacent Kings
-rN3rr1/1bn1p1B1/Q2Rp2r/1nP1B1b1/2PnK3/4BR2/B2bPp2/3kQN2 b - - 0 1	 Illegal Both Kings in Check
-N5b1/qp1P4/2r1Rb1r/4Rqnn/2Q2Rr1/bK3Q2/1PqPN1N1/N2b2kB b - - 0 1	 Illegal Both Kings in Check
-n1nbB2Q/PQ2r3/1p3N2/qn2B1P1/BP1p1NR1/KN1q4/3q2bk/q3r2B b - - 0 1	 Illegal Both Kings in Check
-1q3Rrr/rBq4R/Q5PN/B4Q1P/1bK2k1q/3QpPp1/3bP1Pb/2rn4 b - - 0 1	 Illegal Both Kings in Check
-2rrBQqb/1Qn5/2kN1R1n/2b3BB/3QR1qN/3NpBK1/4Rp2/2R4n b - - 0 1	 Illegal Both Kings in Check
-3rNrR1/B2kQ3/bPb2Bq1/R1KN1pRn/5p1Q/nqQ5/2q3b1/N1B3N1 b - - 0 1	 Illegal Bishops Too Monochromatic	 wx 1 wp 1 wpr 7 wpx 0 maxuwp -1 minopp 2	 bx 3 bp 2 bpr 4 bpx 2 maxubp 0 minopp 2
-2R2b1n/8/1n1R1qbN/3B1q1Q/kKQ1p2q/3nR1N1/P2p4/Q1RBrRQr b - - 0 1	 Illegal Adjacent Kings
-rb1R3B/2K4N/p6R/1rQ1nq1r/3P1R2/NB2NkRb/4bBn1/2nQn2N b - - 0 1	 Illegal Both Kings in Check
-1qn4b/Kr3N1b/P1B1P3/1n5Q/2Q1qr2/2R2NQB/n2k2q1/NRNbNb2 b - - 0 1	 Illegal Both Kings in Check
-1n2N3/bnnrKrN1/p1pQRN1N/P1qnR1N1/b5Np/2P1B3/1k6/5BN1 b - - 0 1	 Illegal Side not to move in Check
-3QQ1qb/2qRb1P1/3Qb2q/Nr1P4/1b1KN1kQ/5n2/1B3Bqn/NBrR4 b - - 0 1	 Illegal Both Kings in Check
-4bnQ1/1R1r2Q1/2Br1nR1/pNk1q3/Q1K1brqN/2P3Q1/1NbP4/2R3Bn b - - 0 1	 Illegal Adjacent Kings
-NB3nqn/1B4R1/r5R1/1p1r2qN/Rk1Q2P1/2R1n3/PRKRb3/q2b2bB b - - 0 1	 Illegal Both Kings in Check
-1n3RR1/kr2qBpp/4r2B/2n1pRQN/2bQ2Pn/2Q2PR1/1q2P1K1/3q3N b - - 1 2	 Illegal Side not to move in Check
-7b/1pRP4/2n1pp1n/4P3/qN1BqP2/BBq1Prq1/1KNrBN2/b1Rk3Q b - - 0 1	 Illegal Both Kings in Check
-2Q1bk1r/2rr1B2/b1R1p1Q1/2N1nQ1Q/N3Q1NB/5R2/4Kn1B/1Q1q1bNq b - - 0 1	 Illegal Side not to move in Check
-6rn/1Q5R/2qNK3/1b1P1nQ1/1R1Rb1qr/1P1Q1B1p/1B1RN2k/1RN1n2n b - - 0 1	 Illegal Bishops Too Monochromatic	 wx 0 wp 2 wpr 6 wpx 0 maxuwp 1 minopp 1	 bx 4 bp 1 bpr 4 bpx 3 maxubp 0 minopp 1
-1qbB1rrR/P1Q2kQR/RK2q3/Q1PNr3/4bq2/1R1N4/R2B1nR1/n6q b - - 0 1	 Illegal Both Kings in Check
-8/R2q2b1/1NN1n3/R3B2R/pb4rk/N1r1pbnP/KPQ2RQ1/1Bq2Q1N b - - 0 1	 Single Check	 wx 0 wp 2 wpr 6 wpx 0 maxuwp 2 minopp 0	 bx 4 bp 2 bpr 2 bpx 4 maxubp 2 minopp 0
-2RN1qr1/2BbB1nk/3qN1Np/4R3/rN2NP2/b1P1K2P/b6r/1B1Rq1Q1 b - - 0 1	 Illegal Side not to move in Check
-1q3Nr1/N1Rbn1BK/N7/QrpBqrR1/R1PPB3/6P1/n2q4/R2Bk3 b - - 0 1	 No Checks	 wx 0 wp 3 wpr 5 wpx 0 maxuwp 4 minopp -1	 bx 5 bp 1 bpr 3 bpx 4 maxubp 2 minopp -1
-6Qn/PK1p4/B1NPQr1N/1P3q2/p2k3R/B1b2bn1/PRqp3r/1R2RrR1 b - - 0 1	 Illegal Double Check
+7N/p1p1p1QK/1PpN2P1/1bnBB1Rn/r1P3Pq/1pb3p1/3p1p2/2Rr3k w - - 0 1	 Illegal Side not to move in Check
+n2N4/1P1pQrB1/2b2rP1/bpp3pp/Kp3p2/PN1PP3/2k3pn/3RR2q w - - 0 1	 Single Check	 wx 4 wp 5 wpr 0 wpx 3 maxuwp 4 minopp 1	 bx 0 bp 8 bpr 0 bpx 0 maxubp 7 minopp 1
+2N1r3/RP4p1/2p5/R1r2k2/pbB1K1Pp/1ppPpP1p/3Pn2B/b2N1q1n w - - 0 1	 Illegal Adjacent Kings
+3q1nR1/p2b3P/1p2PB1r/1r1kp1bB/1P2p1n1/p3P1P1/2ppK1P1/QN6 w - - 0 1	 No Checks	 wx 4 wp 6 wpr 0 wpx 2 maxuwp 6 minopp 0	 bx 1 bp 7 bpr 0 bpx 1 maxubp 7 minopp 0
+K1Bn2b1/pP1N1pq1/1P5P/2nPp3/Rr3P1p/R2p2pQ/4k2r/b4BN1 w - - 0 1	 Illegal Side not to move in Check
+7q/1bb3R1/n1p5/p1Pp2rN/1B1PQ1p1/pP1k1pp1/1P2pKPN/nR1rB3 w - - 2 3	 Illegal Both Kings in Check
+4B3/4RP1p/K4Np1/1Q2b1qp/3pP3/pn1BppbR/Pp1nP2P/N2r2kr w - - 2 3	 Illegal Bishops Too Monochromatic	 wx 3 wp 5 wpr 1 wpx 2 maxuwp 1 minopp 4	 bx 0 bp 8 bpr 1 bpx -1 maxubp 4 minopp 4
+5R2/pK1p4/1pNbp1bn/PpB3np/3QP1NP/B4qpP/r2P1pk1/3r3R w - - 3 6	 No Checks	 wx 3 wp 5 wpr 1 wpx 2 maxuwp 2 minopp 3	 bx 0 bp 8 bpr 0 bpx 0 maxubp 5 minopp 3
+8/1qP2p1p/nBp1Rp1K/3rb1Np/prP2PB1/1pn4p/QNP2b1P/R5k1 w - - 2 3	 Illegal Side not to move in Check
+2Kb4/pPk4N/1Q2p2p/q1p1np1p/P2r1p1B/1Rr1b2P/2PPN1p1/3Rn1B1 w - - 1 3	 Illegal Adjacent Kings
+1B2n3/N1P3pp/1p1kR1N1/Rqp4P/pnp2rK1/P1b1BPr1/Qp2p1P1/3b4 w - - 2 3	 Illegal Both Kings in Check
+b2R4/P1pRp1Kn/k3r1p1/2p1Pr1p/4p3/N1PqpnQ1/1P1NPPB1/2b5 w - - 1 3	 No Checks	 wx 3 wp 6 wpr 0 wpx 2 maxuwp 5 minopp 1	 bx 1 bp 7 bpr 0 bpx 1 maxubp 6 minopp 1
+4QK2/P1qP1Pb1/NRkp2R1/p3P3/n1bPrr2/P1pp3p/np2p1N1/4B3 w - - 1 2	 Illegal Both Kings in Check
+n1n3qk/p3p3/P2QPpp1/1B2p2p/P3PK2/N3PpRB/Rr2rp1P/4b3 w - - 0 5	 Single Check	 wx 3 wp 6 wpr 1 wpx 1 maxuwp 3 minopp 3	 bx 1 bp 8 bpr 0 bpx 0 maxubp 5 minopp 3
+3q4/2nn1rpp/2p2bpP/rPP2p1N/2P2P1p/pk1bRK1p/4B1P1/5QRN w - - 3 4	 No Checks	 wx 3 wp 6 wpr 0 wpx 2 maxuwp 3 minopp 3	 bx 0 bp 8 bpr 0 bpx 0 maxubp 5 minopp 3
+3b3r/pR4n1/1p1K1ppp/5ppr/1bB2P1p/PkP2PNQ/2P2nPP/2B1q3 w - - 0 1	 Illegal Both Kings in Check
+n2BQ3/p2B1b2/PPpNp2p/1r1RPK2/r5p1/qRN2p1b/1P2PkP1/6n1 w - - 0 1	 Single Check	 wx 2 wp 6 wpr 0 wpx 2 maxuwp 5 minopp 1	 bx 2 bp 6 bpr 1 bpx 1 maxubp 5 minopp 1
+br1B4/2pQ2r1/2pPP1R1/B2pP1pp/2p5/p3NP2/1k1qN1PP/R2Knn2 w - - 1 2	 Single Check	 wx 2 wp 6 wpr 1 wpx 1 maxuwp 4 minopp 2	 bx 2 bp 7 bpr 0 bpx 1 maxubp 5 minopp 2
+4KN2/Pp6/1prR3P/RP2PQ1b/2Pp2pr/p1pPN1nB/1B1p3n/k5qb w - - 0 1	 Illegal Both Kings in Check
+r1n4k/1p1p1PP1/3br2p/1pRPN2p/RP1Q3P/4B2p/1K1pn2P/3bNBq1 w - - 3 5	 Illegal Side not to move in Check
+Nq2Bn2/2p2rp1/6pP/R2pP2p/1pP1BkK1/N4Rp1/1PQ2PbP/1b2r1n1 w - - 1 3	 Illegal Adjacent Kings
+N5k1/pK1p1p1p/b1PP4/1P1p2R1/Pp2bppq/n1B1RQPr/3N2nP/3r2B1 w - - 0 1	 Illegal Both Kings in Check
+5r2/1bpq4/R1N1QP2/PbBp1prB/N1Pp1kK1/1npP1PP1/2P2p2/4n3 w - - 3 4	 Illegal Adjacent Kings
+1K5N/p1p1PP2/1qP3rp/1Bb2RPP/bp1p2P1/2P2R1p/1k1p3r/4nQN1 w - - 0 1	 Single Check	 wx 2 wp 7 wpr 0 wpx 1 maxuwp 5 minopp 2	 bx 2 bp 7 bpr 0 bpx 1 maxubp 5 minopp 2
+K7/Q1p1k1p1/p1P3np/N1P2r2/1B1Pb1bP/1pRpp1PP/1N1P1B2/q4n2 w - - 0 6	 No Checks	 wx 2 wp 7 wpr 1 wpx 0 maxuwp 3 minopp 4	 bx 2 bp 7 bpr 1 bpx 0 maxubp 3 minopp 4
+1r3nn1/1pp1p1P1/pPbpN2p/4B3/P2P1P2/pkP1RB1P/2p5/2Qqb1NK w - - 3 5	 No Checks	 wx 2 wp 7 wpr 0 wpx 1 maxuwp 3 minopp 4	 bx 1 bp 8 bpr 0 bpx 0 maxubp 4 minopp 4
+2N5/1pbB3p/pp1p3p/RP4pP/PBrnp1Q1/1r1Pk3/nP1PP2R/1Kq2b2 w - - 0 1	 Illegal Both Kings in Check
+N2Bqk1R/3pp1Bp/pK3P2/3P1p1n/P1P2rRP/ppNbp3/1P1bP3/2n4r w - - 0 1	 Illegal Side not to move in Check
+3Rb1nq/1prB1R2/2P1pK1k/n4Ppp/P6N/pP1PPN1P/2p3Pp/5r2 w - - 3 4	 Discovered Double Check	 wx 2 wp 8 wpr 0 wpx 0 maxuwp 5 minopp 3	 bx 2 bp 7 bpr 0 bpx 1 maxubp 4 minopp 3
+1R6/2pp1PP1/1PPRp2B/1P1q4/p3pp2/Pp1Nr2r/1kpP1PbB/3Kn3 w - - 0 1	 Illegal Both Kings in Check
+8/p1NPr3/2Kp2b1/1PpP1Pb1/1n2p1Rp/PQ1R1Pqp/p2nPr1P/3N1k2 w - - 0 1	 Single Check	 wx 2 wp 8 wpr 0 wpx 0 maxuwp 4 minopp 4	 bx 1 bp 7 bpr 0 bpx 1 maxubp 3 minopp 4
+4b3/2P1pnRn/P1KpPNP1/1p1Pp3/R3rP2/1r1PQ3/B1b5/1N1B1k1q w - - 0 1	 Single Check	 wx 1 wp 7 wpr 1 wpx 0 maxuwp 7 minopp 0	 bx 4 bp 4 bpr 1 bpx 3 maxubp 4 minopp 0
+B3r1R1/PnP3P1/1P2Pn2/N5RP/1p5b/p1P2k1p/r1pBbqKp/1Q2N3 w - - 0 1	 Illegal Adjacent Kings
+n3kr2/P1p1NB1K/1P4Qp/2PPP1N1/bPPr2Bn/3p1p1p/8/Rb3qR1 w - - 0 1	 Illegal Side not to move in Check
+R5Q1/pPP1RP2/N1PB1P2/3kP2n/K4pNp/4pr2/qp1rnP1B/4b2b w - - 0 1	 Single Check	 wx 1 wp 7 wpr 1 wpx 0 maxuwp 6 minopp 1	 bx 3 bp 5 bpr 0 bpx 3 maxubp 4 minopp 1
+1K1n3r/pR1pPBNp/4p2P/1P1Q2b1/4r3/pP1qb2P/1kP2pPN/2R2B2 w - - 0 1	 Illegal Bishops Too Monochromatic	 wx 1 wp 7 wpr 1 wpx 0 maxuwp 4 minopp 3	 bx 3 bp 6 bpr 1 bpx 1 maxubp 3 minopp 3
+1rQNN2B/r1n1pb2/2b1P2P/4K2k/qRP2p1n/PPpp1p2/P1PRp3/3B4 w - - 0 1	 Illegal Bishops Too Monochromatic	 wx 1 wp 7 wpr 0 wpx 1 maxuwp 4 minopp 3	 bx 2 bp 6 bpr 1 bpx 1 maxubp 3 minopp 3
+2b1B3/1kPP1p2/6Pp/1RnnPN2/qp1prPp1/1N2P3/Rp1PBKb1/2r3Q1 w - - 0 1	 Illegal Side not to move in Check
+7r/1BpP2PP/p1bp1N1p/bp3Qn1/P1qP1B2/1Ppr3P/3RkK2/2n1N1R1 w - - 1 6	 Illegal Adjacent Kings
+5q2/NpP2p2/2P1kRpp/p2P2PN/1Bp2b2/1KP1pQ1b/P3RBrP/2nr4 w - - 0 4	 Illegal Both Kings in Check
+N7/1Ppp3R/1b1Bppp1/1p3QRP/pb1P4/4P1Pq/PNP1rKr1/k2Bn3 w - - 7 10	 Illegal Double Check
+4Bk1n/3r1p1p/1K2qR2/8/NP1ppP2/ppb1PNbQ/PPpP1P1R/2rnB3 w - - 3 5	 Single Check	 wx 1 wp 7 wpr 0 wpx 1 maxuwp 2 minopp 5	 bx 1 bp 7 bpr 1 bpx 0 maxubp 2 minopp 5
+4q2N/1p1bpB2/3p4/3PPn2/b2n1P1p/1PRpPpP1/p1Nk1B1P/rRKrQ3 w - - 0 1	 Illegal Adjacent Kings
+BK6/P4bRp/P1rp3R/qPrN3p/1b2k2P/PP1p1P1p/P2B4/Q1n5 w - - 0 1	 Illegal Side not to move in Check
+2br4/1p2R3/1p3p1K/3P1P1n/P2pPNrP/p2Pk1Pp/1QqbN1nP/B4R2 w - - 0 1	 No Checks	 wx 1 wp 8 wpr 0 wpx 0 maxuwp 5 minopp 3	 bx 2 bp 6 bpr 0 bpx 2 maxubp 3 minopp 3
+B1b3n1/4P3/R5Pb/2Pp1pq1/2nrpkNp/p2Pp3/PNQ1PPP1/1r2K1B1 w - - 0 4	 Single Check	 wx 1 wp 8 wpr 0 wpx 0 maxuwp 5 minopp 3	 bx 2 bp 6 bpr 0 bpx 2 maxubp 3 minopp 3
+RN3BB1/p2pNb2/3KP3/1b1pn3/p1P1p3/1qPPPn1P/P1p1Pr2/Rrk5 w - - 0 1	 Illegal Bishops Too Monochromatic	 wx 1 wp 8 wpr 0 wpx 0 maxuwp 4 minopp 4	 bx 2 bp 6 bpr 1 bpx 1 maxubp 2 minopp 4
+3b4/B3N1pr/P7/P1r2R1k/P1ppBPp1/2qPKQPp/3N1PRP/2nn3b w - - 0 3	 Illegal Both Kings in Check
+BN6/Pr1p4/n2Pkp1K/2Pq2Q1/2bPNPP1/P4P1p/1p2rRbp/1RB4n w - - 0 1	 Illegal Bishops Too Monochromatic	 wx 0 wp 8 wpr 0 wpx 0 maxuwp 5 minopp 3	 bx 3 bp 5 bpr 1 bpx 2 maxubp 2 minopp 3
+1nq5/pPb1P3/PRr1P1pP/1p1k4/P1K3P1/1Q1rP1pN/3BB1p1/b1R2N1n w - - 0 1	 Illegal Adjacent Kings
+5q2/p1P2nR1/2PpP1Nb/1brrn2K/PN2ppk1/2P4B/Q2BPPpP/4R3 w - - 1 3	 Illegal Adjacent Kings
+3r4/r1ppB3/2Q2bNq/pR2PP2/P2p1p1p/b1PP2B1/2P2P1P/K1Nn1kR1 w - - 2 10	 Illegal Side not to move in Check
+rB1NK3/6rp/pp2P1P1/R5n1/2pR1p1P/bP2PNQb/P1P1pPk1/4B1q1 w - - 1 10	 Illegal Side not to move in Check
+1b2R3/P2N2n1/1pppr1P1/BbBP3p/2q2p1r/1PPN1n1P/p1P1P1K1/k1RQ4 w - - 0 1	 Illegal Side not to move in Check
+k1N1RK2/P1ppp3/B1bpp3/1r2P1pP/1q1Rp2P/4pn2/2P1rQ2/1B2n1N1 w - g6 1 2	 No Checks	 wx 3 wp 5 wpr 1 wpx 2 maxuwp 3 minopp 2	 bx 1 bp 8 bpr 0 bpx 0 maxubp 6 minopp 2
+1B4nb/2p2r2/1P1Q4/B1pP1Pp1/ppPNP3/6r1/NPp2RPk/1qK1bR2 w - g6 1 3	 Single Check	 wx 1 wp 7 wpr 1 wpx 0 maxuwp 4 minopp 3	 bx 3 bp 6 bpr 1 bpx 1 maxubp 3 minopp 3
+3n1b2/PbpBNr1p/p1R2p2/r1PpKk1p/PpP3n1/N4R2/2q1pB2/8 b - - 0 1	 Illegal Adjacent Kings
+2Q4N/R4B2/1K1B1bpp/P2P1p1k/PNp2p1n/1qrP1Pn1/rpR5/3b4 b - - 0 1	 No Checks	 wx 3 wp 5 wpr 0 wpx 3 maxuwp 7 minopp -2	 bx 2 bp 6 bpr 0 bpx 2 maxubp 8 minopp -2
+2N5/pb5p/P1pp3P/p2P1Rqn/KB1kB1Q1/bN1n1p2/2Pr2P1/r3R3 b - - 0 1	 Single Check	 wx 3 wp 5 wpr 0 wpx 3 maxuwp 7 minopp -2	 bx 2 bp 6 bpr 0 bpx 2 maxubp 8 minopp -2
+3rN2n/3Rp2N/k2PP1nQ/pp1PpK1P/B2q1r2/2pB3P/3bpRpb/8 b - - 0 1	 Illegal Side not to move in Check
+3KN2B/1q3pk1/pN1rBpR1/Rp2p3/pP2P1Q1/P2Pp2p/1nb1nP2/b6r b - - 5 6	 Illegal Both Kings in Check
+1rq2R2/p1B1p3/PP2n1pP/4b2p/2p5/Ppn1pN1Q/B1KbN1pP/r4kR1 b - - 0 1	 Illegal Both Kings in Check
+b1r2kK1/BpRpp3/2B2n1p/N1R3p1/3nPPr1/2p4q/P1pPPpb1/1Q5N b - - 0 1	 Illegal Adjacent Kings
+4K3/1r4p1/BP6/P1B1kpnQ/2bRP3/1p1Pp1Pq/Npr2Pp1/1n1b3N b - - 0 1	 No Checks	 wx 3 wp 6 wpr 0 wpx 2 maxuwp 6 minopp 0	 bx 2 bp 6 bpr 1 bpx 1 maxubp 6 minopp 0
+1k6/1prPP2n/R2Bp1P1/2RP2r1/1p1p4/b2p4/1PppP2N/bK1BQ1N1 b - - 0 1	 Illegal Side not to move in Check
+1rn4B/2N2bB1/4P3/RPpP1rp1/1p1q1pRp/1PN1KP2/P2Q1p2/n3b2k b - - 0 1	 Illegal Side not to move in Check
+r2nN1R1/Qpr1P2P/2B3Kq/4P2p/7P/RpP1B1pp/2NbP1bp/2k4n b - - 0 1	 Illegal Side not to move in Check
+K4nN1/p1pp4/bb2pPp1/rNB1P1PR/4np2/p5PP/PR4Qk/2Br4 b - - 1 3	 Single Check	 wx 2 wp 6 wpr 1 wpx 1 maxuwp 4 minopp 2	 bx 2 bp 7 bpr 0 bpx 1 maxubp 5 minopp 2
+3N4/1B1pnP2/1kKp1Q1n/1p3pp1/2P1PPrp/2P1q1P1/2R1pR1p/r5NB b - - 0 1	 Illegal Adjacent Kings
+1K3BQn/2B2p1b/Pr1k2pp/RPqN1P2/1pN1P3/1P1p4/P1pnp1rR/3b4 b - - 0 1	 Illegal Both Kings in Check
+5nbQ/pR4kr/2p5/1Pp1rp2/2p2bq1/PK1P1Pnp/2PBp1P1/1RN1NB2 b - - 0 3	 Illegal Both Kings in Check
+2N1n1Bq/pp1N4/P1Rn3b/3Ppb2/rP1k1p2/1pB3rp/1KQP1pPP/2R5 b - - 2 3	 Single Check	 wx 2 wp 6 wpr 0 wpx 2 maxuwp 4 minopp 2	 bx 1 bp 7 bpr 0 bpx 1 maxubp 5 minopp 2
+K2nr2Q/1PRBp2P/Np1pR1qb/2pP4/5k1P/r1pNP1n1/1pb1Pp2/6B1 b - - 0 1	 Illegal Double Check
+2RR2KB/1P4pb/bPppp1n1/1r1P1q1p/1nkp2P1/N2P2p1/p1B4P/4NQ2 b - - 0 2	 Illegal Both Kings in Check
+1rbn2BB/1p5p/KPrp1p1P/2p2R2/q5P1/1pPR1P1b/2QP1pNp/5nNk b - - 0 5	 Illegal Side not to move in Check
+4N2k/QP2qp2/1nPPp3/1PRprPp1/4Pb2/p3PR2/rpN1B1b1/1n1K4 b - - 0 2	 No Checks	 wx 2 wp 7 wpr 0 wpx 1 maxuwp 6 minopp 1	 bx 2 bp 6 bpr 0 bpx 2 maxubp 5 minopp 1
+1q4N1/p1n3P1/1pp1K1Pp/3bp2Q/B1P2p2/PP4n1/1pR1PrRP/1r1kB3 b - - 8 10	 Illegal Side not to move in Check
+2b1R3/r3qBpP/PppK3p/nP1k2P1/p5B1/p1P2pb1/p1N2PRP/2Qn4 b - - 4 5	 Illegal Adjacent Kings
+3n4/1pP4p/n1rp2r1/R1kBq2P/1RPP2b1/pNP1P2B/1p2pPb1/K4N2 b - - 0 2	 Illegal Both Kings in Check
+1k1r4/3prNP1/RbqP1pN1/Q1P5/1p1P1n2/1BP1R2b/pKpP1P1n/4B3 b - - 0 1	 No Checks	 wx 1 wp 7 wpr 0 wpx 1 maxuwp 7 minopp 0	 bx 3 bp 5 bpr 0 bpx 3 maxubp 5 minopp 0
+R1K2b1n/2Pk3r/2B3Np/1Q1PN1pP/p1R3Pp/6P1/rP1P1pnp/2B4b b - - 0 2	 Illegal Adjacent Kings
+1R1K1bkB/PPB1p1N1/p2rPP2/1NPpnp1p/2rP3P/1p1Q2q1/8/4nR1b b - - 2 3	 Illegal Side not to move in Check
+rn6/PrRpBb2/1PPN1p2/1pk5/3Np3/1PQpPqP1/P1pnb1B1/2K3R1 b - - 0 1	 Illegal Bishops Too Monochromatic	 wx 1 wp 7 wpr 0 wpx 1 maxuwp 4 minopp 3	 bx 2 bp 6 bpr 1 bpx 1 maxubp 3 minopp 3
+2q5/p3PnB1/P1R1ppbN/1P1pn1P1/1PQk2P1/R1p2p1N/1b1P2r1/3Br1K1 b - - 0 1	 Illegal Both Kings in Check
+4BN2/1P2b1NP/3p2Rr/2pPP2p/1pKpBR1P/r2n1p2/2pP1P1Q/3q1b1k b - - 0 2	 Illegal Bishops Too Monochromatic	 wx 1 wp 7 wpr 1 wpx 0 maxuwp 3 minopp 4	 bx 2 bp 7 bpr 0 bpx 1 maxubp 3 minopp 4
+1R6/p1B1p1Pn/P1QNp1p1/K2PP1Bk/5q1p/rp2P2P/4pRPb/1Nn2r2 b - - 2 4	 Illegal Side not to move in Check
+5q1n/Kp3PR1/kB1bnp1p/2p2P2/1P2QppP/Nrb4B/P1P3Pp/1R4N1 b - - 6 10	 Illegal Adjacent Kings
+1N1bn2B/b1pBNnpK/1kQ3P1/2R5/P2pppP1/3RPP2/p1pPrP2/1r6 b - - 3 4	 Single Check	 wx 1 wp 7 wpr 0 wpx 1 maxuwp 3 minopp 4	 bx 2 bp 7 bpr 1 bpx 0 maxubp 3 minopp 4
+1q2b3/rP3ppp/2kP1Rp1/PrPB1K2/P2nNBPP/3p4/RnQ4P/8 b - - 0 1	 Illegal Both Kings in Check
+B1R2N2/2pNPp1P/br2Q1P1/pPPP3p/1r6/2Pn1qp1/n1K2PB1/1bk5 b - - 0 2	 Illegal Adjacent Kings
+1n4rB/pnKp2pN/5PPP/PP2p3/BprQNPbR/1Pp5/6P1/3k1b2 b - - 2 3	 Illegal Both Kings in Check
+8/rPN3pn/bp1b1PPp/nN4PP/r3PPp1/PB2Q1q1/KR1R3B/2k5 b - - 0 1	 No Checks	 wx 0 wp 8 wpr 0 wpx 0 maxuwp 8 minopp 0	 bx 4 bp 4 bpr 0 bpx 4 maxubp 4 minopp 0
+4R1B1/1p3nPn/2N3PP/1ppRPQ1p/2PbKPp1/Np4P1/2q2Pk1/5B1b b - - 0 1	 Illegal Both Kings in Check
+r1Rn2q1/BRp1Pbpn/rb2PB2/2P1P3/Qp4P1/1P1p2PN/1pP3k1/2NK4 b - - 0 3	 Illegal Bishops Too Monochromatic	 wx 0 wp 8 wpr 1 wpx -1 maxuwp 5 minopp 3	 bx 3 bp 5 bpr 0 bpx 3 maxubp 2 minopp 3
+q4b2/pP2P1K1/1pbpPRnQ/4N1P1/1k1pB3/Pnr1pr2/NP2PP2/4RB2 b - - 1 3	 Illegal Both Kings in Check
+b4b2/qnP2pp1/Q1k4R/1P2pNR1/1nP2r2/PPNpPPP1/1K1rp3/2B2B2 b - - 0 3	 Illegal Both Kings in Check
+4Rb2/nn3p2/q1p1PQ2/NK1p2pp/3PrPPP/NpR2Pk1/1P1r1bBP/3B4 b - - 1 5	 Illegal Both Kings in Check
+1NB3b1/4pk1P/2pp1pr1/P1q1RKQ1/1pP2pp1/1B2P1p1/R4NP1/n5nr b - c3 0 3	 No Checks	 wx 3 wp 5 wpr 1 wpx 2 maxuwp 3 minopp 2	 bx 1 bp 8 bpr 0 bpx 0 maxubp 6 minopp 2
+4NRb1/1BppP1Qp/Ppn4R/Nr6/PpP4k/1q1Pr2p/KP2n1p1/7b b - c3 0 3	 Illegal Both Kings in Check
+1KrR3k/N6P/1q1pPp2/RPrb3p/nP1NpP1P/4P1QB/3Pn1pp/5b2 b - f3 1 4	 Illegal Both Kings in Check
