@@ -1,6 +1,7 @@
 module Chess.Position.Ranking (URPosition, fromPosition, toPosition, sideToMoveRanking, caseRanking, wArmyStatRanking, bArmyStatRanking, guardRanking, enPassantRanking, epOppRanking, sandwichRanking, opposeRanking, pawnRanking, castleRanking, wArmyRanking, bArmyRanking, pieceRanking, emptyURPosition) where
 
 import Control.Monad
+import Data.Function
 import Data.Maybe
 import Data.Char
 import Data.List
@@ -168,16 +169,18 @@ sp = putStrLn . showDiagram . diagram
 
 -- rank side to move
 sideToMoveRanking :: URPosition -> Ranking URPosition
-sideToMoveRanking pos = Ranking size unrank rank where
+sideToMoveRanking pos = Ranking size cmp unrank rank where
   size = 2
+  cmp = compare `on` rank
   unrank i = pos { whiteToMove = i == 0 }
   rank (URPosition { whiteToMove = wtm }) = if wtm then 0 else 1
 
 -- rank cases related to castling and en-passant
 caseRanking :: URPosition -> Ranking URPosition
-caseRanking pos = Ranking size unrank rank where
+caseRanking pos = Ranking size cmp unrank rank where
   -- cases = [(fwr,fbr,ep) | fwr <- [0..2], fbr <- [0..2], ep <- [0..1]]
   size = 3 * 3 * 2
+  cmp = compare `on` rank
   unrank i' = pos { fixwr = i `div` 6, fixbr = i `div` 2 `mod` 3, fixp = i `mod` 2 } where i = fromIntegral i'
   rank (URPosition { fixwr = fwr, fixbr = fbr, fixp = ep }) = fromIntegral $ 6 * fwr + 2 * fbr + ep
 
@@ -220,23 +223,25 @@ armyStats_ = array ((0,0),(2,1)) [((fr,fp), collectedArmies fr fp) | fr<-[0..2],
 
 -- rank stats of white army
 wArmyStatRanking :: URPosition -> Ranking URPosition
-wArmyStatRanking pos@(URPosition { fixwr = fwr, fixp = ep }) = Ranking size unrank rank where
+wArmyStatRanking pos@(URPosition { fixwr = fwr, fixp = ep }) = Ranking size cmp unrank rank where
   wArmyStats = armyStats fwr ep
   size = fromIntegral $ M.size wArmyStats
+  cmp = compare `on` rank
   unrank i = pos { wArmyStat = fst $ M.elemAt (fromIntegral i) wArmyStats } 
   rank (URPosition { wArmyStat = wAS }) = fromIntegral . M.findIndex wAS $ wArmyStats
 
 -- rank stats of black army
 bArmyStatRanking :: URPosition -> Ranking URPosition
-bArmyStatRanking pos@(URPosition { fixbr = fbr, fixp = ep }) = Ranking size unrank rank where
+bArmyStatRanking pos@(URPosition { fixbr = fbr, fixp = ep }) = Ranking size cmp unrank rank where
   bArmyStats = armyStats fbr ep
   size = fromIntegral $ M.size bArmyStats
+  cmp = compare `on` rank
   unrank i = pos { bArmyStat = fst $ M.elemAt (fromIntegral i) bArmyStats } 
   rank (URPosition { bArmyStat = bAS }) = fromIntegral . M.findIndex bAS $ bArmyStats
 
 -- guard on promotion feasibility
 guardRanking :: URPosition -> Ranking URPosition
-guardRanking pos = Ranking size unrank rank where
+guardRanking pos = Ranking size cmp unrank rank where
   URPosition { fixp = ep, wArmyStat = ArmyStat wtot wp wproms _, bArmyStat = ArmyStat btot bp bproms _ } = pos
   caps = 32 - wtot - btot
   np = 8 - ep
@@ -247,30 +252,33 @@ guardRanking pos = Ranking size unrank rank where
   -- wp-maxuwp = wp-np+bp+bproms-caps+wproms
   minopp = ep + wp-maxuwp -- wp-maxuwp == bp-maxubp where maxubp = wpx + caps - bproms
   size = if min maxuwp maxubp >= 0 then 1 else 0
+  cmp _ _ = EQ
   unrank _ = pos { minOpp = minopp }
   rank _ = 0
 
 -- rank white army piece counts
 wArmyRanking :: URPosition -> Ranking URPosition
-wArmyRanking pos = Ranking size unrank rank where
+wArmyRanking pos = Ranking size cmp unrank rank where
   URPosition { fixwr = fwr, fixp = ep, wArmyStat = wAS } = pos
   wArmies = armyStats fwr ep M.! wAS
   size = fromIntegral $ length wArmies
+  cmp = compare `on` rank
   unrank i = pos { pieceCnts = cnts } where cnts = wArmies!!(fromIntegral i)
   rank (URPosition { pieceCnts = cnts }) = fromIntegral . fromJust . elemIndex (take 5 cnts) $ wArmies
 
 -- rank black army piece counts
 bArmyRanking :: URPosition -> Ranking URPosition
-bArmyRanking pos = Ranking size unrank rank where
+bArmyRanking pos = Ranking size cmp unrank rank where
   URPosition { fixbr = fbr, fixp = ep, bArmyStat = bAS , pieceCnts = wCnts } = pos
   bArmies = armyStats fbr ep M.! bAS
   size = fromIntegral $ length bArmies
+  cmp = compare `on` rank
   unrank i = pos { pieceCnts = take 5 wCnts ++ cnts } where cnts = bArmies!!(fromIntegral i)
   rank (URPosition { pieceCnts = cnts }) = fromIntegral . fromJust . elemIndex (drop 5 cnts) $ bArmies
 
 -- rank castling details
 castleRanking :: URPosition -> Ranking URPosition
-castleRanking pos = Ranking size unrank rank where
+castleRanking pos = Ranking size cmp unrank rank where
   URPosition { whiteToMove = wtm, fixp = ep, fixwr = fwr, fixbr = fbr } = pos
   -- rookAssocs = filterMap cM [(0,'r'),(7,'r'),(56,'R'),(63,'R')]
   size = fromIntegral $ mwr * mbr
@@ -279,6 +287,7 @@ castleRanking pos = Ranking size unrank rank where
   multFR 0 = 1
   multFR 1 = 2
   multFR 2 = 1
+  cmp = compare `on` rank
   unrank i' = pos { castleMap = cM } where
     i = fromIntegral i' :: Int
     wi = i `div` mbr
@@ -293,11 +302,12 @@ castleRanking pos = Ranking size unrank rank where
 
 -- rank en-passant details
 enPassantRanking :: URPosition -> Ranking URPosition
-enPassantRanking pos = Ranking size unrank rank where
+enPassantRanking pos = Ranking size cmp unrank rank where
   URPosition { whiteToMove = wtm, fixp = ep } = pos
   size = multEP ep
   multEP 0 = 1
   multEP 1 = 14
+  cmp = compare `on` rank
   unrank i' = if ep==0 then pos else pos { wEP = wep, bEP = bep } where
     i = fromIntegral i'
     i7 = i `div` 2
@@ -312,16 +322,18 @@ enPassantRanking pos = Ranking size unrank rank where
 
 -- rank opposition of en-passant files
 epOppRanking :: URPosition -> Ranking URPosition
-epOppRanking pos@(URPosition { fixp = ep, wArmyStat = ArmyStat _ wp _ _, bArmyStat = ArmyStat _ bp _ _, minOpp = mo }) = Ranking size unrank rank where
+epOppRanking pos@(URPosition { fixp = ep, wArmyStat = ArmyStat _ wp _ _, bArmyStat = ArmyStat _ bp _ _, minOpp = mo }) = Ranking size cmp unrank rank where
   opptions = if ep==0 then [(0,0)] else [(wopp,bopp) | wopp <- [max 0 (mo-wp)..1], bopp <- [max 0 (mo-bp)..1], wopp+bopp <= max 0 mo]
   size = fromIntegral $ length opptions
+  cmp = compare `on` rank
   unrank i = pos { wEPOpp = wopp, bEPOpp = bopp } where (wopp,bopp) = opptions!!fromIntegral i
   rank (URPosition { wEPOpp = wopp, bEPOpp = bopp }) = fromIntegral . fromJust . elemIndex (wopp,bopp) $ opptions
  
 -- rank amount of pawn free sandwich space
 sandwichRanking :: URPosition -> Ranking URPosition
-sandwichRanking pos@(URPosition { minOpp = mo }) = Ranking size unrank rank where
+sandwichRanking pos@(URPosition { minOpp = mo }) = Ranking size cmp unrank rank where
   size = 1 + 4 * fromIntegral (max 0 mo)
+  cmp = compare `on` rank
   unrank i = pos { oppSep = fromIntegral i }
   rank (URPosition { oppSep = s }) = fromIntegral s
  
@@ -345,10 +357,11 @@ merge xs@(x@(xc,_):xs') ys@(y@(yc,_):ys') = if xc`mod`8 < yc`mod`8 then x:merge 
 
 -- rank placement of opposing pawns
 opposeRanking :: URPosition -> Ranking URPosition
-opposeRanking pos = Ranking sz unrnk rnk where
+opposeRanking pos = Ranking sz cmp unrnk rnk where
   URPosition { whiteToMove = wtm, fixp = ep, minOpp = mo, wEP = wep, bEP = bep, wEPOpp = wopp, bEPOpp = bopp, oppSep = s } = pos
   p = max 0 mo
   sz = if ep == 0 then fromIntegral (mopps p s 8) else size epR
+  cmp = compare `on` rnk
   epR = sizeRanking $ epRCase wopp bopp where
     epRCase 0 0  = [([], epopp 0 0)]
     epRCase 0 1  = [([(bep,bep+8+ds*8)], epopp 1 ds) | ds<-[0,1..5-bep`div`8]]
@@ -402,9 +415,10 @@ fac_ = listArray (0,64) (scanl (*) 1 [1..64])
 
 -- rank placement of free pawns
 pawnRanking :: URPosition -> Ranking URPosition
-pawnRanking pos = Ranking size unrnk rnk where
+pawnRanking pos = Ranking size cmp unrnk rnk where
   URPosition { fixp = ep, minOpp = mo, wEP = wep, bEP = bep, wEPOpp = wepopp, bEPOpp = bepopp, oppSep = oS, oppList = oL, wArmyStat = ArmyStat _ wp _ _, bArmyStat = ArmyStat _ bp _ _ } = pos
   size   = fallingPower pspace (wp' + bp') `div` (fac wp' * fac bp')
+  cmp = compare `on` rnk
   wpOpp = max 0 mo - wepopp
   bpOpp = max 0 mo - bepopp
   wp' = wp - wpOpp
@@ -417,9 +431,10 @@ pawnRanking pos = Ranking size unrnk rnk where
 
 -- rank placement of free pieces
 pieceRanking :: URPosition -> Ranking URPosition
-pieceRanking pos = Ranking size unrnk rnk where
+pieceRanking pos = Ranking size cmp unrnk rnk where
   URPosition { fixp = ep, wArmyStat = ArmyStat wtot _ _ _, bArmyStat = ArmyStat btot _ _ _, pieceCnts = pcs } = pos
   size   = fallingPower pcspace (sum pcs) `div` product (map fac pcs)
+  cmp = compare `on` rnk
   emptySpace = 64 - 2 * ep - wtot - btot
   pcspace = emptySpace + sum pcs
   pieces = (emptySymbol, emptySpace) : zip pieceSymbols pcs

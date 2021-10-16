@@ -8,6 +8,7 @@ import qualified Data.Ranking as R
 -- rank and unrank size items to/from 0..size-1
 data BRanking a = BRanking {
   size   :: Integer,
+  cmp    :: a -> a -> Ordering,
   unrank :: [Integer] -> [a],
   rank   :: [a] -> [Integer]
 }
@@ -16,14 +17,20 @@ data BRanking a = BRanking {
 batch :: (a -> R.Ranking b) -> a -> BRanking b
 batch arb a = let r = arb a in BRanking {
   size   = R.size r,
+  cmp    = R.cmp r,
   unrank = map (R.unrank r),
   rank   = map (R.rank r)
 }
 
 -- rank pairs (0,0)..(0,size0-1), (1,0)..(1,size1-1), ... ,(k,0)..(k,sizek-1)
 sizeRanking :: (Show a, Eq a) => [(a, Integer)] -> BRanking (a, Integer)
-sizeRanking itemSizes = BRanking size unrank rank where
+sizeRanking itemSizes = BRanking size cmp unrank rank where
   size = sum . map snd $ itemSizes
+  cmp (a0,i0) (a1,i1) = if cmpai == EQ then compare i0 i1 else cmpai where
+    cmpai = compare ai0 ai1 
+    (Just ai0) = elemIndex a0 items
+    (Just ai1) = elemIndex a1 items
+    items = map fst itemSizes
   unrank = urnk 0 itemSizes where
     urnk _ _ [] = []
     urnk sum iS@((a,sz):iS') is@(i:is') = if i-sum < sz then (a,i-sum):urnk sum iS is' else urnk (sum+sz) iS' is
@@ -42,10 +49,12 @@ nondecreasing l = and [x <= y  | (x:y:_) <- tails l]
 
 -- analogue of monadic bind for arbitrarily sized Rankings
 bindR :: (b -> a) -> BRanking a -> (a -> BRanking b) -> BRanking b
-bindR inv ra arb = BRanking sz unrnk rnk where
+bindR inv ra arb = BRanking sz cmpr unrnk rnk where
   aranks   = [0.. size ra-1]
   sizeR    = sizeRanking $ zip aranks (map (size . arb) . unrank ra $ aranks)
   sz       = size sizeR
+  cmpr b0 b1 = if cmp ra a0 a1 == EQ then cmp (arb a0) b0 b1 else cmp ra a0 a1 where
+    (a0, a1) = (inv b0, inv b1)
   unrnk is = concat . zipWith unrank rbs . map snd $ aibis where
     rbs   =  map arb . unrank ra . map fst $ aibis
     aibis = groupByFst . unrank sizeR $ is
@@ -56,10 +65,12 @@ bindR inv ra arb = BRanking sz unrnk rnk where
 
 -- analogue of monadic bind for Uniformly sized Rankings
 bindUR :: (b -> a) -> BRanking a -> (a -> BRanking b) -> BRanking b
-bindUR inv ra arb = BRanking sz unrnk rnk where
+bindUR inv ra arb = BRanking sz cmpr unrnk rnk where
   sz       = sizeRa * sizeRb
   sizeRa   = size ra
   sizeRb   = size . arb . head . unrank ra $ [0]
+  cmpr b0 b1 = if cmp ra a0 a1 == EQ then cmp (arb a0) b0 b1 else cmp ra a0 a1 where
+    (a0, a1) = (inv b0, inv b1)
   unrnk is = concat . zipWith unrank rbs . map snd $ aibis where
     rbs   =  map arb . unrank ra . map fst $ aibis
     aibis = groupByFst . map (`divMod` sizeRb) $ is
