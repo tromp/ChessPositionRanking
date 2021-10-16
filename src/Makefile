@@ -12,6 +12,9 @@ cpr:	Makefile Chess/Position.hs Data/Ranking.hs Chess/Position/Ranking.hs Data/R
 legal:	Makefile Legality.hs
 	ghc -O Legality.hs -o legal
 
+sortFENs:	Makefile SortFENs.hs
+	ghc -O SortFENs.hs -o sortFENs
+
 clean: 	*.o *.hi
 	find . -name "*.o" -type f -delete
 	find . -name "*.hi" -type f -delete
