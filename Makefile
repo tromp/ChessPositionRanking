@@ -7,6 +7,34 @@ count:	Makefile
 test100:	Makefile testRnd1kResearch
 	diff testRnd100Research sortedRnd100Research
 
+sortedRnd100kLegalFENs:	Makefile
+	$(MAKE) -C src/ randomFENs
+	$(MAKE) -C src/ sortFENs
+	time src/randomFENs 100 100000 | src/sortFENs > sortedRnd100kLegalFENs
+
+sortedRnd100kLegalRanks:	Makefile sortedRnd100kLegalFENs
+	$(MAKE) -C src/ cpr
+	time src/cpr rank < sortedRnd100kLegalFENs > sortedRnd100kLegalRanks
+
+testRnd100kLegalFENs:	Makefile sortedRnd100kLegalRanks
+	$(MAKE) -C src/ cpr
+	time src/cpr unrank < sortedRnd100kLegalRanks > testRnd100kLegalFEN
+	diff sortedRnd100kLegalFENs testRnd100kLegalFEN
+
+sortedRnd1mLegalFENs:	Makefile
+	$(MAKE) -C src/ randomFENs
+	$(MAKE) -C src/ sortFENs
+	time src/randomFENs 100 1000000 | src/sortFENs > sortedRnd1mLegalFENs
+
+sortedRnd1mLegalRanks:	Makefile sortedRnd1mLegalFENs
+	$(MAKE) -C src/ cpr
+	time src/cpr rank < sortedRnd1mLegalFENs > sortedRnd1mLegalRanks
+
+testRnd1mLegalFENs:	Makefile sortedRnd1mLegalRanks
+	$(MAKE) -C src/ cpr
+	time src/cpr unrank < sortedRnd1mLegalRanks > testRnd1mLegalFEN
+	diff sortedRnd1mLegalFENs testRnd1mLegalFEN
+
 testRnd100Ranks:	Makefile
 	$(MAKE) -C src/ randomRs
 	src/randomRs 8726713169886222032347729969256422370854716254 100 | sort -n > testRnd100Ranks
