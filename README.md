@@ -50,6 +50,7 @@ or **(4.48 +- 0.37) x 10^44**, again with 95% confidence level.
 # Reproducibility
 
 We generated legal FENs by playing chess games with moves chosen uniformly at random among all legal ones, and 1% chance of termination after every move. We sorted and ranked all these FENs and unranked the results to verify invertibility of ranking (Makefile targets testRnd100kLegalFENs and testRnd1mLegalFENs).
+In order to be able to sort FENs, we added a fourth component to our former Ranking triple, namely a function to compare two ranked elements.
 
 We produced our integer samples using Haskell's built-in random number
 generator with a seed of 0, and sorted the result for use in batched ranking
