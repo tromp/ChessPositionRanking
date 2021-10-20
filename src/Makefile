@@ -1,7 +1,10 @@
 all:	CountChess randomRs cpr legal sortFENs
 
-CountChess:	Makefile CountChess.hs
-		ghc -O CountChess.hs
+count:	Makefile CountChess.hs
+		ghc -O CountChess.hs -o count
+
+noproms:	Makefile CountChess.hs
+		ghc -O CountNoProms.hs -o noproms
 
 randomFENs:	Makefile randomFENs.hs
 		ghc -O --make RandomFENs.hs -o randomFENs

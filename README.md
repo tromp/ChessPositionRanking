@@ -97,6 +97,11 @@ found in Will Entriken's [github
 repo](https://github.com/fulldecent/chess-upper-bound-armies), which also
 contains his software for ranking chess diagrams.
 
+In 2014, Stefan Steinerberger derived an upper bound of approximately 1.53x10^40 on
+the number of diagrams with no promoted pawns.
+We improve this down to 2891398339895958031893456691621753206624 ~ 2.9x10^39 by constraining the number of unopposed pawns according to pawns and pieces captured (Makefile target noproms).
+
+
 # Bug Bounties
 
 Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $64 is offered for a proof game for one of the 381 positions claimed to be illegal.
@@ -186,3 +191,5 @@ manual analysis within manageable limits.
 [8] https://www.chessprogramming.org/ICGA_Journal#19_3
 
 [9] https://github.com/fulldecent/chess-upper-bound-armies
+
+[10] https://link.springer.com/article/10.1007/s00182-014-0453-7

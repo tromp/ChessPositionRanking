@@ -1,8 +1,12 @@
 all:	count test1k
 
 count:	Makefile
-	$(MAKE) -C src/ CountChess
-	time src/CountChess
+	$(MAKE) -C src/ countChess
+	time src/countChess
+	
+noproms:	Makefile
+	$(MAKE) -C src/ noproms
+	time src/noproms
 	
 test100:	Makefile testRnd1kResearch
 	diff testRnd100Research sortedRnd100Research

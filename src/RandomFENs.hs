@@ -4,10 +4,10 @@ import System.Environment
 import System.Random
 import Data.List
 import Data.Either
-import Chess
+import Chess -- this and next 3 modules are from hchesslib
 import Chess.FEN
 import Chess.Internal.Move
-import Chess.Internal.Game
+import Chess.Internal.Game -- with customized updateEnPassantSquare
 
 randomMoves :: RandomGen g => GameState -> Int -> g -> (GameState, g)
 randomMoves gs len gen = let
