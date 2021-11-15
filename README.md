@@ -38,14 +38,21 @@ To obtain a full digit of accuracy, we need to reduce the error by about a facto
 Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample.
 
 Mario Richter kindly contributed the output of his legality checking program
-"rawbats", which found 130 of the 919 positions to be illegal. Altogether,
-538 are proven legal with a proof game constructed for each, and 381 determined to be illegal with an illegality proof sketch. The 538 legal
+"rawbats", which found 130 of the 919 positions to be illegal.
+Altogether, 538 are proven legal with a proof game constructed for each, and 381 determined to be illegal with an illegality proof sketch. The 538 legal
 positions have an average multiplicity of 564/538 ~1.0483, slightly larger than
 the 1.0355 average of all 10000.
 
 This yields an **estimated number of legal positions of**
 (5.38% +- 1.96 sqrt(5.38% * 94.62% / 10000)) * N / 1.0483,
 or **(4.48 +- 0.37) x 10^44**, again with 95% confidence level.
+
+More recently (November 2021), Peter Österlund used his [Texel chess
+engine](https://github.com/peterosterlund2/texel) to test all 919 positions for
+He found that only 542 of the 919 positions have a so-called proof game *kernel*,
+a necessary condition for legality, which also proves the other 377 to be illegal,
+confirming the manual analysis.
+Four of the 542 prove to be illegal despite having a proof game kernel.
 
 # Reproducibility
 
