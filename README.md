@@ -48,12 +48,10 @@ This yields an **estimated number of legal positions of**
 or **(4.48 +- 0.37) x 10^44**, again with 95% confidence level.
 
 More recently (November 2021), Peter Österlund used his [Texel chess
-engine](https://github.com/peterosterlund2/texel) to test all 919 positions for
-Texel found that only 541 of the 919 positions have a so-called proof game *kernel*,
-a necessary condition for legality, which also proves the other 378 to be illegal,
-confirming the manual analysis.
-Three of the 541 prove to be illegal despite having a proof game kernel.
-See the file Texel.919 for its full analysis.
+engine](https://github.com/peterosterlund2/texel) to test all 919 positions for legality.
+Texel found that only 538 of the 919 positions have a so-called proof game *kernel*,
+a necessary condition for legality, which proves the other 381 to be illegal (barring program bugs),
+fully confirming the manual analysis. See the file Texel.919 for its full analysis.
 
 # Reproducibility
 
