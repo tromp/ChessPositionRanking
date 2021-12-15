@@ -185,7 +185,7 @@ The other 56026 games have an average multiplicity of 58586/56026 ~ 1.0457.
 Once we find the 56026 corresponding proof games, and verify these
 along with the logic and implementation of Texel's proof kernel search, 
 then we would establish a more accurate estimated number of legal positions of
-(5.60% +- 1.96 * sqrt(5.60% * 94.40% / 1000000)) * N / 1.0457,
+(5.6026% +- 1.96 * sqrt(5.6026% * 94.3974% / 1000000)) * N / 1.0457,
 or (4.676 +- 0.037) * 10^44, again with 95% confidence level.
 
 # References
