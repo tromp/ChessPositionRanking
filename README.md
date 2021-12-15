@@ -177,6 +177,7 @@ Analyzing such a large sample will require
 additional software to aid both in proof game construction and in much
 more comprehensive detection of illegality, in order to keep the necessary
 manual analysis within manageable limits.
+
 Recent advancements in the Texel chess engine by Peter Österlund bring us close to that goal.
 Of the 94733 possibly legal positions in testRnd1mResearch,
 it finds 38707 lack a proof kernel and should thus be illegal.
