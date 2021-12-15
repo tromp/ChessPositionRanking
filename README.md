@@ -31,7 +31,7 @@ The main executable, cpr, uses [Forsyth–Edwards Notation](https://en.wikipedia
 # Estimating the number of legal positions
 
 The 3 legal positions all have a multiplicity of 1, while the average multiplicity of all 100 positions is 1.04.
-With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (3% +- 1.96 sqrt(3% * 97% / 100)) * N / 1, or (2.6+-2.9)x10^44,
+With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (3% +- 1.96 * sqrt(3% * 97% / 100)) * N / 1, or (2.6+-2.9)x10^44,
 which is far less than one digit of accuracy, and barely gives us the order of magnitude.
 
 To obtain a full digit of accuracy, we need to reduce the error by about a factor of 10, which requires a 100x bigger sample. File "testRnd10kResearch" contains a sample of 10,000 random positions subjected to a relatively simple legality check, that finds all but 919 positions to be illegal for trivial reasons.
@@ -44,8 +44,8 @@ positions have an average multiplicity of 564/538 ~1.0483, slightly larger than
 the 1.0355 average of all 10000.
 
 This yields an **estimated number of legal positions of**
-(5.38% +- 1.96 sqrt(5.38% * 94.62% / 10000)) * N / 1.0483,
-or **(4.48 +- 0.37) x 10^44**, again with 95% confidence level.
+(5.38% +- 1.96 * sqrt(5.38% * 94.62% / 10000)) * N / 1.0483,
+or **(4.48 +- 0.37) * 10^44**, again with 95% confidence level.
 
 More recently, Peter Österlund used his [Texel chess
 engine](https://github.com/peterosterlund2/texel) to test all 919 positions for legality.
@@ -184,9 +184,9 @@ it finds 38707 lack a proof kernel and should thus be illegal.
 The other 56026 games have an average multiplicity of 58586/56026 ~ 1.0457.
 Once we find the 56026 corresponding proof games, and verify these
 along with the logic and implementation of Texel's proof kernel search, 
-then we would establish a more accurate estimate of
-0.056026 * 8726713169886222032347729969256422370854716254 / 1.0457 ~ 4.7 x 10^44
-legal positions.
+then we would establish a more accurate estimated number of legal positions of
+(5.60% +- 1.96 * sqrt(5.60% * 94.40% / 1000000)) * N / 1.0457,
+or (4.676 +- 0.037) * 10^44, again with 95% confidence level.
 
 # References
 
