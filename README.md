@@ -47,11 +47,12 @@ This yields an **estimated number of legal positions of**
 (5.38% +- 1.96 sqrt(5.38% * 94.62% / 10000)) * N / 1.0483,
 or **(4.48 +- 0.37) x 10^44**, again with 95% confidence level.
 
-More recently (November 2021), Peter Österlund used his [Texel chess
+More recently, Peter Österlund used his [Texel chess
 engine](https://github.com/peterosterlund2/texel) to test all 919 positions for legality.
-Texel found that only 538 of the 919 positions have a so-called proof game *kernel*,
-a necessary condition for legality, which proves the other 381 to be illegal (barring program bugs),
-fully confirming the manual analysis. See the file Texel.919 for its full analysis.
+Texel found that all 381 positions determined illegal by manual analysis,
+lack a proof game *kernel*, which is a necessary condition for legality.
+For the other 538 positions with proof games, it did find corresponding proof kernels.
+Thus, Texel's analysis (reproduced in file Texel.919) fully corroborates the manual analysis.
 
 # Reproducibility
 
@@ -61,6 +62,7 @@ In order to be able to sort FENs, we added a fourth component to our former Rank
 We produced our integer samples using Haskell's built-in random number
 generator with a seed of 0, and sorted the result for use in batched ranking
 (Makefile targets testRnd100Ranks, testRnd1kRanks, testRnd10kRanks, and testRnd100kRank).
+NOTE: random-1.1 was used for our results. The newer random-1.2 produces different results.
 
 We unranked these to obtain random urpositions (Makefile targets testRnd100FENs,testRnd1kFENs, testRnd10kFENs, and testRnd100kFENs). NOTE that these can take over half an hour to complete.
 
@@ -175,6 +177,15 @@ Analyzing such a large sample will require
 additional software to aid both in proof game construction and in much
 more comprehensive detection of illegality, in order to keep the necessary
 manual analysis within manageable limits.
+Recent advancements in the Texel chess engine by Peter Österlund bring us close to that goal.
+Of the 94733 possibly legal positions in testRnd1mResearch,
+it finds 38707 lack a proof kernel and should thus be illegal.
+The other 56026 games have an average multiplicity of 58586/56026 ~ 1.0457.
+Once we find the 56026 corresponding proof games, and verify these
+along with the logic and implementation of Texel's proof kernel search, 
+then we would establish a more accurate estimate of
+0.056026 * 8726713169886222032347729969256422370854716254 / 1.0457 ~ 4.7 x 10^44
+legal positions.
 
 # References
 
