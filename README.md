@@ -34,12 +34,12 @@ The 3 legal positions all have a multiplicity of 1, while the average multiplici
 With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (3% +- 1.96 * sqrt(3% * 97% / 100)) * N / 1, or (2.6+-2.9)x10^44,
 which is far less than one digit of accuracy, and barely gives us the order of magnitude.
 
-To obtain a full digit of accuracy, we need to reduce the error by about a factor of 10, which requires a 100x bigger sample. File "testRnd10kResearch" contains a sample of 10,000 random positions subjected to a relatively simple legality check, that finds all but 919 positions to be illegal for trivial reasons.
-Under milestone "10k", I have filed a separate issue for each of the 919 potentially legal positions in the 10k sample.
+To obtain a full digit of accuracy, we need to reduce the error by about a factor of 10, which requires a 100x bigger sample. File "testRnd10kResearch" contains a sample of 10,000 random positions subjected to a relatively simple legality check, that finds all but 923 positions to be illegal for trivial reasons.
+Under milestone "10k", I have filed a separate issue for each of the 923 potentially legal positions in the 10k sample.
 
 Mario Richter kindly contributed the output of his legality checking program
-"rawbats", which found 130 of the 919 positions to be illegal.
-Altogether, 538 are proven legal with a proof game constructed for each, and 381 determined to be illegal with an illegality proof sketch. The 538 legal
+"rawbats", which found 132 of the 923 positions to be illegal.
+Altogether, 538 are proven legal with a proof game constructed for each, and 385 determined to be illegal with an illegality proof sketch. The 538 legal
 positions have an average multiplicity of 564/538 ~1.0483, slightly larger than
 the 1.0355 average of all 10000.
 
@@ -48,11 +48,11 @@ This yields an **estimated number of legal positions of**
 or **(4.48 +- 0.37) * 10^44**, again with 95% confidence level.
 
 More recently, Peter Österlund used his [Texel chess
-engine](https://github.com/peterosterlund2/texel) to test all 919 positions for legality.
-Texel found that all 381 positions determined illegal by manual analysis,
+engine](https://github.com/peterosterlund2/texel) to test all 923 positions for legality.
+Texel found that all 385 positions determined illegal by manual analysis,
 lack a proof game *kernel*, which is a necessary condition for legality.
 For the other 538 positions with proof games, it did find corresponding proof kernels.
-Thus, Texel's analysis (reproduced in file Texel.919) fully corroborates the manual analysis.
+Thus, Texel's analysis (reproduced in file Texel.923) fully corroborates the manual analysis.
 
 # Reproducibility
 
@@ -112,7 +112,7 @@ We improve this down to 2891398339895958031893456691621753206624 ~ 2.9x10^39 by 
 
 # Bug Bounties
 
-Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $64 is offered for a proof game for one of the 381 positions claimed to be illegal.
+Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $64 is offered for a proof game for one of the 385 positions claimed to be illegal.
 
 # Interesting observations
 
