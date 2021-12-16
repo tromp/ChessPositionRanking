@@ -320,7 +320,7 @@ N5Qr/N2N1q2/QK3P2/b1R1Nq2/2q1r2B/1Qp2q2/1B1kRN2/b2b1Rnn w - - 0 1	 Illegal Both 
 2QRkQ1Q/4bpp1/2B5/1nQ5/1K1NPqR1/N3N3/1bBB1qRq/n1r1r2n w - - 0 1	 Illegal Side not to move in Check
 2K1n2R/4NBqP/1r1qNn1R/R2bR1b1/1r5n/1R1R1pp1/3B3N/B2bk1Q1 w - - 0 1	 Illegal Side not to move in Check
 B1b1B1nQ/1R1B3B/1pqN2NP/1rR5/r4Bp1/6r1/qK1k1p1b/N1N3N1 w - - 0 1	 Illegal Both Kings in Check
-3r3q/qrkbb3/QRn5/2QQp3/Q1QB2Q1/2bN3P/BqB2qKN/R3n3 w - - 0 1	 Illegal Double Check
+3r3q/qrkbb3/QRn5/2QQp3/Q1QB2Q1/2bN3P/BqB2qKN/R3n3 w - - 0 1	 Discovered Double Check	 wx 1 wp 1 wpr 6 wpx 1 maxuwp 1 minopp 0	 bx 3 bp 1 bpr 4 bpx 3 maxubp 1 minopp 0
 QQN4r/2bb1B2/Q6R/qr2p2p/2r1NnkR/1Q1KQP2/2b4Q/2bn1NB1 w - - 0 1	 Illegal Both Kings in Check
 1NRr1b2/1Npp1K1b/1Bq1bn1R/r6k/N2N2Br/Rq1Q1Bb1/3P1N2/B7 w - - 0 1	 Illegal Both Kings in Check
 1bRr3b/br2k3/nRRQ1r2/1p1p4/1P2KnNR/n1R4N/1R1B1Q2/3rBQ2 w - - 0 1	 Illegal Both Kings in Check

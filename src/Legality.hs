@@ -77,13 +77,13 @@ research (Position { diagram = diag, sideToMove = stm, castlings = c, enPassant 
   (sharpAngle, rightAngle) = (innerProd > 0, innerProd == 0)
   minDist = M.fromList [("bb",99),("bn",7),("bp",99),("bq",5),("br",5),("nn",99),("np",99),("nq",6),("nr",6),("pp",99),("pq",5),("pr",5),("qq",99),("qr",5),("rr",99)]
   discoverable = taxiCab >= minDist M.! checkingpcs
-  promRowCheckers = [sq | (sq,(_,y)) <- checksOnTM, if wtm then y==7 else y==0]
+  promRowCheckers = filter (\(_,(_,y)) -> y == if wtm then 7 else 0) checksOnTM 
   kDistToPromRow = if wtm then 7-yktm else yktm
   (slack, stats) = spareProms diag
   promRowLegal = case length promRowCheckers of
     0 ->  sharpAngle && discoverable 
     1 -> (rightAngle &&  taxiCab > 2  &&  kDistToPromRow <= 1 && slack > 0)
-      || (sharpAngle && (discoverable || (kDistToPromRow == 1 && slack > 0)))
+      || (sharpAngle && (discoverable ||  kDistToPromRow == 1))
     2 ->  sharpAngle && (discoverable || (kDistToPromRow == 2 && slack > 0))
   doubleCheck = if checkingpcs == "nn" then "Illegal Double Knight Check"
            else if promRowLegal then ("Discovered Double Check" ++ stats)

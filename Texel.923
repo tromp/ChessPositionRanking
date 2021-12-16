@@ -18267,3 +18267,16 @@ q:0 r:2 bd:-1 bl:0 n:-1 p:-4 sp:2
 nodes: 2 time: 0.00326755
 found:0 nodes:50699 csp:0 cspNodes:0
 1q2k1br/P4R2/NB1p1r1R/1KR1QB1p/5p1P/1N4p1/BRP2Pr1/n4Q1r b k - 0 1 illegal, no proof kernel
+3r3q/qrkbb3/QRn5/2QQp3/Q1QB2Q1/2bN3P/BqB2qKN/R3n3 w - - 0 1 illegal, No possible last move
+Checking capture: g7f8n (Q, -, -, 0)
+Checking capture: g7f8n (R, -, -, 0)
+Checking capture: g7f8n (B, -, -, 0)
+Checking capture: g7f8n (N, -, -, 0)
+B4Nb1/4nR1k/1b1q1b2/pqR1bNQ1/n4N1r/5N1B/r2Q1BnK/1b1bQ3 b - - 0 1 illegal, No possible last move, all captures rejected
+Checking capture: e7d8n (Q, -, -, 0)
+Checking capture: e7d8n (R, -, -, 0)
+Checking capture: e7d8n (B, -, -, 0)
+Checking capture: e7d8n (N, -, -, 0)
+b2N2bq/1bRQ1kb1/n1P2N2/2R2N1n/r2r1RPb/2B5/q1nBBP1K/Q7 b - - 0 1 illegal, No possible last move, all captures rejected
+Br6/Qk2bBN1/3B2N1/3n1qN1/1r1BB1r1/KQ1N4/5nn1/bbQRrRB1 b - - 0 1 illegal, No possible last move
+
