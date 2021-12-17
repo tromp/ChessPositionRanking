@@ -179,13 +179,14 @@ more comprehensive detection of illegality, in order to keep the necessary
 manual analysis within manageable limits.
 
 Recent advancements in the Texel chess engine by Peter Österlund bring us close to that goal.
-Of the 94733 possibly legal positions in testRnd1mResearch,
-it finds 38707 lack a proof kernel and should thus be illegal.
-The other 56026 games have an average multiplicity of 58586/56026 ~ 1.0457.
-Once we find the 56026 corresponding proof games, and verify these
+Of the 94903 possibly legal positions in testRnd1mResearch,
+it finds 38866 lack a proof kernel and should thus be illegal.
+For the other 56037 positions it finds a proof kernel. Except for one, which still has a proof game.
+These 56037 have an average multiplicity of 58597/56037 ~ 1.0457.
+Once we find all 56037 corresponding proof games, and verify these
 along with the logic and implementation of Texel's proof kernel search, 
 then we would establish a more accurate estimated number of legal positions of
-(5.6026% +- 1.96 * sqrt(5.6026% * 94.3974% / 1000000)) * N / 1.0457,
+(5.6037% +- 1.96 * sqrt(5.6037% * 94.3963% / 1000000)) * N / 1.0457,
 or (4.676 +- 0.037) * 10^44, again with 95% confidence level.
 
 # References
