@@ -183,11 +183,13 @@ Of the 94903 possibly legal positions in testRnd1mResearch,
 it finds 38866 lack a proof kernel and should thus be illegal.
 The other 56037 positions, for which it finds a proof kernel,
 have an average multiplicity of 58597/56037 ~ 1.0457.
-Once we find all 56037 corresponding proof games, and verify these
-along with the logic and implementation of Texel's proof kernel search, 
-then we would establish a more accurate estimated number of legal positions of
-(5.6037% +- 1.96 * sqrt(5.6037% * 94.3963% / 1000000)) * N / 1.0457,
-or (4.676 +- 0.037) * 10^44, again with 95% confidence level.
+It's likely that some small fraction (on the order of 1%) of these proof kernels
+do not extend to proof games, for example due to some promoted piece being trapped
+and unable to reach its target square. Still, this suggest an upper bound on
+the number of legal positions of 4.7 * 10^44, with 95% confidence level.
+
+With Peter's plans to improve Texel's ability to synthesize proof games from proof kernels, 
+we can look forward to better estimates in the future.
 
 # References
 
