@@ -187,7 +187,7 @@ we can look forward to better estimates in the future.
 # The Future is here
 
 Further advancements in Texel, applied to the 1M sample, have now proved 943977 positions illegal and 55958 positions legal.
-Of the remaining 1000000-943977-55958 = 65 positions, 53 were manually proven legal, and 12 were manually proven illegal, giving an exact total of 56011 legal positions, with an average 1/multiplicity of ~ 0.98013 (versus ~ 0.98583for all 1M).
+Of the remaining 1000000-943977-55958 = 65 positions, 53 were manually proven legal, and 12 were manually proven illegal, giving an exact total of 56011 legal positions, with an average 1/multiplicity of ~ 0.98013 (versus ~ 0.98583 for all 1M).
 
 This yields an **estimated number of legal positions of**
 (5.6% +- 1.96 * sqrt(5.6% * 94.4% / 10000)) * N * 0.98013,
