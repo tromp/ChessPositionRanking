@@ -30,7 +30,7 @@ The main executable, cpr, uses [Forsyth–Edwards Notation](https://en.wikipedia
 
 # Estimating the number of legal positions
 
-The 3 legal positions all have a multiplicity of 1, while the average multiplicity of all 100 positions is 1.04.
+The 3 legal positions all have a multiplicity of 1, while the average 1/multiplicity of all 100 positions is ~ 0.9833.
 With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (3% +- 1.96 * sqrt(3% * 97% / 100)) * N / 1, or (2.6+-2.9)x10^44,
 which is far less than one digit of accuracy, and barely gives us the order of magnitude.
 
@@ -39,13 +39,11 @@ Under milestone "10k", I have filed a separate issue for each of the 923 potenti
 
 Mario Richter kindly contributed the output of his legality checking program
 "rawbats", which found 132 of the 923 positions to be illegal.
-Altogether, 538 are proven legal with a proof game constructed for each, and 385 determined to be illegal with an illegality proof sketch. The 538 legal
-positions have an average multiplicity of 564/538 ~1.0483, slightly larger than
-the 1.0355 average of all 10000.
+Altogether, 538 are proven legal with a proof game constructed for each, and 385 determined to be illegal with an illegality proof sketch. The 538 legal positions have an average 1/multiplicity of ~ 0.97847, somewhat lower than the ~ 0.98467 average of all 10000.
 
 This yields an **estimated number of legal positions of**
-(5.38% +- 1.96 * sqrt(5.38% * 94.62% / 10000)) * N / 1.0483,
-or **(4.48 +- 0.37) * 10^44**, again with 95% confidence level.
+(5.38% +- 1.96 * sqrt(5.38% * 94.62% / 10000)) * N * 0.97847,
+or **(4.59 +- 0.38) * 10^44**, again with 95% confidence level.
 
 More recently, Peter Österlund used his [Texel chess
 engine](https://github.com/peterosterlund2/texel) to test all 923 positions for legality.
@@ -189,11 +187,11 @@ we can look forward to better estimates in the future.
 # The Future is here
 
 Further advancements in Texel, applied to the 1M sample, have now proved 943977 positions illegal and 55958 positions legal.
-Of the remaining 1000000-943977-55958 = 65 positions, 53 were manually proven legal, and 12 were manually proven illegal, giving an exact total of 56011 legal positions, with an average multiplicity of 58570/56011 ~ 1.0457.
+Of the remaining 1000000-943977-55958 = 65 positions, 53 were manually proven legal, and 12 were manually proven illegal, giving an exact total of 56011 legal positions, with an average 1/multiplicity of ~ 0.98013 (versus ~ 0.98583for all 1M).
 
 This yields an **estimated number of legal positions of**
-(5.6% +- 1.96 * sqrt(5.6% * 94.4% / 10000)) * N / 1.0457,
-or **(4.67 +- 0.04) * 10^44**, again with 95% confidence level.
+(5.6% +- 1.96 * sqrt(5.6% * 94.4% / 10000)) * N * 0.98013,
+or **(4.79 +- 0.04) * 10^44**, again with 95% confidence level.
 
 # References
 
