@@ -105,11 +105,10 @@ testRnd100kRanks:	Makefile
 	src/randomRs 8726713169886222032347729969256422370854716254 100000 | sort -n > testRnd100kRanks
 	diff testRnd100kRanks sortedRnd100kRanks
 
-testRnd10kRanking:	Makefile testRnd10kFENs
+testRnd100kRanking:	Makefile testRnd100kFENs
 	$(MAKE) -C src/ cpr
-	time src/cpr rank < testRnd10kFENs > testRnd10kFENsRanked
-	diff testRnd10kRanks testRnd10kFENsRanked
-	
+	time src/cpr rank < testRnd100kFENs > testRnd100kFENsRanked
+	diff testRnd100kRanks testRnd100kFENsRanked
 
 testRnd100kFENs:	Makefile testRnd100kRanks
 	$(MAKE) -C src/ cpr
@@ -121,7 +120,23 @@ testRnd100kResearch:	Makefile testRnd100kFENs
 	src/legal < testRnd100kFENs > testRnd100kResearch
 	diff testRnd100kResearch sortedRnd100kResearch
 	
-testRnd100kRanking:	Makefile testRnd100kFENs
+
+testRnd1mRanks:	Makefile
+	$(MAKE) -C src/ randomRs
+	src/randomRs 8726713169886222032347729969256422370854716254 1000000 | sort -n > testRnd1mRanks
+	diff testRnd1mRanks sortedRnd1mRanks
+
+testRnd1mRanking:	Makefile testRnd1mFENs
 	$(MAKE) -C src/ cpr
-	time src/cpr rank < testRnd100kFENs > testRnd100kFENsRanked
-	diff testRnd100kRanks testRnd100kFENsRanked
+	time src/cpr rank < testRnd1mFENs > testRnd1mFENsRanked
+	diff testRnd1mRanks testRnd1mFENsRanked
+	
+testRnd1mFENs:	Makefile testRnd1mRanks
+	$(MAKE) -C src/ cpr
+	time src/cpr unrank < testRnd1mRanks > testRnd1mFENs
+	diff testRnd1mFENs sortedRnd1mFENs
+
+testRnd1mResearch:	Makefile testRnd1mFENs
+	$(MAKE) -C src/ legal
+	src/legal < testRnd1mFENs > testRnd1mResearch
+	diff testRnd1mResearch sortedRnd1mResearch
