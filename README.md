@@ -48,7 +48,7 @@ or **(4.59 +- 0.38) * 10^44**, again with 95% confidence level.
 More recently, Peter Österlund used his [Texel chess
 engine](https://github.com/peterosterlund2/texel) to test all 923 positions for legality.
 Texel found that all 385 positions determined illegal by manual analysis,
-lack a proof game *kernel*, which is a necessary condition for legality.
+lack a [proof game *kernel*](https://github.com/peterosterlund2/texel/blob/master/doc/proofgame.md), which is a necessary condition for legality.
 For the other 538 positions with proof games, it did find corresponding proof kernels.
 Thus, Texel's analysis (reproduced in file Texel.923) fully corroborates the manual analysis.
 
