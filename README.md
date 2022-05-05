@@ -42,12 +42,12 @@ For a sample S of n random positions containing n<sub>S</sub> legal ones, we est
 Y = Y(S) = (1/n) * Sum<sub>legal p in S</sub>N/m</sub>(p) = (n<sub>S</sub>/n) * N * (1/n<sub>S</sub>) * Sum 1/m(p)
 
 This is the product of the legal fraction n<sub>S</sub>/n, N, and the average legal inverse multiplicity.
-Since the last factor shows less variation than the first, we borrow the normal approximation from the binomial distribution for computing confidence bounds [11], as implemented in our src/estimate.pl script.
+Since the last factor shows less variation than the first, we borrow the normal approximation from the binomial distribution for computing [confidence bounds](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), as implemented in our src/estimate.pl script.
 
 # A crude estimate from a small n=100 sample
 
-The n<sub>S</sub><=3 legal positions all have a multiplicity of 1 (the average 1/multiplicity of all 100 positions is ~ 0.9833).
-With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (3% +- 1.96 * sqrt(3% * 97% / 100)) * N * 1, or (2.6+-2.9)x10^44,
+The n<sub>S</sub>=3 legal positions all have a multiplicity of 1 (the average 1/multiplicity of all 100 positions is ~ 0.9833).
+With a 95% confidence level, this yields an estimated number of legal positions of (3% +- 1.96 * sqrt(3% * 97% / 100)) * N * 1, or (2.6+-2.9)x10^44,
 which is far less than one digit of accuracy, and barely gives us the order of magnitude.
 
 To obtain a full digit of accuracy, we need to reduce the error by about a factor of 10, which requires a 100x bigger sample. File "testRnd10kResearch" contains a sample of 10,000 random positions subjected to a relatively simple legality check, that finds all but 923 positions to be illegal for trivial reasons.
@@ -232,5 +232,3 @@ or **(4.79 +- 0.04) * 10^44**, again with 95% confidence level.
 [9] https://github.com/fulldecent/chess-upper-bound-armies
 
 [10] https://link.springer.com/article/10.1007/s00182-014-0453-7
-
-[11] https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval
