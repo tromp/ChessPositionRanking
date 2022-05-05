@@ -25,5 +25,5 @@ my $N = 8726713169886222032347729969256422370854716254;
 my $legal_frac = $nlegal / $tot_samples;
 my $est = ($nlegal / $tot_samples) * $N * $avg_recip_mult;
 my $conf95 = 1.96 * sqrt($legal_frac * (1-$legal_frac) / $tot_samples) * $N * $avg_recip_mult;;
-print "estimate $est +- $conf95 at 95% confidence\n";
+printf "estimate %g +- %g at 95%% confidence\n", $est, $conf95;
 
