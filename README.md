@@ -50,6 +50,8 @@ The n<sub>S</sub>=3 legal positions all have a multiplicity of 1 (the average 1/
 With a 95% confidence level, this yields an estimated number of legal positions of (3% +- 1.96 * sqrt(3% * 97% / 100)) * N * 1, or (2.6+-2.9)x10^44,
 which is far less than one digit of accuracy, and barely gives us the order of magnitude.
 
+# A better estimate from a medium n=10,000 sample
+
 To obtain a full digit of accuracy, we need to reduce the error by about a factor of 10, which requires a 100x bigger sample. File "testRnd10kResearch" contains a sample of 10,000 random positions subjected to a relatively simple legality check, that finds all but 923 positions to be illegal for trivial reasons.
 Under milestone "10k", I have filed a separate issue for each of the 923 potentially legal positions in the 10k sample.
 
