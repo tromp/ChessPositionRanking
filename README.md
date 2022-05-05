@@ -34,15 +34,19 @@ We can write L as Sum l<sub>m</sub>, where l<sub>m</sub> is the number of legal 
 Similarly N = Sum (m * n<sub>m</sub>), where n<sub>m</sub> is the number of positions with multiplicity m.
 Let X be a random variable that is one of the N urpositions chosen uniformly at random,
 and let Y = Y(X) be a random variable that is 0 if X is illegal, or N/m if X is legal with multiplicity m. Then Y is an unbiased estimator of L, since the expected value of Y is
-E[Y] = Sum P(X legal of multiplicity m) * N/m = Sum (m * l<sub>m</sub>/N) * N/m = Sum l<sub>m</sub> = L.
+
+E[Y] = Sum P(X legal of multiplicity m) * N/m = Sum (m * l<sub>m</sub>/N) * N/m = Sum l<sub>m</sub> = L
+
 For a sample S of n random positions containing n<sub>S</sub> legal ones, we estimate L as the average of the individual estimates:
-Y = Y(S) = (1/n) * Sum<sub>legal p in S</sub>N/m</sub>(p) = (n<sub>S</sub>/n) * N * (1/n<sub>S</sub>) * Sum 1/m(p).
+
+Y = Y(S) = (1/n) * Sum<sub>legal p in S</sub>N/m</sub>(p) = (n<sub>S</sub>/n) * N * (1/n<sub>S</sub>) * Sum 1/m(p)
+
 This is the product of the legal fraction n<sub>S</sub>/n, N, and the average legal inverse multiplicity.
 Since the last factor shows less variation than the first, we borrow the normal approximation from the binomial distribution for computing confidence bounds [11], as implemented in our src/estimate.pl script.
 
 # A crude estimate from a small n=100 sample
 
-The n<sub>S<=3 legal positions all have a multiplicity of 1 (the average 1/multiplicity of all 100 positions is ~ 0.9833).
+The n<sub>S</sub><=3 legal positions all have a multiplicity of 1 (the average 1/multiplicity of all 100 positions is ~ 0.9833).
 With a 95% [confidence level](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), this yields an estimated number of legal positions of (3% +- 1.96 * sqrt(3% * 97% / 100)) * N * 1, or (2.6+-2.9)x10^44,
 which is far less than one digit of accuracy, and barely gives us the order of magnitude.
 
