@@ -42,7 +42,7 @@ For a sample S of n random positions containing n<sub>S</sub> legal ones, we est
 Y = Y(S) = (1/n) * Sum<sub>legal p in S</sub>N/m</sub>(p) = (n<sub>S</sub>/n) * N * (1/n<sub>S</sub>) * Sum 1/m(p)
 
 This is the product of the legal fraction n<sub>S</sub>/n, N, and the average legal inverse multiplicity.
-Since the last factor shows less variation than the first, we borrow the normal approximation from the binomial distribution for computing [confidence bounds](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), as implemented in our src/estimate.pl script.
+Since the last factor shows less variation than the first, we borrow the normal approximation from the binomial distribution for computing [confidence bounds](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), as implemented in our [estimate.pl](src/estimate.pl) script.
 
 # A crude estimate from a small n=100 sample
 
@@ -126,7 +126,7 @@ We improve this down to 2891398339895958031893456691621753206624 ~ 2.9x10^39 by 
 
 # Bug Bounties
 
-Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $64 is offered for a proof game for one of the 385 positions claimed to be illegal, or one of the 9077 position judged illegal by src/Lagality.hs
+Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $64 is offered for a proof game for one of the 385 positions claimed to be illegal, or one of the 9077 position judged illegal by [Legality.hs](src/Legality.h)s
 
 # Interesting observations
 
