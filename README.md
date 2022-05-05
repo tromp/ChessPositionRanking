@@ -126,7 +126,7 @@ We improve this down to 2891398339895958031893456691621753206624 ~ 2.9x10^39 by 
 
 # Bug Bounties
 
-Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $64 is offered for a proof game for one of the 385 positions claimed to be illegal, or one of the 9077 position judged illegal by [Legality.hs](src/Legality.h)s
+Since validity of these results hinges on the ranking including all legal positions, a bounty of $256 is hereby offered to the first person to file an issue with a legal but unrankable position. A bounty of $128 is offered for a rankable position for which unranking reports the wrong multiplicity. Finally, a bounty of $64 is offered for a proof game for one of the 385 positions claimed to be illegal, or one of the 9077 position judged illegal by [Legality.hs](src/Legality.hs).
 
 # Interesting observations
 
