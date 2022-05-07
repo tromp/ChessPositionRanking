@@ -39,10 +39,10 @@ E[Y] = Sum P(X legal of multiplicity m) * N/m = Sum (m * l<sub>m</sub>/N) * N/m 
 
 For a sample S of n random positions containing n<sub>S</sub> legal ones, we estimate L as the average of the individual estimates:
 
-Y = Y(S) = (1/n) * Sum<sub>legal p in S</sub>N/m</sub>(p) = (n<sub>S</sub>/n) * N * (1/n<sub>S</sub>) * Sum 1/m(p)
+Y(S) = (1/n) * Sum<sub>legal p in S</sub>N/m</sub>(p) = (n<sub>S</sub>/n) * N * (1/n<sub>S</sub>) * Sum 1/m(p)
 
 This is the product of the legal fraction n<sub>S</sub>/n, N, and the average legal inverse multiplicity.
-Since the last factor shows less variation than the first, we borrow the normal approximation from the binomial distribution for computing [confidence bounds](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval), as implemented in our [estimate.pl](src/estimate.pl) script.
+Due to the averaging, we assume Y(S) approximates a normal distribution and borrow the method of computing [confidence bounds](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Normal_approximation_interval) from that of binomial distributions, as implemented in our [estimate.pl](src/estimate.pl) script.
 
 # A crude estimate from a small n=100 sample
 
