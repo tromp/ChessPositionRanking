@@ -18,7 +18,7 @@ my $n_samples = $ARGV[0];
 
 # and some set of possibly legal position on stdin, one position per line
 # the first 6 fields on each line are FEN data, and the 7th is either "legal" or "illegal"
-# this is typically the output of running texelutil -proofgame on a set of FENs,
+# this is typically the output of running texelutil proofgame on a set of FENs,
 # itself typically trimmed by src/legal
 my $n_lines = 0;
 my @legal_mults;  # array counting number of legal positions with each multiplicity

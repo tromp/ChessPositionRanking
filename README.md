@@ -85,13 +85,23 @@ We unranked these to obtain random urpositions (Makefile targets testRnd100FENs,
 
 We checked invertibility by ranking the results (Makefile targets testRnd100Ranking, testRnd1kRanking, testRnd10kRanking, and testRnd100kRanking), and comparing with the original integers used for unranking.
 
-We ran some legality tests that find ~95% of the positions to be definitely
-illegal (Makefile targets testRnd100Research, testRnd1kResearch, testRnd10kResearch,
+We ran the legality tests in [Legality.hs](src/Legality.hs) that find ~95% of the positions to be definitely illegal (Makefile targets testRnd100Research, testRnd1kResearch, testRnd10kResearch,
 testRnd100kResearch).
 
 The file sortedRnd1kResearchManual extends sortedRnd1kResearch with a manual determination of legality of the 93 remaining positions in the 1k sample.
 
-# A good estimate from a large n=1,000,000 sample
+# Estimation from million sized samples
+
+Huge improvements made by Peter Österlund to his texelutil legality (dis)proving engine allow us  to tackle million-sized samples and leave only a few dozen positions for manual analysis.
+We fed the 94903 possibly legal positions in testRnd1mResearch into texel as Texel.in.94903
+and manually resolved the 65 positions it failed on, to obtain Texel.out.94903 with 
+56011 legal and 38892 illegal positions. Running our estimate script on that yields
+estimate 4.79082e+44 +- 3.87698e+42 at 95% confidence.
+While the original 1 million sample was generated with version 1.1 of the Haskell package System.Random, use of the newer 1.2 revision produces a completely different 1m sample testRnd1mFENs-1.2
+We also let Texel analyze that as Texel.in.95544, and with 12 positions left to resolve manually, obtain estimate 4.85304e+44 +- 3.9004e+42 at 95% confidence.
+
+Combining the two independent samples into a bigger 2-million yiels the best
+estimate 4.82193e+44 +- 2.74973e+42 at 95% confidence.
 
 # Related Work
 
@@ -189,30 +199,6 @@ leaving 53063 + 35584 + 5839 = 94486 positions for manual analysis.
 Some people might enjoy minimizing the number of moves in a Proof Game, in what could be a friendly "Chess golf" competition, similar to [Code golf](https://en.wikipedia.org/wiki/Code_golf).
 
 # Future work
-
-More accuracy can be obtained by analysing the 100x larger sample
-testRnd1mResearch, giving 2 digits of accuracy at the 95% confidence level.
-Analyzing such a large sample will require
-additional software to aid both in proof game construction and in much
-more comprehensive detection of illegality, in order to keep the necessary
-manual analysis within manageable limits.
-
-Recent advancements in the Texel chess engine by Peter Österlund bring us close to that goal.
-Of the 94903 possibly legal positions in testRnd1mResearch,
-it finds 38866 lack a proof kernel and should thus be illegal.
-For the other 56037 positions, it finds a proof kernel, but not necessarily a proof game.
-
-With Peter's plans to improve Texel's ability to synthesize proof games from proof kernels, 
-we can look forward to better estimates in the future.
-
-# The Future is here
-
-Further advancements in Texel, applied to the 1M sample, have now proved 943977 positions illegal and 55958 positions legal.
-Of the remaining 1000000-943977-55958 = 65 positions, 53 were manually proven legal, and 12 were manually proven illegal, giving an exact total of 56011 legal positions, with an average 1/multiplicity of ~ 0.98013 (versus ~ 0.98583 for all 1M).
-
-This yields an **estimated number of legal positions of**
-(5.6% +- 1.96 * sqrt(5.6% * 94.4% / 10000)) * N * 0.98013,
-or **(4.79 +- 0.04) * 10^44**, again with 95% confidence level.
 
 # References
 
