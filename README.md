@@ -100,7 +100,7 @@ estimate 4.79082e+44 +- 3.87698e+42 at 95% confidence.
 While the original 1 million sample was generated with version 1.1 of the Haskell package System.Random, use of the newer 1.2 revision produces a completely different 1m sample testRnd1mFENs-1.2
 We also let Texel analyze that as Texel.in.95544, and with 12 positions left to resolve manually, obtain estimate 4.85304e+44 +- 3.9004e+42 at 95% confidence.
 
-Combining the two independent samples into a bigger 2-million yiels the best
+Combining the two independent samples into a bigger 2-million yields the best
 estimate 4.82193e+44 +- 2.74973e+42 at 95% confidence.
 
 # Related Work
@@ -182,7 +182,7 @@ The number of promotions is much more evenly distributed, with 4 through 12 prom
 
 The 1 million sample classifies as
 
-    $ src/legal < sortedRnd1mFENs | grep "^ " | sort | uniq -c | sort -rn
+    $ src/legal < sortedRnd1mFENs | cut -f2 -d $'\t' | sort | uniq -c | sort -rn
     492045  Illegal Both Kings in Check
     173401  Illegal Side not to move in Check
     102541  Illegal Adjacent Kings
