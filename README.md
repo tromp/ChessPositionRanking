@@ -93,15 +93,53 @@ The file sortedRnd1kResearchManual extends sortedRnd1kResearch with a manual det
 # Estimation from million sized samples
 
 Huge improvements made by Peter Österlund to his texelutil legality (dis)proving engine allow us  to tackle million-sized samples and leave only a few dozen positions for manual analysis.
-We fed the 94903 possibly legal positions in testRnd1mResearch into texel as Texel.in.94903
-and manually resolved the 65 positions it failed on, to obtain Texel.out.94903 with 
-56011 legal and 38892 illegal positions. Running our estimate script on that yields
-estimate 4.79082e+44 +- 3.87698e+42 at 95% confidence.
+The 1 million sample sortedRnd1mFENs initially classifies as
+
+    $ src/legal < sortedRnd1mFENs | cut -f2 -d $'\t' | sort | uniq -c | sort -rn
+    492045  Illegal Both Kings in Check
+    173401  Illegal Side not to move in Check
+    102541  Illegal Adjacent Kings
+    79019  Illegal Bishops Too Monochromatic
+    53063  Single Check
+    35584  No Checks
+    29962  Illegal Triple Check
+    27415  Illegal Double Check
+    6256  Discovered Double Check
+     714  Illegal Double Knight Check
+
+We extracted the 53063 + 35584 + 6256 = 94903 possibly legal positions with 
+    
+    $ grep -v Illegal sortedRnd1mResearch | cut -f1 -d $'\t' > Texel.in.94903
+
+and fed these into Texel with
+
+    $ cat Texel.in.94903 | <PATH_TO_TEXEL>/build/texelutil -j 1 proofgame -f -o out
+
+which left 65 positions to be resolved manually. The result are collected in
+Texel.out.94903 with 56011 legal and 38892 illegal positions. Running our estimate script on that yields
+
+    $ src/estimate.pl 1000000 < Texel.out.94903
+    Exp[Y] ~ 0.0548983 * N
+    Var[Y] ~ 0.0513776 * N^2
+    Sigma[Y] ~ 0.226666 * N
+    Sigma[Y[S]] ~ 0.000226666 * N
+    n = 1000000 samples 56011/94903 legal  53930 1674 369 25 1 10    2 avg 1/mult 0.980134556902513
+    estimate 4.79082e+44 +- 3.87698e+42 at 95% confidence.
+
 While the original 1 million sample was generated with version 1.1 of the Haskell package System.Random, use of the newer 1.2 revision produces a completely different 1m sample testRnd1mFENs-1.2
 We also let Texel analyze that as Texel.in.95544, and with 12 positions left to resolve manually, obtain estimate 4.85304e+44 +- 3.9004e+42 at 95% confidence.
 
-Combining the two independent samples into a bigger 2-million yields the best
-estimate 4.82193e+44 +- 2.74973e+42 at 95% confidence.
+Combining the two independent samples into a bigger 2-million sample gives
+
+    $ cat Texel.out.94903 Texel.out.95544 |  src/estimate.pl 2000000
+    Exp[Y] ~ 0.0552548 * N
+    Var[Y] ~ 0.051689 * N^2
+    Sigma[Y] ~ 0.227352 * N
+    Sigma[Y[S]] ~ 0.000160762 * N
+    n = 2000000 samples 112754/190447 legal  108547 3418 705 56 3 23    2 avg 1/mult 0.980095015106633
+    estimate 4.82193e+44 +- 2.74973e+42 at 95% confidence 
+
+so the number of legal chess positions is approximately (4.82 +- 0.03) * 10^44.
 
 # Related Work
 
@@ -179,22 +217,6 @@ The next most common capture counts are 5 (20%), 3 (5.7%), 6 (1.9%) and 7 (0.1%)
 
 The number of promotions is much more evenly distributed, with 4 through 12 promotions accounting for
 0.3%, 1.1%, 3.4%, 8.3%, 15.2%, 21.5%, 22.7%, 17.1%, 8.3%, and 2% of random urpositions.
-
-The 1 million sample classifies as
-
-    $ src/legal < sortedRnd1mFENs | cut -f2 -d $'\t' | sort | uniq -c | sort -rn
-    492045  Illegal Both Kings in Check
-    173401  Illegal Side not to move in Check
-    102541  Illegal Adjacent Kings
-    79019  Illegal Bishops Too Monochromatic
-    53063  Single Check
-    35584  No Checks
-    29962  Illegal Triple Check
-    27541  Illegal Double Check
-    6130  Discovered Double Check
-     714  Illegal Double Knight Check
-
-leaving 53063 + 35584 + 5839 = 94486 positions for manual analysis.
 
 Some people might enjoy minimizing the number of moves in a Proof Game, in what could be a friendly "Chess golf" competition, similar to [Code golf](https://en.wikipedia.org/wiki/Code_golf).
 
