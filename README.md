@@ -17,7 +17,7 @@ Hovering over each position will show the integer used to generate it.
 The conversion from integers to positions is made possible by a so-called *ranking*,
 which is a triple consisting of a size, 
 an unrank function that maps integers in the range 0..size-1 to objects,
-and a rank function that maps objects to integers.
+and a rank function that maps objects to integers, as defined in [Kreher and Stinson](http://www2.denizyuret.com/bib/kreher/donald1999combinatorial/combinatorialA.pdf).
 A ranking is invertible when the rank and unrank functions form a bijection, giving each object a unique rank.
 
 The objects in our chess ranking are actually not mere positions, but positions annotated with some additional data generated during the unranking process. For simplicity, we call them uniquely rankable positions, or urpositions for short.
@@ -245,3 +245,5 @@ Some people might enjoy minimizing the number of moves in a Proof Game, in what 
 [9] https://github.com/fulldecent/chess-upper-bound-armies
 
 [10] https://link.springer.com/article/10.1007/s00182-014-0453-7
+
+[11] http://www2.denizyuret.com/bib/kreher/donald1999combinatorial/combinatorialA.pdf
