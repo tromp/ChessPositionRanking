@@ -86,17 +86,31 @@ count fixwr fixbr fixp = sum $ do
   -- choose wp+bp among pawn space and then all pawns/pieces among space-wp-bp
   return $ wmul * bmul * (pawns fixp wp bp minopp * fp space (wpcs+bpcs) `div` (wprod * bprod))
  
+-- opposition cases (dopp,dwp,dbp,ds,mul) for ep capturable pawn
+-- cases for White file
+epWxBw = [(0,0,0,0,1)
+          ,(1,1,1,0,3) -- 76,43,32
+          ,(1,1,1,1,1) -- 42
+          ,(1,0,1,0,1) -- 65
+          ,(1,0,1,1,1) -- 75
+         ]
+-- cases for Black file
+epWxBb = [(0,0,0,0,1)
+          ,(1,1,1,0,2) -- 43,32
+          ,(1,1,1,1,1) -- 42
+          ,(1,1,0,0,1) -- 54
+          ,(1,1,0,1,1) -- 53
+          ,(1,1,0,2,1) -- 52
+         ]
 -- ways to distribute wp white pawns and bp black pawns over space ps with opposing pawns on opp files
 pawns :: Int -> Int -> Int -> Int -> Integer
 pawns 0 wp bp opp = sum [fromIntegral (mopps opp s 8) * choose2 (48-2*opp-s) (wp-opp) (bp-opp) | s <- [0..4*opp]]
-pawns 1 wp bp opp = pawnsep 0 0 0
-             + sum [pawnsep 1 1 (ds1+ds2) | opp>1, ds1 <- [0..2], ds2 <- [0..1]]
-             + sum [pawnsep 1 0  ds1      | opp>0, ds1 <- [0..2]]
-             + sum [pawnsep 0 1      ds2  | opp>0, ds2 <- [0..1]] where
+pawns 1 wp bp opp = sum [m1*m2* pawnsep (o1+o2) (w1+w2) (b1+b2) (s1+s2) | (o1,w1,b1,s1,m1) <- epWxBw, (o2,w2,b2,s2,m2) <- epWxBb, o1+o2<=opp, w1+w2<=wp, b1+b2<=bp] where
   -- put dw white pawns in file of black pawn just moved
   -- and db black pawns opposite white's pawn that can capture it en-passant
   -- together spanning ds sandwiched space
-  pawnsep dw db ds = let opp' = opp-dw-db in sum [fromIntegral (mopps opp' s 6) * choose2 (44-opp-opp'-ds-s) (wp+db-opp) (bp+dw-opp) | s <- [0..4*opp']]
+  pawnsep dop dw db ds = let opp' = opp-dop
+    in sum [fromIntegral (mopps opp' s 6) * choose2 (44-dw-db-(2*opp')-ds-s) (wp-dw-opp') (bp-db-opp') | s <- [0..4*opp']]
 
 -- opps p s os counts ways for p opposing pawns to sandwich s others in n files
 opps :: Int -> Int -> Int -> Int
@@ -115,7 +129,7 @@ cases = [(fwr,fbr,ep) | fwr <- [0..2], fbr <- [0..2], ep <- [0..1]]
 
 multFR :: Int -> Integer
 multFR 0 = 1
-multFR 1 = 2
+multFR 1 = 2 -- with 1 fixed rook, it can be fixed on either a or h file
 multFR 2 = 1
 
 multEP :: Int -> Integer
