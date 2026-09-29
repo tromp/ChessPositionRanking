@@ -140,3 +140,7 @@ testRnd1mResearch:	Makefile testRnd1mFENs
 	$(MAKE) -C src/ legal
 	src/legal < testRnd1mFENs > testRnd1mResearch
 	diff testRnd1mResearch sortedRnd1mResearch
+
+# En-passant bounty regressions
+testEnPassant: Makefile tests/en_passant_regressions.sh
+	tests/en_passant_regressions.sh

@@ -1,4 +1,4 @@
-module Chess.Position.Ranking (URPosition, fromPosition, toPosition, sideToMoveRanking, caseRanking, wArmyStatRanking, bArmyStatRanking, guardRanking, enPassantRanking, epOppRanking, sandwichRanking, opposeRanking, pawnRanking, castleRanking, wArmyRanking, bArmyRanking, pieceRanking, emptyURPosition) where
+module Chess.Position.Ranking (URPosition, fromPosition, toPosition, sideToMoveRanking, caseRanking, wArmyStatRanking, bArmyStatRanking, guardRanking, enPassantRanking, epOppRanking, sandwichRanking, opposeRanking, pawnRanking, castleRanking, wArmyRanking, bArmyRanking, pieceRanking, emptyURPosition, urChoices) where
 
 import Data.Function
 import Data.Maybe
@@ -85,14 +85,39 @@ mkOppLists mo (f:fs) = mkOppLists mo fs ++ [ opp:opps | opp <- f, opps <- mkOppL
 
 -- create ranking of en-passant and oppose list choices
 urChoices :: URPosition -> Diagram -> Ranking (Square, Square, [Opposing])
-urChoices (URPosition { whiteToMove = wtm, wEP = wep, bEP = bep, minOpp = minopp }) diag = listRanking choices where
-  pep = if wtm then bep else wep
+urChoices pos@(URPosition { whiteToMove = wtm, fixp = ep, minOpp = minopp, wArmyStat = ArmyStat _ wp _ _, bArmyStat = ArmyStat _ bp _ _ }) diag = listRanking choices where
+  pep = if wtm then bEP pos else wEP pos
   epfile = pep `mod` 8
   eps = if wtm then [(pep-1, pep) | epfile > 0, diag!(pep-1)=='P']
                  ++ [(pep+1, pep) | epfile < 7, diag!(pep+1)=='P']
                else [(pep, pep-1) | epfile > 0, diag!(pep-1)=='p']
                  ++ [(pep, pep+1) | epfile < 7, diag!(pep+1)=='p']
-  choices = [(wep, bep, oL) | (wep, bep) <- if pep == 0 then [(0,0)] else eps, oL <- mkOppLists (max 0 minopp) . mkOpps $ diag]
+  choices = do
+    (wep', bep') <- if ep == 0 then [(0,0)] else eps
+    let
+      wfile = wep' `mod` 8
+      bfile = bep' `mod` 8
+      mo = max 0 minopp
+    (wopp, bopp) <- if ep == 0 then [(0,0)] else
+                      [(wo, bo) | wo <- [max 0 (mo-wp)..1], bo <- [max 0 (mo-bp)..1], wo + bo <= mo]
+    let
+      -- Normally both en-passant files are reserved for their fixed pawns.
+      -- When more than six opposing pairs are required, however, the
+      -- target-file pair must remain ordinary: the fixed pawn on that file is
+      -- not itself the pair found by mkOpps (see issues #927 and #928).
+      excludedFiles = if ep == 0 then [] else
+        if mo > 6 && wopp == 0 && bopp == 0
+          then [if wtm then wfile else bfile]
+          else [wfile, bfile]
+      fs = [0..7] \\ excludedFiles
+      opps = mkOpps diag
+      wEPPairs = if wopp == 0 then [[]] else [[(b, wep')] | (b, w) <- opps !! wfile, w == wep']
+      bEPPairs = if bopp == 0 then [[]] else [[(bep', w)] | (b, w) <- opps !! bfile, b == bep']
+      otherOpps = mkOppLists (mo - wopp - bopp) (map (opps !!) fs)
+    wEPP <- wEPPairs
+    bEPP <- bEPPairs
+    oL_other <- otherOpps
+    return (wep', bep', merge (merge wEPP bEPP) oL_other)
 
 -- convert from Position
 fromPosition :: Position -> URPosition
@@ -365,11 +390,15 @@ opposeRanking pos = Ranking sz cmp unrnk rnk where
     epRCase 0 1  = [([(bep,bep+8+ds*8)], epopp 1 ds) | ds<-[0,1..5-bep`div`8]]
     epRCase 1 0  = [([(wep-8-8*ds,wep)], epopp 1 ds) | ds<-[0,1..wep`div`8-2]]
     epRCase 1 1  = [(merge [(bep,bep+dr1*8)] [(wep-8*dr2,wep)], epopp 2 (dr1+dr2-2)) | dr1<-[1,2..6-bep`div`8], dr2<-[1,2..wep`div`8-1]] where
-    epopp dp ds = if ds > s then 0 else fromIntegral $ mopps (p-dp) (s-ds) 6
+    epopp dp ds = if ds > s then 0 else fromIntegral $ mopps (p-dp) (s-ds) ordinaryFiles
+      where ordinaryFiles = if p > 6 && dp == 0 then 7 else 6
   unrnk i = pos { oppList = (if ep == 0 then placeOpp [0..7] p s else placeEPOpp) i } where
     placeEPOpp i = merge epOpps (placeOpp fs p' s' i') where
       (epOpps, i') = unrank epR i
-      fs = [0..7] \\ [wep `mod` 8, bep `mod` 8]
+      fs = if p > 6 && null epOpps
+        then [0..7] \\ [capturerFile]
+        else [0..7] \\ [wep `mod` 8, bep `mod` 8]
+      capturerFile = if wtm then wep `mod` 8 else bep `mod` 8
       p' = p - length epOpps
       s' = s - sum [(w-8 - b) `div` 8 | (b,w) <- epOpps]
     placeOpp []     0 _ 0 = []
@@ -384,7 +413,10 @@ opposeRanking pos = Ranking sz cmp unrnk rnk where
   rnk (URPosition { oppList = oL }) = if ep == 0 then unplaceOpp [0..7] s oL else unplaceEPOpp where
     unplaceEPOpp = rank epR (epOpps, unplaceOpp fs s' opps) where
       (epOpps, opps) = partition (\(b,w) -> b == bep || w == wep) oL
-      fs = [0..7] \\ [wep `mod` 8, bep `mod` 8]
+      fs = if p > 6 && null epOpps
+        then [0..7] \\ [capturerFile]
+        else [0..7] \\ [wep `mod` 8, bep `mod` 8]
+      capturerFile = if wtm then wep `mod` 8 else bep `mod` 8
       s' = s - sum [(w-8 - b) `div` 8 | (b,w) <- epOpps]
     unplaceOpp _      0 [] = 0
     unplaceOpp (f:fs) s os@(opp@(b,w):opps') = if b `mod` 8 /= f then unplaceOpp fs s os else sizeNo + rnkOpp (fileOpps f s) where
